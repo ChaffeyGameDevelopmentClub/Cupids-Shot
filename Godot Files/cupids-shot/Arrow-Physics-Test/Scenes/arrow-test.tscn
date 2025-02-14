@@ -7,8 +7,7 @@
 priority = 1
 gravity = 1.0
 script = ExtResource("1_2ukvh")
-custom_gravity = 20.0
-mass = 0.2
+mass = 3.0
 
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
 position = Vector2(-66, 1)

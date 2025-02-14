@@ -5,8 +5,10 @@ extends Area2D
 
 #We're basically cheating by rotating the area 2d body to simulate arrow movement
 @onready var arrow: Area2D = $"."
-@onready var tip: CollisionPolygon2D = $Tip
 @onready var arrow_sprite: Sprite2D = $"Arrow Sprite"
+@onready var tip: CollisionPolygon2D = $Tip
+
+
 
 #Lol what do you think this is for
 var true_velocity = Vector2(0,0)
