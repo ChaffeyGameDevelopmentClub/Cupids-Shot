@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://8bqn2rmct5tn"]
+
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/Arrow.gd" id="1_2ukvh"]
+[ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_g1ey8"]
+
+[node name="Arrow" type="Area2D"]
+priority = 1
+gravity = 1.0
+script = ExtResource("1_2ukvh")
+custom_gravity = 20.0
+mass = 0.2
+
+[node name="Arrow Sprite" type="Sprite2D" parent="."]
+position = Vector2(-66, 1)
+scale = Vector2(1, 0.171875)
+texture = ExtResource("2_g1ey8")
+
+[node name="Tip" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, -10, 10, 0, -8, 10)

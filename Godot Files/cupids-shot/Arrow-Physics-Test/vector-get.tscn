@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp4tiorm38lb8"]
+
+[ext_resource type="Script" path="res://Arrow-Physics-Test/vector_get.gd" id="1_iokoj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41k1x"]
+size = Vector2(199, 196)
+
+[node name="Vector-get" type="Area2D"]
+script = ExtResource("1_iokoj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_41k1x")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
