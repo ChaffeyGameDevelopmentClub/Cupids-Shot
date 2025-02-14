@@ -41,9 +41,11 @@ gravity_space_override = 1
 gravity = 9.0
 linear_damp_space_override = 1
 angular_damp_space_override = 1
+custom_gravity = 10.0
+mass = 0.25
 
-[node name="Vector-get" parent="." instance=ExtResource("4_l00ag")]
-position = Vector2(213, 263)
+[node name="Vector-get" parent="Arrow" instance=ExtResource("4_l00ag")]
+position = Vector2(-55, 14)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(570, 325)
