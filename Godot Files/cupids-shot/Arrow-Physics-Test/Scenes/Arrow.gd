@@ -19,17 +19,13 @@ var acceleration : Vector2
 
 #Two states really - arrowAiming is going to be probably for aiming but right now we're just trying to get the physics right
 var arrowLaunched = false
-var arrowAiming = true
 
-
-#The logic we can use for the arrow is force (vector) is equal to the mass and then the acceleration (also a vector)
-#We can use it to update the position so like position += force
-#We are NOT accounting for wind resistance, yet
+var stuck = false
 
 
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
-	if arrowLaunched:
+	if arrowLaunched && !stuck:
 		true_velocity +=  gravity_direction * mass * gravity #Can use custom gravity, will change it later
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle()
@@ -43,17 +39,7 @@ func _launch_arrow(initial_velocity: Vector2) -> void:
 	pass
 	
 func Bounce_x() -> void:
-	#boing, reverse the x on the vector 2
-	#You could say, coding genius?
-	true_velocity *= Vector2(-1,1)
+	true_velocity = true_velocity.bounce(Vector2(1,0))
 
 func Bounce_y() -> void:
-	#boing, reverse the x on the vector 2
-	#You could say, coding genius?
-	true_velocity *= Vector2(1,-1)
-	if true_velocity.y < 0:
-		true_velocity -= Vector2(0,-20)
-	if true_velocity.y > 0:
-		true_velocity += Vector2(0,20)
-	#true_velocity *= Vector2(1,-1)
-	pass
+	true_velocity = true_velocity.bounce(Vector2(0,1))
