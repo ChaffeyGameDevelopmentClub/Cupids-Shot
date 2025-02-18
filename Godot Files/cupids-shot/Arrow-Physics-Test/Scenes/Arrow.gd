@@ -21,18 +21,28 @@ var arrowLaunched = false
 
 var stuck = false
 
-var directional_influence = Vector2.ZERO
+var directional_influence = .5
+var direction : String
+
 
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
 	if arrowLaunched && !stuck:
 		true_velocity +=  gravity_direction * gravity
 		position +=  true_velocity * delta
-		rotation = true_velocity.angle()
+		rotation = true_velocity.angle() 
 		if true_velocity.x > 0:
-			print("This way") #Right
+			#true_velocity.x.clamp(0,true_velocity.x)
+			if Input.is_action_pressed("ui_left"):
+				true_velocity += Vector2(.2, -.01)
+			elif Input.is_action_pressed("ui_right"):
+				true_velocity += Vector2(-.1, .4)
 		elif true_velocity.x < 0:
-			print("That way") #Left
+			#true_velocity.x.clamp(true_velocity.x,0)
+			if Input.is_action_pressed("ui_left"):
+				true_velocity += Vector2(.2, -.01)
+			elif Input.is_action_pressed("ui_right"):
+				true_velocity += Vector2(-.1, .4)
 		pass
 	pass
 

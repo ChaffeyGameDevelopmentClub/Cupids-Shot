@@ -45,7 +45,7 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_released("left_click"):
 		touch_down = false
-		force = Vector2(new_vector.x / force_influence, abs(new_vector.y /force_influence))
+		force = Vector2(abs(new_vector.x) / force_influence, abs(new_vector.y) /force_influence)
 		test_world._launch(new_vector*force)
 		queue_redraw()
 		
