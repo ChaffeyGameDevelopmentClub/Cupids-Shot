@@ -30,8 +30,8 @@ func _draw() -> void:
 #Basic inputs, basically release gets the new vector into the arrow while holding still draws the vector
 func _input(event: InputEvent) -> void:
 	
-	#if !arrow:
-	#	return
+	if !arrow:
+		return
 		
 	if not touch_down:
 		return
@@ -66,11 +66,13 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	print("Yes")
 	if area.is_in_group("arrow"):
-		print("Yuh")
+		arrow = area;
+		arrow.arrowLaunched = false;
 	pass # Replace with function body.
 
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
 		print("Buh bye")
+		arrow = null
 	pass # Replace with function body.
