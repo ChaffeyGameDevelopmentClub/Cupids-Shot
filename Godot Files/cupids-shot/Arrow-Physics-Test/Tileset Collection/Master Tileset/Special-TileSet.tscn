@@ -6,7 +6,7 @@
 scenes/1/scene = ExtResource("1_6uvdj")
 
 [sub_resource type="TileSet" id="TileSet_21ve2"]
-tile_size = Vector2i(85, 85)
+tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetScenesCollectionSource_f150f")
 
 [node name="Special-tileSet" type="TileMapLayer"]

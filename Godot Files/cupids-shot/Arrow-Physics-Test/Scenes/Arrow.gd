@@ -33,7 +33,6 @@ func _process(delta: float) -> void:
 		true_velocity +=  gravity_direction * mass * gravity #Can use custom gravity, will change it later
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle()
-		print(true_velocity)
 		pass
 	pass
 
