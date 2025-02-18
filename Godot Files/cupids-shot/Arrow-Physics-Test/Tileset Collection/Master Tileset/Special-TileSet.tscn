@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgcksq2d4gyr0"]
+
+[ext_resource type="PackedScene" uid="uid://cfoh4qknguryk" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/bounce-block.tscn" id="1_6uvdj"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_f150f"]
+scenes/1/scene = ExtResource("1_6uvdj")
+
+[sub_resource type="TileSet" id="TileSet_21ve2"]
+tile_size = Vector2i(85, 85)
+sources/0 = SubResource("TileSetScenesCollectionSource_f150f")
+
+[node name="Special-tileSet" type="TileMapLayer"]
+tile_set = SubResource("TileSet_21ve2")

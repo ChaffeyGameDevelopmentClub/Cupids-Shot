@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfoh4qknguryk"]
+
+[ext_resource type="Texture2D" uid="uid://d3kwmfx04osxw" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/bouncy_tileset.png" id="1_elcq5"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/bounce_block_tileset.gd" id="1_hk1md"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/tb_walls_bounce.gd" id="3_nrrj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seoay"]
+size = Vector2(11, 73.1875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn4oe"]
+size = Vector2(77, 5)
+
+[node name="Bounce-block" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_elcq5")
+region_enabled = true
+region_rect = Rect2(48, 16, 16, 16)
+
+[node name="LR WALLS" type="Area2D" parent="."]
+script = ExtResource("1_hk1md")
+
+[node name="Left Wall" type="CollisionShape2D" parent="LR WALLS"]
+position = Vector2(-34, -1.1875)
+shape = SubResource("RectangleShape2D_seoay")
+
+[node name="Right Wall" type="CollisionShape2D" parent="LR WALLS"]
+position = Vector2(34, -1)
+shape = SubResource("RectangleShape2D_seoay")
+
+[node name="TB WALLS" type="Area2D" parent="."]
+script = ExtResource("3_nrrj1")
+
+[node name="Top Wall" type="CollisionShape2D" parent="TB WALLS"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_yn4oe")
+
+[node name="Bottom Wall" type="CollisionShape2D" parent="TB WALLS"]
+position = Vector2(0, 38)
+shape = SubResource("RectangleShape2D_yn4oe")
+
+[connection signal="area_entered" from="LR WALLS" to="LR WALLS" method="_on_area_entered"]
+[connection signal="area_entered" from="TB WALLS" to="LR WALLS" method="_on_tb_walls_area_entered"]

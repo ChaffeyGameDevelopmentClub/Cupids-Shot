@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 		true_velocity +=  gravity_direction * mass * gravity #Can use custom gravity, will change it later
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle()
-		
+		print(true_velocity)
 		pass
 	pass
 
@@ -41,4 +41,20 @@ func _process(delta: float) -> void:
 func _launch_arrow(initial_velocity: Vector2) -> void:
 	arrowLaunched = true
 	true_velocity = initial_velocity
+	pass
+	
+func Bounce_x() -> void:
+	#boing, reverse the x on the vector 2
+	#You could say, coding genius?
+	true_velocity *= Vector2(-1,1)
+
+func Bounce_y() -> void:
+	#boing, reverse the x on the vector 2
+	#You could say, coding genius?
+	true_velocity *= Vector2(1,-1)
+	if true_velocity.y < 0:
+		true_velocity -= Vector2(0,-20)
+	if true_velocity.y > 0:
+		true_velocity += Vector2(0,20)
+	#true_velocity *= Vector2(1,-1)
 	pass
