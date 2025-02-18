@@ -16,4 +16,6 @@ scale = Vector2(1, 0.171875)
 texture = ExtResource("2_g1ey8")
 
 [node name="Tip" type="CollisionPolygon2D" parent="."]
+position = Vector2(1.20972, 1)
+scale = Vector2(1.09028, 1.0625)
 polygon = PackedVector2Array(-8, -10, 10, 0, -8, 10)

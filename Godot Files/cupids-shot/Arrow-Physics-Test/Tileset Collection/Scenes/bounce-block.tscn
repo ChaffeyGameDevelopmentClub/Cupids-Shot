@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfoh4qknguryk"]
 
 [ext_resource type="Texture2D" uid="uid://d3kwmfx04osxw" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/bouncy_tileset.png" id="1_elcq5"]
-[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/bounce_block_tileset.gd" id="1_hk1md"]
-[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/tb_walls_bounce.gd" id="3_nrrj1"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/bounce_block_tileset.gd" id="1_hk1md"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/tb_walls_bounce.gd" id="3_nrrj1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seoay"]
 size = Vector2(1.875, 14)

@@ -1,7 +1,12 @@
 extends Node2D
 
 @onready var arrow: Area2D = $Arrow
+@onready var camera_2d: Camera2D = $Camera2D
 
+
+func _process(delta: float) -> void:
+	camera_2d.position = arrow.position
+	pass
 #Do not press space no more, this was a test
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):

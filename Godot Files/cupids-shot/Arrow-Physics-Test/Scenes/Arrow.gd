@@ -21,13 +21,18 @@ var arrowLaunched = false
 
 var stuck = false
 
+var directional_influence = Vector2.ZERO
 
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
 	if arrowLaunched && !stuck:
-		true_velocity +=  gravity_direction * mass * gravity #Can use custom gravity, will change it later
+		true_velocity +=  gravity_direction * gravity
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle()
+		if true_velocity.x > 0:
+			print("This way") #Right
+		elif true_velocity.x < 0:
+			print("That way") #Left
 		pass
 	pass
 
