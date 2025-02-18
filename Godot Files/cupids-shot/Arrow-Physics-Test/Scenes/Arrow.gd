@@ -1,6 +1,5 @@
 extends Area2D
 
-
 #Check the sides because we are using some built in linear damp and angular damp and gravity over time for this function
 
 #We're basically cheating by rotating the area 2d body to simulate arrow movement
