@@ -4,10 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_g1ey8"]
 
 [node name="Arrow" type="Area2D"]
+collision_layer = 2
 priority = 1
 gravity = 1.0
 script = ExtResource("1_2ukvh")
-mass = 3.0
+custom_gravity = 1.0
+mass = 1.0
 
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
 position = Vector2(-66, 1)
@@ -16,3 +18,5 @@ texture = ExtResource("2_g1ey8")
 
 [node name="Tip" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-8, -10, 10, 0, -8, 10)
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
