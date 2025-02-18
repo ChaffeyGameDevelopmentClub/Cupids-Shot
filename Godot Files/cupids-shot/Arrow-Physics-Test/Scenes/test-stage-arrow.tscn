@@ -14,6 +14,7 @@ mass = 1.0
 
 [node name="Vector-get" parent="." instance=ExtResource("4_l00ag")]
 position = Vector2(445, 276)
+force_influence = 80
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(570, 325)

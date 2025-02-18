@@ -9,12 +9,19 @@ var position_end = Vector2.ZERO
 var new_vector = Vector2.ZERO
 
 var arrow = null
+
 #This is not real maybe
 #Get the parent of the level, it might work per level but honestly I don't know, it might be better 
 #and optimal just to do
 #var current_level = get_parent(), but as it turns out it's always NULL
 #IDK WHY
+
+
 @onready var test_world: Node2D = $".."
+
+#Messing with the force
+var force = Vector2.ZERO
+@export var force_influence : int
 
 #Uh, getting the position of the actual arrow so this always follows
 #DO NOT MAKE IT A CHILD, it makes it super awkward
@@ -38,7 +45,8 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_released("left_click"):
 		touch_down = false
-		test_world._launch(new_vector)
+		force = Vector2(new_vector.x / force_influence, abs(new_vector.y /force_influence))
+		test_world._launch(new_vector*force)
 		queue_redraw()
 		
 		
@@ -64,15 +72,11 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("Yes")
 	if area.is_in_group("arrow"):
 		arrow = area;
 		arrow.arrowLaunched = false;
-	pass # Replace with function body.
 
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
-		print("Buh bye")
 		arrow = null
-	pass # Replace with function body.
