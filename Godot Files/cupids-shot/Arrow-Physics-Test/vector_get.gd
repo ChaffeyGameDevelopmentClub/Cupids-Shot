@@ -8,6 +8,7 @@ var position_end = Vector2.ZERO
 
 var new_vector = Vector2.ZERO
 
+var arrow = null
 #This is not real maybe
 #Get the parent of the level, it might work per level but honestly I don't know, it might be better 
 #and optimal just to do
@@ -29,28 +30,47 @@ func _draw() -> void:
 #Basic inputs, basically release gets the new vector into the arrow while holding still draws the vector
 func _input(event: InputEvent) -> void:
 	
+	#if !arrow:
+	#	return
+		
 	if not touch_down:
 		return
 		
 	if event.is_action_released("left_click"):
 		touch_down = false
 		test_world._launch(new_vector)
+		queue_redraw()
 		
 		
 	if event is InputEventMouseMotion and touch_down:
 		position_end = event.position
-		new_vector = -(position_end - position_start)
-		new_vector = new_vector.clamp(Vector2(-200,-200),Vector2(200,200))
+		new_vector = (position_start - position_end)
+		if new_vector.length() > maximum_length:
+			new_vector = new_vector.normalized()*maximum_length
 		queue_redraw()
 
 #Follows the arrow while bouncing
 func _process(delta: float) -> void:
-	arrow_location = test_world.get_arrow_location()
-	position = arrow_location
+	#arrow_location = test_world.get_arrow_location()
+	#position = arrow_location
 	pass
+	
 #Lets the input function happen
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left_click"):
 		touch_down = true
 		position_start = event.position
+	pass # Replace with function body.
+
+
+func _on_area_entered(area: Area2D) -> void:
+	print("Yes")
+	if area.is_in_group("arrow"):
+		print("Yuh")
+	pass # Replace with function body.
+
+
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group("arrow"):
+		print("Buh bye")
 	pass # Replace with function body.

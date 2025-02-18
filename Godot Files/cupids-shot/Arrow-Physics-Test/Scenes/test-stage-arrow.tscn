@@ -10,12 +10,10 @@ script = ExtResource("1_xf6kv")
 
 [node name="Arrow" parent="." instance=ExtResource("2_8inbh")]
 position = Vector2(509, 276)
-collision_mask = 2
 mass = 1.0
 
 [node name="Vector-get" parent="." instance=ExtResource("4_l00ag")]
 position = Vector2(445, 276)
-collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(570, 325)

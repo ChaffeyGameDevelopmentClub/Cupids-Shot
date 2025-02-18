@@ -6,6 +6,7 @@
 size = Vector2(199, 196)
 
 [node name="Vector-get" type="Area2D"]
+collision_mask = 2
 script = ExtResource("1_iokoj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

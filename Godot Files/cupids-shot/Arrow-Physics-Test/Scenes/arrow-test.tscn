@@ -3,7 +3,8 @@
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/Arrow.gd" id="1_2ukvh"]
 [ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_g1ey8"]
 
-[node name="Arrow" type="Area2D"]
+[node name="Arrow" type="Area2D" groups=["arrow"]]
+collision_mask = 3
 priority = 1
 gravity = 1.0
 script = ExtResource("1_2ukvh")
