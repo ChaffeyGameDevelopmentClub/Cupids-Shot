@@ -6,6 +6,7 @@ extends Area2D
 @onready var arrow: Area2D = $"."
 @onready var arrow_sprite: Sprite2D = $"Arrow Sprite"
 @onready var tip: CollisionPolygon2D = $Tip
+@onready var direction_line: Line2D = $Direction
 
 
 
@@ -25,7 +26,6 @@ var pointing_to = Vector2.ZERO
 var stuck = false
 
 var directional_influence = .5
-var direction : String
 
 #OK THIS MIGHT BE COOL
 var fuel : float = 100
@@ -35,9 +35,17 @@ var boost :Vector2
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
 	if arrowLaunched && !stuck:
-		true_velocity +=  gravity_direction * gravity
+		
+		true_velocity +=  (gravity_direction * gravity)
+		var input_dir = Input.get_axis("ui_right", "ui_left")
+		true_velocity += input_dir * true_velocity.normalized().orthogonal() * 1.5
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle() 
+		
+		
+		
+		
+		'''
 		if true_velocity.x > 0 && fuel > 10:
 			#true_velocity.x.clamp(0,true_velocity.x)
 			if Input.is_action_pressed("ui_left"):
@@ -59,6 +67,7 @@ func _process(delta: float) -> void:
 				true_velocity += Vector2(.2, -.01)
 			elif Input.is_action_pressed("ui_right"):
 				true_velocity += Vector2(-.1, .4)
+		'''
 
 #run this when the state is changed
 func _launch_arrow(initial_velocity: Vector2) -> void:
@@ -68,6 +77,8 @@ func _launch_arrow(initial_velocity: Vector2) -> void:
 	
 func Bounce_x() -> void:
 	true_velocity = true_velocity.bounce(Vector2(1,0))
+	position+=true_velocity.normalized()*25
 
 func Bounce_y() -> void:
 	true_velocity = true_velocity.bounce(Vector2(0,1))
+	position+=true_velocity.normalized()*25
