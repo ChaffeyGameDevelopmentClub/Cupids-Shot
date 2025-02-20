@@ -7,6 +7,7 @@ extends Node2D
 func _process(delta: float) -> void:
 	camera_2d.position = arrow.position
 	pass
+
 #Do not press space no more, this was a test
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
@@ -21,6 +22,7 @@ func _launch(direction: Vector2) -> void:
 	
 	arrow._launch_arrow(direction)
 	pass
+
 #godot structure moment, it's easier to just get the vector from the level script than it is for the vecttor-get
 #object to get it itself
 func get_arrow_location() -> Vector2:

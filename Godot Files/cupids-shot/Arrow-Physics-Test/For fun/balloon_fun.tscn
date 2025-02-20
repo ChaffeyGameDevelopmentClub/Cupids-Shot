@@ -7,12 +7,15 @@
 radius = 8.0
 height = 22.0
 
-[node name="Balloon_Fun" type="Area2D"]
+[node name="Balloon_Fun" type="Area2D" groups=["Balloon"]]
+scale = Vector2(4, 4)
 script = ExtResource("1_yn8cr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 4)
 texture = ExtResource("2_nxhyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_buogt")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

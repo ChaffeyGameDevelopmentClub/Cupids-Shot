@@ -6,7 +6,6 @@ extends Area2D
 @onready var arrow: Area2D = $"."
 @onready var arrow_sprite: Sprite2D = $"Arrow Sprite"
 @onready var tip: CollisionPolygon2D = $Tip
-@onready var direction_line: Line2D = $Direction
 
 
 
@@ -42,9 +41,6 @@ func _process(delta: float) -> void:
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle() 
 		
-		
-		
-		
 		'''
 		if true_velocity.x > 0 && fuel > 10:
 			#true_velocity.x.clamp(0,true_velocity.x)
@@ -69,12 +65,13 @@ func _process(delta: float) -> void:
 				true_velocity += Vector2(-.1, .4)
 		'''
 
+
 #run this when the state is changed
 func _launch_arrow(initial_velocity: Vector2) -> void:
 	arrowLaunched = true
 	true_velocity = initial_velocity
 	pass
-	
+
 func Bounce_x() -> void:
 	true_velocity = true_velocity.bounce(Vector2(1,0))
 	position+=true_velocity.normalized()*25
