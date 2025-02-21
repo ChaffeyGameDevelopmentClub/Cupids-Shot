@@ -14,14 +14,21 @@ config/name="Cupids Shot"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AppConfig="*res://UI Stuff/Auto-Loads/app_config.tscn"
+
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
-[global_group]
+[file_customization]
 
-arrow=""
-Balloon=""
+folder_colors={
+"res://UI Stuff/": "blue"
+}
 
 [input]
 

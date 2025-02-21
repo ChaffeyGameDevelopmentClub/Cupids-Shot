@@ -1,0 +1,143 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbapcpomtr2cl"]
+
+[ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
+
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("OptionsContainer", "MenuContainer", "BackButton", "TitleLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5mrkf")
+OptionsContainer = NodePath("OptionsContainer")
+MenuContainer = NodePath("MenuContainer")
+BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
+TitleLabel = NodePath("MenuContainer/TitleMargin/TitleContainer/TitleLabel")
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 32
+
+[node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MenuContainer/TitleMargin/TitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 67.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Cupids Shot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleMarign" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 96
+
+[node name="SubtitleContainer" type="Control" parent="MenuContainer/SubtitleMarign"]
+layout_mode = 2
+
+[node name="SubtitleLabel" type="Label" parent="MenuContainer/SubtitleMarign/SubtitleContainer"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Subtitle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtonsMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+
+[node name="MenuButtonsContainer" type="Control" parent="MenuContainer/MenuButtonsMargin"]
+layout_mode = 2
+
+[node name="MenuButtonsBox" type="BoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -50.5
+offset_right = 35.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="StartGame" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Start"
+
+[node name="Options" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Quit"
+
+[node name="OptionsContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FlowControlContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="FlowControl" type="Control" parent="FlowControlContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="FlowControlContainer/FlowControl"]
+custom_minimum_size = Vector2(62, 40)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 62.0
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Quit" to="." method="_on_quit_pressed"]

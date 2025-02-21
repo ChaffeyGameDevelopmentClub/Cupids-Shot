@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh1xpqila3dnw"]
+
+[ext_resource type="Script" path="res://UI Stuff/Auto-Loads/app_config.gd" id="1_cklai"]
+
+[node name="AppConfig" type="Node"]
+script = ExtResource("1_cklai")
