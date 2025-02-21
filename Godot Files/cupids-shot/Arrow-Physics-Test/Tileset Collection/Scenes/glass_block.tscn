@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmvvkgep6rhlw"]
 
-[ext_resource type="Script" path="res://glass_block.gd" id="1_6qpjd"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/glass_block.gd" id="1_rsq8c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bff2"]
 
 [node name="Glass Block" type="Area2D"]
-script = ExtResource("1_6qpjd")
+script = ExtResource("1_rsq8c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5bff2")

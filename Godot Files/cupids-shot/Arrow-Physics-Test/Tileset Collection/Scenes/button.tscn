@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://csn0ivmt8rbn4"]
 
-[ext_resource type="Script" path="res://button.gd" id="1_yj1uy"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/button.gd" id="1_yj1uy"]
 [ext_resource type="Texture2D" uid="uid://cpwsqf6q5fhmv" path="res://Arrow-Physics-Test/Temporary Assets/Temp button.png" id="2_ro073"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj00e"]
