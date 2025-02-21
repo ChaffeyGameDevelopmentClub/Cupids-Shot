@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://5ki700lvga5a"]
+
+[ext_resource type="Script" path="res://UI Stuff/Options-Menu/option_control/option_control.gd" id="1_d8y0g"]
+
+[node name="OptionControl" type="HBoxContainer" node_paths=PackedStringArray("OptionLabel")]
+offset_right = 400.0
+offset_bottom = 40.0
+script = ExtResource("1_d8y0g")
+OptionLabel = NodePath("OptionLabel")
+
+[node name="OptionLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = ":"
+vertical_alignment = 1

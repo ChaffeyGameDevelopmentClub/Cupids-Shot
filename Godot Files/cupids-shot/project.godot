@@ -14,6 +14,10 @@ config/name="Cupids Shot"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AppConfig="*res://UI Stuff/Auto-Loads/app_config.tscn"
+
 [display]
 
 window/size/viewport_width=1920
