@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cu1fepnu7er4n"]
+[gd_scene load_steps=9 format=4 uid="uid://cu1fepnu7er4n"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/test_stage_arrow.gd" id="1_xf6kv"]
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="2_8inbh"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bva5m4o7obgxu" path="res://Arrow-Physics-Test/For fun/balloon_fun.tscn" id="5_ar25m"]
 [ext_resource type="PackedScene" uid="uid://bhy1fo1jsmw3w" path="res://wind.tscn" id="6_hnoq4"]
 [ext_resource type="PackedScene" uid="uid://csn0ivmt8rbn4" path="res://button.tscn" id="7_he7e6"]
+[ext_resource type="PackedScene" uid="uid://c1k75pfu4yjn8" path="res://slide_path.tscn" id="8_320vn"]
 
 [node name="Test-World" type="Node2D"]
 script = ExtResource("1_xf6kv")
@@ -32,16 +33,6 @@ position_smoothing_speed = 10.0
 [node name="Wind" parent="." instance=ExtResource("6_hnoq4")]
 position = Vector2(181, 136)
 
-[node name="Button" parent="." instance=ExtResource("7_he7e6")]
-position = Vector2(478, 492)
-rotation = 1.5708
-scale = Vector2(2, 2)
-
-[node name="Button2" parent="." instance=ExtResource("7_he7e6")]
-position = Vector2(418, 492)
-rotation = 3.14159
-scale = Vector2(2, 2)
-
 [node name="Button3" parent="." instance=ExtResource("7_he7e6")]
 position = Vector2(353, 492)
 scale = Vector2(2, 2)
@@ -51,4 +42,20 @@ position = Vector2(543, 492)
 rotation = 4.71239
 scale = Vector2(2, 2)
 
+[node name="Slide Path" parent="." node_paths=PackedStringArray("custom_path") instance=ExtResource("8_320vn")]
+position = Vector2(300, 420)
+custom_path = NodePath("Line2D")
+speed = 0.5
+
+[node name="Button" parent="Slide Path/PathFollow2D" index="0" instance=ExtResource("7_he7e6")]
+position = Vector2(-7.62939e-06, 0)
+scale = Vector2(2, 2)
+
+[node name="Line2D" type="Line2D" parent="Slide Path"]
+position = Vector2(1.52588e-05, 3.05176e-05)
+points = PackedVector2Array(0, 0, 161, 0)
+width = 1.0
+
 [connection signal="area_entered" from="Arrow" to="." method="_on_arrow_area_entered"]
+
+[editable path="Slide Path"]

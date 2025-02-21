@@ -21,7 +21,7 @@ scale = Vector2(1.09028, 1.0625)
 polygon = PackedVector2Array(-8, -10, 8.97961, -1.88235, 8.97961, 0, 8.97961, 1.88235, -8, 10)
 
 [node name="Bounce Timer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.001
 one_shot = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
