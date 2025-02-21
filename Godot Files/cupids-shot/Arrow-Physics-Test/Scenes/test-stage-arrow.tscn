@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://cu1fepnu7er4n"]
+[gd_scene load_steps=8 format=4 uid="uid://cu1fepnu7er4n"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/test_stage_arrow.gd" id="1_xf6kv"]
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="2_8inbh"]
 [ext_resource type="PackedScene" uid="uid://cp4tiorm38lb8" path="res://Arrow-Physics-Test/vector-get.tscn" id="4_l00ag"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="4_wllj4"]
 [ext_resource type="PackedScene" uid="uid://bva5m4o7obgxu" path="res://Arrow-Physics-Test/For fun/balloon_fun.tscn" id="5_ar25m"]
+[ext_resource type="PackedScene" uid="uid://bhy1fo1jsmw3w" path="res://wind.tscn" id="6_hnoq4"]
+[ext_resource type="PackedScene" uid="uid://csn0ivmt8rbn4" path="res://button.tscn" id="7_he7e6"]
 
 [node name="Test-World" type="Node2D"]
 script = ExtResource("1_xf6kv")
@@ -14,7 +16,7 @@ position = Vector2(445, 276)
 force_influence = 80
 
 [node name="Arrow" parent="." instance=ExtResource("2_8inbh")]
-position = Vector2(509, 276)
+position = Vector2(438, 276)
 mass = 1.0
 
 [node name="Special-tileSet" parent="." instance=ExtResource("4_wllj4")]
@@ -26,5 +28,27 @@ position = Vector2(201, 301)
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Wind" parent="." instance=ExtResource("6_hnoq4")]
+position = Vector2(181, 136)
+
+[node name="Button" parent="." instance=ExtResource("7_he7e6")]
+position = Vector2(478, 492)
+rotation = 1.5708
+scale = Vector2(2, 2)
+
+[node name="Button2" parent="." instance=ExtResource("7_he7e6")]
+position = Vector2(418, 492)
+rotation = 3.14159
+scale = Vector2(2, 2)
+
+[node name="Button3" parent="." instance=ExtResource("7_he7e6")]
+position = Vector2(353, 492)
+scale = Vector2(2, 2)
+
+[node name="Button4" parent="." instance=ExtResource("7_he7e6")]
+position = Vector2(543, 492)
+rotation = 4.71239
+scale = Vector2(2, 2)
 
 [connection signal="area_entered" from="Arrow" to="." method="_on_arrow_area_entered"]

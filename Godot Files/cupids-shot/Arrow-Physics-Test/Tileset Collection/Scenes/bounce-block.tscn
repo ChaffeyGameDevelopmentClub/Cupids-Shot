@@ -1,14 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfoh4qknguryk"]
+[gd_scene load_steps=4 format=3 uid="uid://cfoh4qknguryk"]
 
 [ext_resource type="Texture2D" uid="uid://d3kwmfx04osxw" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/bouncy_tileset.png" id="1_elcq5"]
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/bounce_block_tileset.gd" id="1_hk1md"]
-[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/tb_walls_bounce.gd" id="3_nrrj1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seoay"]
-size = Vector2(1.875, 14)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn4oe"]
-size = Vector2(16, 1)
+size = Vector2(16, 16)
 
 [node name="Bounce-block" type="Node2D"]
 scale = Vector2(4, 4)
@@ -18,27 +14,10 @@ texture = ExtResource("1_elcq5")
 region_enabled = true
 region_rect = Rect2(48, 16, 16, 16)
 
-[node name="LR WALLS" type="Area2D" parent="."]
+[node name="area2d" type="Area2D" parent="."]
 script = ExtResource("1_hk1md")
 
-[node name="Left Wall" type="CollisionShape2D" parent="LR WALLS"]
-position = Vector2(-7.0625, 0)
+[node name="collision" type="CollisionShape2D" parent="area2d"]
 shape = SubResource("RectangleShape2D_seoay")
 
-[node name="Right Wall" type="CollisionShape2D" parent="LR WALLS"]
-position = Vector2(7, 0)
-shape = SubResource("RectangleShape2D_seoay")
-
-[node name="TB WALLS" type="Area2D" parent="."]
-script = ExtResource("3_nrrj1")
-
-[node name="Top Wall" type="CollisionShape2D" parent="TB WALLS"]
-position = Vector2(0, -7.5)
-shape = SubResource("RectangleShape2D_yn4oe")
-
-[node name="Bottom Wall" type="CollisionShape2D" parent="TB WALLS"]
-position = Vector2(0, 7.5)
-shape = SubResource("RectangleShape2D_yn4oe")
-
-[connection signal="area_entered" from="LR WALLS" to="LR WALLS" method="_on_area_entered"]
-[connection signal="area_entered" from="TB WALLS" to="LR WALLS" method="_on_tb_walls_area_entered"]
+[connection signal="area_entered" from="area2d" to="area2d" method="_on_area_entered"]

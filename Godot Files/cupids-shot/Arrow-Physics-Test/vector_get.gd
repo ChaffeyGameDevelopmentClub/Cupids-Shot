@@ -10,6 +10,8 @@ var new_vector = Vector2.ZERO
 
 var arrow = null
 
+@export var base_rotation = 0
+
 #This is not real maybe
 #Get the parent of the level, it might work per level but honestly I don't know, it might be better 
 #and optimal just to do
@@ -73,8 +75,12 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
-		arrow = area;
-		arrow.arrowLaunched = false;
+		arrow = area
+		arrow.arrowLaunched = false
+		var positionTween:Tween = get_tree().create_tween()
+		positionTween.tween_property(arrow, "global_position", global_position, 1)
+		var rotationTween:Tween = get_tree().create_tween()
+		rotationTween.tween_property(arrow, "rotation", base_rotation, 1)
 
 
 func _on_area_exited(area: Area2D) -> void:

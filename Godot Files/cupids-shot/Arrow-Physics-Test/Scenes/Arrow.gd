@@ -6,6 +6,7 @@ extends Area2D
 @onready var arrow: Area2D = $"."
 @onready var arrow_sprite: Sprite2D = $"Arrow Sprite"
 @onready var tip: CollisionPolygon2D = $Tip
+@onready var bounce_timer: Timer = $"Bounce Timer"
 
 
 
@@ -15,6 +16,8 @@ var true_velocity = Vector2(0,0)
 @export var mass : float #Assume kg
 var acceleration : Vector2
 
+
+var just_bounced:bool = false
 
 #Two states really - arrowAiming is going to be probably for aiming but right now we're just trying to get the physics right
 var arrowLaunched = false
@@ -73,9 +76,19 @@ func _launch_arrow(initial_velocity: Vector2) -> void:
 	pass
 
 func Bounce_x() -> void:
-	true_velocity = true_velocity.bounce(Vector2(1,0))
-	position+=true_velocity.normalized()*25
+	if (!just_bounced):
+		just_bounced = true
+		bounce_timer.start()
+		true_velocity = true_velocity.bounce(Vector2(1,0))
+		position+=true_velocity.normalized()*25
 
 func Bounce_y() -> void:
-	true_velocity = true_velocity.bounce(Vector2(0,1))
-	position+=true_velocity.normalized()*25
+	if (!just_bounced):
+		just_bounced = true
+		bounce_timer.start()
+		true_velocity = true_velocity.bounce(Vector2(0,1))
+		position+=true_velocity.normalized()*25
+
+
+func _on_bounce_timer_timeout() -> void:
+	just_bounced = false

@@ -1,13 +1,10 @@
 extends Area2D
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.has_method("Bounce_x"):
-		area.Bounce_x()
-
-
-
-
-
-func _on_tb_walls_area_entered(area: Area2D) -> void:
-	if area.has_method("Bounce_y"):
-		area.Bounce_y()
+	if area.is_in_group("arrow"):
+		print(global_position)
+		var block_to_arrow: Vector2 = global_position - area.global_position
+		if abs(block_to_arrow.y)>abs(block_to_arrow.x):
+			area.Bounce_y()
+		else:
+			area.Bounce_x()

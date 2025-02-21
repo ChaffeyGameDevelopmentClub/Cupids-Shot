@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://csn0ivmt8rbn4"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_yj1uy"]
+[ext_resource type="Texture2D" uid="uid://cpwsqf6q5fhmv" path="res://Arrow-Physics-Test/Temporary Assets/Temp button.png" id="2_ro073"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj00e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61obv"]
+atlas = ExtResource("2_ro073")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05l34"]
+atlas = ExtResource("2_ro073")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_803ph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61obv")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05l34")
+}],
+"loop": false,
+"name": &"unpressed",
+"speed": 5.0
+}]
+
+[node name="Button" type="Area2D"]
+script = ExtResource("1_yj1uy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gj00e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_803ph")
+animation = &"unpressed"
+autoplay = "unpressed"
+
+[node name="Direction Line" type="Line2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
