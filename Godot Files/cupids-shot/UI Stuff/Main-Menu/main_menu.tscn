@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=9 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
+[ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
+[ext_resource type="Texture2D" uid="uid://bf6xblgjmkslg" path="res://UI Stuff/UI-Assets/StartGameNeutral.png" id="3_ve14k"]
+[ext_resource type="Texture2D" uid="uid://dqrqycd2ml61d" path="res://UI Stuff/UI-Assets/StartGamePress.png" id="4_sum63"]
+[ext_resource type="Texture2D" uid="uid://c7ib384jg2v2m" path="res://UI Stuff/UI-Assets/StartGameHover.png" id="5_8wvv7"]
+[ext_resource type="Texture2D" uid="uid://dfeuvfj06ebge" path="res://UI Stuff/UI-Assets/QuitNeutral.png" id="6_2cixy"]
+[ext_resource type="Texture2D" uid="uid://8gef7bdhisy3" path="res://UI Stuff/UI-Assets/QuitPress.png" id="7_xf5km"]
+[ext_resource type="Texture2D" uid="uid://daygqcjfy3ugx" path="res://UI Stuff/UI-Assets/QuitHover.png" id="8_6ng6s"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("MenuContainer", "BackButton", "TitleLabel")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("LevelSelectContainer", "MenuContainer", "BackButton", "TitleLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +17,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5mrkf")
+LevelSelectPackedScene = ExtResource("2_yjon0")
+LevelSelectContainer = NodePath("LevelSelectContainer")
 MenuContainer = NodePath("MenuContainer")
 BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
 TitleLabel = NodePath("MenuContainer/TitleMargin/TitleContainer/TitleLabel")
@@ -63,7 +72,7 @@ anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 24
-text = "Subtitle"
+text = "Yay"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -88,21 +97,17 @@ grow_horizontal = 2
 grow_vertical = 2
 vertical = true
 
-[node name="StartGame" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
-custom_minimum_size = Vector2(128, 40)
+[node name="StartGame" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
 layout_mode = 2
-text = "Start"
+texture_normal = ExtResource("3_ve14k")
+texture_pressed = ExtResource("4_sum63")
+texture_hover = ExtResource("5_8wvv7")
 
-[node name="Options" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
-visible = false
-custom_minimum_size = Vector2(128, 40)
+[node name="Quit" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
 layout_mode = 2
-text = "Options"
-
-[node name="Quit" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
-custom_minimum_size = Vector2(128, 40)
-layout_mode = 2
-text = "Quit"
+texture_normal = ExtResource("6_2cixy")
+texture_pressed = ExtResource("7_xf5km")
+texture_hover = ExtResource("8_6ng6s")
 
 [node name="LevelSelectContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -128,6 +133,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="BackButton" type="Button" parent="FlowControlContainer/FlowControl"]
+visible = false
 custom_minimum_size = Vector2(62, 40)
 layout_mode = 1
 anchors_preset = 2
@@ -139,5 +145,5 @@ grow_vertical = 0
 text = "Back"
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/StartGame" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="FlowControlContainer/FlowControl/BackButton" to="." method="_on_back_button_pressed"]

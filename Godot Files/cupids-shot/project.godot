@@ -11,12 +11,9 @@ config_version=5
 [application]
 
 config/name="Cupids Shot"
+run/main_scene="res://UI Stuff/Main-Menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-AppConfig="*res://UI Stuff/Auto-Loads/app_config.tscn"
 
 [display]
 

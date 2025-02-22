@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://w6p3knpnnear"]
+
+[ext_resource type="Script" path="res://UI Stuff/Level-Select/level_select_menu.gd" id="1_q81fv"]
+[ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_ishhk"]
+
+[node name="LevelSelectMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q81fv")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.721569, 1, 0.180392)
+
+[node name="MenuPanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -121.0
+offset_right = 250.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MenuPanelContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuPanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="BoxContainer" type="BoxContainer" parent="MenuPanelContainer/MarginContainer"]
+layout_mode = 2
+vertical = true
+
+[node name="TitleMargin" type="MarginContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Level Select"
+horizontal_alignment = 1
+
+[node name="LevelButtonsMargin" type="MarginContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="MenuButtons" type="BoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 16
+
+[node name="TestLvLDisplay" type="VBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+
+[node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay"]
+layout_mode = 2
+texture = ExtResource("2_ishhk")
+
+[node name="TestLvLButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Test Level"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+
+[node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_ishhk")
+
+[node name="LvL2Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/VBoxContainer"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+text = "Level 2"
+
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay/TestLvLButton" to="." method="_on_test_lvl_button_pressed"]

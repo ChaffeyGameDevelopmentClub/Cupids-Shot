@@ -22,21 +22,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_start_game_pressed() -> void:
-	# Currently ends you to the game scene
-	get_tree().change_scene_to_file("res://Arrow-Physics-Test/Scenes/test-stage-arrow.tscn")
+# Hotkey functionality
+func _input(event):
+	if event.is_action_released("ui_cancel"):
+		if sub_menu:
+			_close_sub_menu()
+		else:
+			get_tree().quit()
 
-func _on_options_pressed() -> void:
-	_open_sub_menu(levels_scene)
-
-func _on_quit_pressed() -> void:
-	get_tree().quit()
-
-func _setup_select():
-	levels_scene = LevelSelectPackedScene.instantiate()
-	levels_scene.hide()
-	LevelSelectContainer.call_deferred("add_child", levels_scene)
-
+# Sub Menu functionality
 func _open_sub_menu(menu : Control):
 	sub_menu = menu
 	sub_menu.show()
@@ -50,3 +44,17 @@ func _close_sub_menu():
 	sub_menu = null
 	BackButton.hide()
 	MenuContainer.show()
+
+func _on_start_game_pressed() -> void:
+	_open_sub_menu(levels_scene)
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+
+func _setup_select():
+	levels_scene = LevelSelectPackedScene.instantiate()
+	levels_scene.hide()
+	LevelSelectContainer.call_deferred("add_child", levels_scene)
+
+func _on_back_button_pressed() -> void:
+	_close_sub_menu()
