@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("OptionsContainer", "MenuContainer", "BackButton", "TitleLabel")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("MenuContainer", "BackButton", "TitleLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5mrkf")
-OptionsContainer = NodePath("OptionsContainer")
 MenuContainer = NodePath("MenuContainer")
 BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
 TitleLabel = NodePath("MenuContainer/TitleMargin/TitleContainer/TitleLabel")
@@ -95,6 +94,7 @@ layout_mode = 2
 text = "Start"
 
 [node name="Options" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
+visible = false
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Options"
@@ -104,7 +104,7 @@ custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 text = "Quit"
 
-[node name="OptionsContainer" type="MarginContainer" parent="."]
+[node name="LevelSelectContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
