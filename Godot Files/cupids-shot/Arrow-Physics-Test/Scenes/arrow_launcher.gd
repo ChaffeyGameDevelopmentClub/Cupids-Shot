@@ -38,13 +38,13 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_released("left_click"):
 		touch_down = false
-		force = Vector2(abs(new_vector.x) / force_influence, abs(new_vector.y) /force_influence)
-		arrow._launch_arrow(new_vector*force)
+		#force = Vector2(abs(new_vector.x) / force_influence, abs(new_vector.y) /force_influence)
+		arrow._launch_arrow(new_vector*2)
 		queue_redraw()
 		
 		
 	if event is InputEventMouseMotion and touch_down:
-		position_end = event.position
+		position_end = event.global_position
 		new_vector = (position_start - position_end)
 		if new_vector.length() > maximum_length:
 			new_vector = new_vector.normalized()*maximum_length
@@ -54,16 +54,13 @@ func _input(event: InputEvent) -> void:
 #Lets the input function happen
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left_click"):
-		print("heuaoef")
 		touch_down = true
-		position_start = event.position
+		position_start = event.global_position
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("area entered")
 	if area.is_in_group("arrow"):
 		arrow = area.get_parent()
-		print(arrow)
 		arrow.arrowLaunched = false
 		var positionTween:Tween = get_tree().create_tween()
 		positionTween.tween_property(arrow, "global_position", global_position, 1)

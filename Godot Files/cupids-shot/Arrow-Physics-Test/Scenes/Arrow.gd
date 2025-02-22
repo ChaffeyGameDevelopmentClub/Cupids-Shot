@@ -1,19 +1,16 @@
-extends Area2D
+extends Node2D
 
 #Check the sides because we are using some built in linear damp and angular damp and gravity over time for this function
 
 #We're basically cheating by rotating the area 2d body to simulate arrow movement
-@onready var arrow: Area2D = $"."
-@onready var arrow_sprite: Sprite2D = $"Arrow Sprite"
-@onready var tip: CollisionPolygon2D = $Tip
+@onready var arrow: Area2D = $Area2D
 @onready var bounce_timer: Timer = $"Bounce Timer"
 
 
 
 #Lol what do you think this is for
 var true_velocity = Vector2(0,0)
-@export var custom_gravity : float 
-@export var mass : float #Assume kg
+@export var custom_gravity : float = 40
 var acceleration : Vector2
 
 
@@ -38,9 +35,12 @@ var boost :Vector2
 func _process(delta: float) -> void:
 	if arrowLaunched && !stuck:
 		
-		true_velocity +=  (gravity_direction * gravity)
+		if true_velocity.y>=0:
+			true_velocity +=  (arrow.gravity_direction * custom_gravity*1.5) * delta
+		if true_velocity.y<=0:
+			true_velocity +=  (arrow.gravity_direction * custom_gravity) * delta
 		var input_dir = Input.get_axis("ui_right", "ui_left")
-		true_velocity += input_dir * true_velocity.normalized().orthogonal() * 1.5
+		true_velocity += input_dir * true_velocity.normalized().orthogonal()
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle() 
 		
@@ -72,6 +72,7 @@ func _process(delta: float) -> void:
 #run this when the state is changed
 func _launch_arrow(initial_velocity: Vector2) -> void:
 	arrowLaunched = true
+	print(initial_velocity)
 	true_velocity = initial_velocity
 	pass
 
