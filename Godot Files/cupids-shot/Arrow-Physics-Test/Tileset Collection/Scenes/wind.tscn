@@ -1,15 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhy1fo1jsmw3w"]
+[gd_scene load_steps=4 format=3 uid="uid://bhy1fo1jsmw3w"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/wind.gd" id="1_qu8s4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkqnc"]
 size = Vector2(200, 200)
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yhxv3"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
 [node name="Wind" type="Area2D"]
 script = ExtResource("1_qu8s4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xkqnc")
+
+[node name="Wind Particles" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_yhxv3")
+trail_enabled = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

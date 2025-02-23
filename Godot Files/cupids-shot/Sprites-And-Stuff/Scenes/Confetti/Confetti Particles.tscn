@@ -1,0 +1,138 @@
+[gd_scene load_steps=13 format=3 uid="uid://dm6yngbvm3w03"]
+
+[ext_resource type="Script" path="res://Sprites-And-Stuff/Scenes/Confetti/confetti_particles.gd" id="1_afvqc"]
+
+[sub_resource type="Curve" id="Curve_h7dni"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -0.67033), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_l7c7f"]
+curve = SubResource("Curve_h7dni")
+
+[sub_resource type="Curve" id="Curve_di00o"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.986667, -173.626), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ulrys"]
+curve = SubResource("Curve_di00o")
+
+[sub_resource type="Curve" id="Curve_bkrr7"]
+min_value = -2.0
+max_value = 2.0
+_data = [Vector2(0.0133333, 0.549451), 0.0, 0.0, 0, 0, Vector2(1, 0.0219781), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jgqoi"]
+curve = SubResource("Curve_bkrr7")
+
+[sub_resource type="Curve" id="Curve_e3och"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.340659), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yi4bd"]
+curve = SubResource("Curve_e3och")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2yxow"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 100.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+orbit_velocity_min = -0.2
+orbit_velocity_max = 0.2
+orbit_velocity_curve = SubResource("CurveTexture_jgqoi")
+gravity = Vector3(0, 100, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 10.0
+linear_accel_curve = SubResource("CurveTexture_ulrys")
+damping_min = 10.0
+damping_max = 20.0
+scale_min = 5.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_yi4bd")
+color = Color(1, 0.69, 0.7055, 1)
+hue_variation_curve = SubResource("CurveTexture_l7c7f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cwks0"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 100.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+orbit_velocity_min = -0.2
+orbit_velocity_max = 0.2
+orbit_velocity_curve = SubResource("CurveTexture_jgqoi")
+gravity = Vector3(0, 100, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 10.0
+linear_accel_curve = SubResource("CurveTexture_ulrys")
+damping_min = 10.0
+damping_max = 20.0
+scale_min = 5.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_yi4bd")
+color = Color(0.866032, 0.801246, 0, 1)
+hue_variation_curve = SubResource("CurveTexture_l7c7f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v2kph"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_max = 100.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+orbit_velocity_min = -0.2
+orbit_velocity_max = 0.2
+orbit_velocity_curve = SubResource("CurveTexture_jgqoi")
+gravity = Vector3(0, 100, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 10.0
+linear_accel_curve = SubResource("CurveTexture_ulrys")
+damping_min = 10.0
+damping_max = 20.0
+scale_min = 5.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_yi4bd")
+color = Color(0, 0.820787, 0.838666, 1)
+hue_variation_curve = SubResource("CurveTexture_l7c7f")
+
+[node name="ConfettiParticles" type="Node2D"]
+script = ExtResource("1_afvqc")
+
+[node name="Pink" type="GPUParticles2D" parent="."]
+scale = Vector2(10, 10)
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_2yxow")
+one_shot = true
+explosiveness = 1.0
+randomness = 0.2
+
+[node name="Yellow" type="GPUParticles2D" parent="."]
+scale = Vector2(10, 10)
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_cwks0")
+one_shot = true
+explosiveness = 1.0
+randomness = 0.2
+
+[node name="Blue" type="GPUParticles2D" parent="."]
+scale = Vector2(10, 10)
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_v2kph")
+one_shot = true
+explosiveness = 1.0
+randomness = 0.2
+
+[node name="Expiration" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Expiration" to="." method="_on_expiration_timeout"]
