@@ -23,10 +23,6 @@ tile_map_data = PackedByteArray("AABGACMAAAAAAAAAAQBGACIAAAAAAAAAAQBGACEAAAAAAAA
 [node name="Balloon_Fun" parent="." instance=ExtResource("5_ar25m")]
 position = Vector2(447, 426)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-
 [node name="Wind" parent="." instance=ExtResource("6_hnoq4")]
 position = Vector2(181, 136)
 
@@ -43,10 +39,12 @@ scale = Vector2(2, 2)
 position = Vector2(300, 420)
 custom_path = NodePath("Line2D")
 speed = 0.5
+type = 2
 
-[node name="Button" parent="Slide Path/PathFollow2D" index="0" instance=ExtResource("7_he7e6")]
+[node name="Button" parent="Slide Path/PathFollow2D" index="0" node_paths=PackedStringArray("slide_path") instance=ExtResource("7_he7e6")]
 position = Vector2(-7.62939e-06, 0)
 scale = Vector2(2, 2)
+slide_path = NodePath("../..")
 
 [node name="Line2D" type="Line2D" parent="Slide Path"]
 position = Vector2(1.52588e-05, 3.05176e-05)

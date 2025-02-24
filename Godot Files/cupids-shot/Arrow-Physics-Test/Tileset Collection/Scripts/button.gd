@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-
+@export var slide_path: Path2D
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
@@ -19,3 +19,4 @@ func _on_area_entered(area: Area2D) -> void:
 		
 		if (arrow_vector.dot(direction)/(arrow_vector.length()*direction.length()) >.5):
 			sprite.play("pressed")
+			slide_path.type = 3 #start slide path
