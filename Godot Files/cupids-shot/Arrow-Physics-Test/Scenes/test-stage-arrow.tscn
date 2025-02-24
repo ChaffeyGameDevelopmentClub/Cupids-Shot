@@ -4,15 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="4_wllj4"]
 [ext_resource type="PackedScene" uid="uid://bva5m4o7obgxu" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/balloon_fun.tscn" id="5_ar25m"]
 [ext_resource type="PackedScene" uid="uid://bhy1fo1jsmw3w" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/wind.tscn" id="6_hnoq4"]
-[ext_resource type="PackedScene" uid="uid://bkxxlunw45fvh" path="res://Arrow-Physics-Test/Scenes/arrow_launcher.tscn" id="7_7q27j"]
 [ext_resource type="PackedScene" uid="uid://csn0ivmt8rbn4" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/button.tscn" id="7_he7e6"]
+[ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://better_arrow_launcher.tscn" id="7_knp4c"]
 [ext_resource type="PackedScene" uid="uid://c1k75pfu4yjn8" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/slide_path.tscn" id="8_320vn"]
 
 [node name="Test-World" type="Node2D"]
-
-[node name="Arrow Launcher" parent="." instance=ExtResource("7_7q27j")]
-position = Vector2(438, 274)
-force_influence = 1
 
 [node name="Arrow" parent="." instance=ExtResource("2_8inbh")]
 position = Vector2(464, 332)
@@ -50,5 +46,8 @@ slide_path = NodePath("../..")
 position = Vector2(1.52588e-05, 3.05176e-05)
 points = PackedVector2Array(0, 0, 161, 0)
 width = 1.0
+
+[node name="better arrow launcher" parent="." instance=ExtResource("7_knp4c")]
+position = Vector2(427, 243)
 
 [editable path="Slide Path"]
