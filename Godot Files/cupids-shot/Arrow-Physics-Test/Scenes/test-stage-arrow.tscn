@@ -11,6 +11,7 @@
 [node name="Test-World" type="Node2D"]
 
 [node name="Arrow" parent="." instance=ExtResource("2_8inbh")]
+z_index = 1
 position = Vector2(464, 332)
 
 [node name="Special-tileSet" parent="." instance=ExtResource("4_wllj4")]

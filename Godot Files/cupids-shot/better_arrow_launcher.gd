@@ -42,6 +42,8 @@ func _input(event: InputEvent) -> void:
 		arrow._launch_arrow(new_vector*2)
 		var cameraTween:Tween = get_tree().create_tween()
 		cameraTween.tween_property(arrow.get_child(1), "position", Vector2(165, 0), .5)
+		var bowTween:Tween = get_tree().create_tween()
+		bowTween.tween_property(bow, "rotation", base_rotation, .5)
 		trajectory.clear_points()
 
 		
@@ -73,7 +75,7 @@ func _on_area_exited(area: Area2D) -> void:
 
 func update_trajectory(input:Vector2, delta:float):
 	var max_points = 300
-	var vel = input
+	var vel = input * 2
 	trajectory.clear_points()
 	var pos = Vector2.ZERO
 	for i in max_points:
