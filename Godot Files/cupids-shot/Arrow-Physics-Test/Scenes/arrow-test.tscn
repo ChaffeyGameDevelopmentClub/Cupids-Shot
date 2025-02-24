@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://8bqn2rmct5tn"]
+[gd_scene load_steps=6 format=3 uid="uid://8bqn2rmct5tn"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/Arrow.gd" id="1_2ukvh"]
 [ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_g1ey8"]
+
+[sub_resource type="Curve" id="Curve_k8hed"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.346667, 0.43956), 0.0, 0.0, 0, 0, Vector2(0.846667, 0), 0.0, 0.0, 0, 0, Vector2(0.973333, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_0g7iw"]
+curve = SubResource("Curve_k8hed")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4xass"]
+particle_flag_disable_z = true
+gravity = Vector3(-90, 0, 0)
+scale_min = 5.0
+scale_max = 5.0
+color = Color(0.882073, 0.759921, 0.792499, 1)
+alpha_curve = SubResource("CurveTexture_0g7iw")
 
 [node name="Arrow" type="Area2D" groups=["arrow"]]
 collision_layer = 3
@@ -9,6 +24,12 @@ priority = 1
 gravity = 1.0
 script = ExtResource("1_2ukvh")
 mass = 3.0
+
+[node name="Arrow Trail" type="GPUParticles2D" parent="."]
+position = Vector2(-116, 0)
+process_material = SubResource("ParticleProcessMaterial_4xass")
+trail_enabled = true
+trail_lifetime = 0.5
 
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
 position = Vector2(-53, 0)
