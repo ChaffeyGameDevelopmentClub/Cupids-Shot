@@ -40,8 +40,10 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_released("left_click"):
 		touch_down = false
 		arrow._launch_arrow(new_vector*2)
+		var cameraTween:Tween = get_tree().create_tween()
+		cameraTween.tween_property(arrow.get_child(1), "position", Vector2(165, 0), .5)
 		trajectory.clear_points()
-		arrow = null
+
 		
 	if event is InputEventMouseMotion and touch_down:
 		new_vector =  get_global_mouse_position() - global_position
@@ -61,6 +63,8 @@ func _on_area_entered(area: Area2D) -> void:
 		positionTween.tween_property(arrow, "global_position", global_position, 1)
 		var rotationTween:Tween = get_tree().create_tween()
 		rotationTween.tween_property(arrow, "rotation", base_rotation, 1)
+		var cameraTween:Tween = get_tree().create_tween()
+		cameraTween.tween_property(arrow.get_child(1), "position", Vector2(0,0), 1)
 
 
 func _on_area_exited(area: Area2D) -> void:

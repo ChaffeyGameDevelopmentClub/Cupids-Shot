@@ -13,6 +13,10 @@ position = Vector2(14.2097, 0)
 scale = Vector2(1.09028, 1.0625)
 polygon = PackedVector2Array(-8, -10, 8.97961, -1.88235, 8.97961, 0, 8.97961, 1.88235, -8, 10)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(165, 0)
+position_smoothing_enabled = true
+
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
 position = Vector2(-53, 0)
 scale = Vector2(1, 0.171875)
@@ -21,9 +25,5 @@ texture = ExtResource("2_g1ey8")
 [node name="Bounce Timer" type="Timer" parent="."]
 wait_time = 0.001
 one_shot = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(165, 0)
-position_smoothing_enabled = true
 
 [connection signal="timeout" from="Bounce Timer" to="." method="_on_bounce_timer_timeout"]

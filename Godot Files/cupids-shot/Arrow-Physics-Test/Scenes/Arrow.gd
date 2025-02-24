@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		if true_velocity.y<=0:
 			true_velocity +=  (arrow.gravity_direction * custom_gravity) * delta
 		var input_dir = Input.get_axis("ui_right", "ui_left")
-		true_velocity += input_dir * true_velocity.normalized().orthogonal()
+		true_velocity += input_dir * true_velocity.normalized().orthogonal() * 40 * delta
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle() 
 		
