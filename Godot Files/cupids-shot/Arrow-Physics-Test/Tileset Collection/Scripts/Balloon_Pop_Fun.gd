@@ -7,6 +7,7 @@ extends Area2D
 const CONFETTI_PARTICLES = preload("res://Sprites-And-Stuff/Scenes/Confetti/Confetti Particles.tscn")
 func BalloonPop() -> void:
 	balloon_normal.visible = false
+	AudioBus.play_sound("Balloon Pop")
 	balloon_popped.visible = true
 	balloon_popped.play("popped")
 	collision_shape_2d.queue_free()

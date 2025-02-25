@@ -1,13 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmvvkgep6rhlw"]
+[gd_scene load_steps=12 format=3 uid="uid://cmvvkgep6rhlw"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/glass_block.gd" id="1_rsq8c"]
+[ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_3n40q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bff2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa64s"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuaib"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8biw"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yfgl"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5bek"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ercg"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n683g"]
+atlas = ExtResource("2_3n40q")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i1y2h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa64s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuaib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8biw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yfgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5bek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ercg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n683g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Glass Block" type="Area2D"]
 script = ExtResource("1_rsq8c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5bff2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_i1y2h")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

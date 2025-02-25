@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://b5pd4ci5mcrhs"
-path="res://.godot/imported/Game BGM.wav-332932e7888b7f124d8319424fe6c96d.sample"
+uid="uid://bb847d6trhnkk"
+path="res://.godot/imported/You Lose.wav-4c00e75ff5607aae0a56611642b7128e.sample"
 
 [deps]
 
-source_file="res://Sound & Music/Game BGM.wav"
-dest_files=["res://.godot/imported/Game BGM.wav-332932e7888b7f124d8319424fe6c96d.sample"]
+source_file="res://Sound & Music/You Lose.wav"
+dest_files=["res://.godot/imported/You Lose.wav-4c00e75ff5607aae0a56611642b7128e.sample"]
 
 [params]
 

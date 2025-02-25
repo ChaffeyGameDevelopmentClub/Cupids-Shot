@@ -83,6 +83,7 @@ func Bounce_x() -> void:
 		bounce_timer.start()
 		true_velocity = true_velocity.bounce(Vector2(1,0))
 		position+=true_velocity.normalized()*25
+		AudioBus.play_sound("Arrow Ricochet")
 
 func Bounce_y() -> void:
 	if (!just_bounced):
@@ -90,6 +91,7 @@ func Bounce_y() -> void:
 		bounce_timer.start()
 		true_velocity = true_velocity.bounce(Vector2(0,1))
 		position+=true_velocity.normalized()*25
+		AudioBus.play_sound("Arrow Ricochet")
 
 
 func _on_bounce_timer_timeout() -> void:

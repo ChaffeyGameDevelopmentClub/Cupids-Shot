@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://b5pd4ci5mcrhs"
-path="res://.godot/imported/Game BGM.wav-332932e7888b7f124d8319424fe6c96d.sample"
+uid="uid://bx7l1li7ddaht"
+path="res://.godot/imported/Arrow Hit.wav-11cb3317d6922fe945d8c1cd3e684c43.sample"
 
 [deps]
 
-source_file="res://Sound & Music/Game BGM.wav"
-dest_files=["res://.godot/imported/Game BGM.wav-332932e7888b7f124d8319424fe6c96d.sample"]
+source_file="res://Sound & Music/Arrow Hit.wav"
+dest_files=["res://.godot/imported/Arrow Hit.wav-11cb3317d6922fe945d8c1cd3e684c43.sample"]
 
 [params]
 
