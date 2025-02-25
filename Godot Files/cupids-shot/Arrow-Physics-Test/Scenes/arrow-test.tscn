@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8bqn2rmct5tn"]
+[gd_scene load_steps=4 format=3 uid="uid://8bqn2rmct5tn"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/arrow.gd" id="1_v48jd"]
 [ext_resource type="Texture2D" uid="uid://bnqc2ns0h57t8" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/cupid shot arrow.png" id="2_iwkp1"]
+[ext_resource type="PackedScene" uid="uid://coduvyg4ug5p5" path="res://Arrow-Physics-Test/Scenes/ArrowTrail.tscn" id="3_duiqk"]
 
 [node name="Arrow" type="Node2D"]
 script = ExtResource("1_v48jd")
@@ -17,6 +18,9 @@ polygon = PackedVector2Array(-2.02673, -3.76471, 4.39364, -0.941176, 4.39364, 0.
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(165, 0)
 position_smoothing_enabled = true
+
+[node name="ArrowTrail" parent="." instance=ExtResource("3_duiqk")]
+position = Vector2(-17, 0)
 
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_iwkp1")
