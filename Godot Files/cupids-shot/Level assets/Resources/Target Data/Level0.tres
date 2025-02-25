@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://enbcjp7bb3tg"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_ho4qb"]
+[ext_resource type="Texture2D" uid="uid://duu3h04wqkjq5" path="res://Sprites-And-Stuff/Sprites/clouds.png" id="2_p3nke"]
+
+[resource]
+script = ExtResource("1_ho4qb")
+target_name = "Balloon"
+target_image = ExtResource("2_p3nke")
+target_description = "Free clouds."
