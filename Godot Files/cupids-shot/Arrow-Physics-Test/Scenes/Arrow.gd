@@ -8,6 +8,7 @@ extends Node2D
 
 
 
+
 #Lol what do you think this is for
 var true_velocity = Vector2(0,0)
 @export var custom_gravity : float = 40

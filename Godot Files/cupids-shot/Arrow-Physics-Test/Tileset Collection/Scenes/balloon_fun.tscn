@@ -1,21 +1,86 @@
-[gd_scene load_steps=4 format=3 uid="uid://bva5m4o7obgxu"]
+[gd_scene load_steps=13 format=3 uid="uid://bva5m4o7obgxu"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/Balloon_Pop_Fun.gd" id="1_yn8cr"]
 [ext_resource type="Texture2D" uid="uid://fbhcvfuunr04" path="res://Arrow-Physics-Test/Temporary Assets/Balloon.png" id="2_nxhyo"]
+[ext_resource type="Texture2D" uid="uid://beedkssgy8o1u" path="res://Sprites-And-Stuff/Sprites/Sprite-0001-Sheet-export.png" id="3_rr6sw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buogt"]
 radius = 8.0
 height = 22.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk50m"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikacy"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ton6s"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqmfm"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sobp7"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epaqv"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eeg0"]
+atlas = ExtResource("3_rr6sw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ejmd3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk50m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikacy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ton6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqmfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sobp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epaqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eeg0")
+}],
+"loop": true,
+"name": &"popped",
+"speed": 15.0
+}]
+
 [node name="Balloon_Fun" type="Area2D" groups=["Balloon"]]
 scale = Vector2(4, 4)
 script = ExtResource("1_yn8cr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Balloon Normal" type="Sprite2D" parent="."]
 position = Vector2(0, 4)
 texture = ExtResource("2_nxhyo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_buogt")
+
+[node name="BalloonPopped" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 4.25)
+sprite_frames = SubResource("SpriteFrames_ejmd3")
+animation = &"popped"
+frame_progress = 0.00488958
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
