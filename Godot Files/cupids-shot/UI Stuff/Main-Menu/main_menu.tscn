@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=10 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 [ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
-[ext_resource type="Texture2D" uid="uid://bf6xblgjmkslg" path="res://UI Stuff/UI-Assets/StartGameNeutral.png" id="3_ve14k"]
+[ext_resource type="Texture2D" uid="uid://xbjygtpxd5dl" path="res://UI Stuff/UI-Assets/CupidShotTitleScreenv2.png" id="3_qtjaa"]
+[ext_resource type="Texture2D" uid="uid://5yimmwtk1rh" path="res://UI Stuff/UI-Assets/StartGameNeutral.png" id="3_ve14k"]
 [ext_resource type="Texture2D" uid="uid://dqrqycd2ml61d" path="res://UI Stuff/UI-Assets/StartGamePress.png" id="4_sum63"]
 [ext_resource type="Texture2D" uid="uid://c7ib384jg2v2m" path="res://UI Stuff/UI-Assets/StartGameHover.png" id="5_8wvv7"]
-[ext_resource type="Texture2D" uid="uid://dfeuvfj06ebge" path="res://UI Stuff/UI-Assets/QuitNeutral.png" id="6_2cixy"]
+[ext_resource type="Texture2D" uid="uid://wvwj1x2pwl0y" path="res://UI Stuff/UI-Assets/QuitNeutral.png" id="6_2cixy"]
 [ext_resource type="Texture2D" uid="uid://8gef7bdhisy3" path="res://UI Stuff/UI-Assets/QuitPress.png" id="7_xf5km"]
 [ext_resource type="Texture2D" uid="uid://daygqcjfy3ugx" path="res://UI Stuff/UI-Assets/QuitHover.png" id="8_6ng6s"]
 
@@ -21,7 +22,7 @@ LevelSelectPackedScene = ExtResource("2_yjon0")
 LevelSelectContainer = NodePath("LevelSelectContainer")
 MenuContainer = NodePath("MenuContainer")
 BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
-TitleLabel = NodePath("MenuContainer/TitleMargin/TitleContainer/TitleLabel")
+TitleLabel = NodePath("")
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false
@@ -42,23 +43,22 @@ grow_vertical = 2
 
 [node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 32
+theme_override_constants/margin_top = 16
 
 [node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
 layout_mode = 2
 
-[node name="TitleLabel" type="Label" parent="MenuContainer/TitleMargin/TitleContainer"]
+[node name="TextureRect" type="TextureRect" parent="MenuContainer/TitleMargin/TitleContainer"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 67.0
+offset_bottom = 197.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 48
-text = "Cupids Shot"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("3_qtjaa")
+stretch_mode = 3
 
 [node name="SubtitleMarign" type="MarginContainer" parent="MenuContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 96
 
@@ -89,10 +89,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -50.5
-offset_right = 35.0
-offset_bottom = 50.5
+offset_left = -80.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 vertical = true
@@ -102,12 +102,14 @@ layout_mode = 2
 texture_normal = ExtResource("3_ve14k")
 texture_pressed = ExtResource("4_sum63")
 texture_hover = ExtResource("5_8wvv7")
+stretch_mode = 3
 
 [node name="Quit" type="TextureButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox"]
 layout_mode = 2
 texture_normal = ExtResource("6_2cixy")
 texture_pressed = ExtResource("7_xf5km")
 texture_hover = ExtResource("8_6ng6s")
+stretch_mode = 3
 
 [node name="LevelSelectContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -119,9 +121,12 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="FlowControlContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16

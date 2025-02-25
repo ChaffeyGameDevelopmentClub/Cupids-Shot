@@ -20,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(1, 0.721569, 1, 0.180392)
+color = Color(1, 0.721569, 1, 0.113725)
 
 [node name="MenuPanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -29,10 +29,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -121.0
-offset_right = 250.0
-offset_bottom = 121.0
+offset_left = -97.5
+offset_top = -50.5
+offset_right = 97.5
+offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -72,24 +72,28 @@ theme_override_constants/separation = 16
 layout_mode = 2
 
 [node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay"]
+custom_minimum_size = Vector2(98, 98)
 layout_mode = 2
 texture = ExtResource("2_ishhk")
+expand_mode = 1
 
 [node name="TestLvLButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay"]
-custom_minimum_size = Vector2(128, 40)
+custom_minimum_size = Vector2(98, 0)
 layout_mode = 2
 text = "Test Level"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="1stLvLDisplay" type="VBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 layout_mode = 2
 
-[node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/VBoxContainer"]
+[node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/1stLvLDisplay"]
+custom_minimum_size = Vector2(98, 98)
 layout_mode = 2
 texture = ExtResource("2_ishhk")
+expand_mode = 1
 
-[node name="LvL2Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/VBoxContainer"]
-custom_minimum_size = Vector2(128, 40)
+[node name="LvL1Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/1stLvLDisplay"]
+custom_minimum_size = Vector2(98, 0)
 layout_mode = 2
-text = "Level 2"
+text = "Level 1"
 
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay/TestLvLButton" to="." method="_on_test_lvl_button_pressed"]

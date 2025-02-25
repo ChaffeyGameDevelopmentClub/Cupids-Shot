@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvwj1x2pwl0y"
-path="res://.godot/imported/QuitNeutral.png-255f505c6882820d7a633f53155d2190.ctex"
+uid="uid://xbjygtpxd5dl"
+path="res://.godot/imported/CupidShotTitleScreenv2.png-e43c10056552552cf6342bdaedaeb59d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI Stuff/UI-Assets/QuitNeutral.png"
-dest_files=["res://.godot/imported/QuitNeutral.png-255f505c6882820d7a633f53155d2190.ctex"]
+source_file="res://UI Stuff/UI-Assets/CupidShotTitleScreenv2.png"
+dest_files=["res://.godot/imported/CupidShotTitleScreenv2.png-e43c10056552552cf6342bdaedaeb59d.ctex"]
 
 [params]
 
