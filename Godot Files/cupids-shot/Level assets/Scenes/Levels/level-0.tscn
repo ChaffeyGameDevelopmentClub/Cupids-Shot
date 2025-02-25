@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cdmofxvfpl6p1" path="res://Level assets/Scripts/level_background_lol.tscn" id="1_240nl"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="2_e7b8u"]
-[ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://better_arrow_launcher.tscn" id="3_mrfg5"]
+[ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="3_mrfg5"]
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="4_irx40"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="5_wisrf"]
 
@@ -32,32 +32,3 @@ offset_left = 393.0
 offset_top = 82.0
 offset_right = 393.0
 offset_bottom = 82.0
-
-[connection signal="area_entered" from="Special-tileSet/Balloon_Fun" to="Special-tileSet/Balloon_Fun" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23667" to="Special-tileSet/@Area2D@23667" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23668" to="Special-tileSet/@Area2D@23668" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23669" to="Special-tileSet/@Area2D@23669" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23670" to="Special-tileSet/@Area2D@23670" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23671" to="Special-tileSet/@Area2D@23671" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23672" to="Special-tileSet/@Area2D@23672" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23673" to="Special-tileSet/@Area2D@23673" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23674" to="Special-tileSet/@Area2D@23674" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23675" to="Special-tileSet/@Area2D@23675" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23676" to="Special-tileSet/@Area2D@23676" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23677" to="Special-tileSet/@Area2D@23677" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23678" to="Special-tileSet/@Area2D@23678" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23679" to="Special-tileSet/@Area2D@23679" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23680" to="Special-tileSet/@Area2D@23680" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23681" to="Special-tileSet/@Area2D@23681" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23682" to="Special-tileSet/@Area2D@23682" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23683" to="Special-tileSet/@Area2D@23683" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23684" to="Special-tileSet/@Area2D@23684" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23685" to="Special-tileSet/@Area2D@23685" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23686" to="Special-tileSet/@Area2D@23686" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23687" to="Special-tileSet/@Area2D@23687" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23688" to="Special-tileSet/@Area2D@23688" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23689" to="Special-tileSet/@Area2D@23689" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23690" to="Special-tileSet/@Area2D@23690" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23691" to="Special-tileSet/@Area2D@23691" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23692" to="Special-tileSet/@Area2D@23692" method="_on_area_entered"]
-[connection signal="area_entered" from="Special-tileSet/@Area2D@23693" to="Special-tileSet/@Area2D@23693" method="_on_area_entered"]

@@ -1,0 +1,130 @@
+[gd_scene load_steps=19 format=3 uid="uid://jaofwnyf0yhc"]
+
+[ext_resource type="Texture2D" uid="uid://coknsx74w7k3x" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/Cupid Shoot Sprite Sheet.png" id="1_3cei1"]
+[ext_resource type="Script" path="res://Levels/test levels/level_start_test.gd" id="1_tmqvh"]
+[ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="3_vvnfl"]
+[ext_resource type="Texture2D" uid="uid://c4y0a4c1ffgxy" path="res://Sprites-And-Stuff/Sprites/Cupid Shot aint no way dawg.png" id="4_1huik"]
+[ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/Cupid Shot You Win.png" id="5_pls8m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e0oy"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kkja"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tln3t"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxx77"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1twn"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tjxi"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glvmn"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu6wf"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0eak"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itmhd"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bmvc"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8knnv"]
+atlas = ExtResource("1_3cei1")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwq5s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e0oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kkja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tln3t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxx77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1twn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tjxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glvmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu6wf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0eak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itmhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bmvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8knnv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Level start test" type="Node2D" node_paths=PackedStringArray("main_camera")]
+script = ExtResource("1_tmqvh")
+main_camera = NodePath("Main Camera")
+
+[node name="Main Camera" type="Camera2D" parent="."]
+position = Vector2(163, 159)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(100, 157)
+sprite_frames = SubResource("SpriteFrames_cwq5s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Objective" parent="CanvasLayer" instance=ExtResource("3_vvnfl")]
+offset_left = 333.0
+offset_top = 60.0
+offset_right = 333.0
+offset_bottom = 60.0
+
+[node name="lose" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(320, 540)
+texture = ExtResource("4_1huik")
+
+[node name="win" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(320, 541)
+texture = ExtResource("5_pls8m")
