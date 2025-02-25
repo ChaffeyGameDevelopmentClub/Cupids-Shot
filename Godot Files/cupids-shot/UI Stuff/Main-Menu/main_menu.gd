@@ -9,6 +9,9 @@ extends Control
 @export var MenuContainer : MarginContainer
 @export var BackButton : Button
 
+# Music
+@export var MainMenuMusic : AudioStreamPlayer
+
 # Vars to designate 
 var levels_scene
 var sub_menu
@@ -54,3 +57,6 @@ func _setup_select():
 
 func _on_back_button_pressed() -> void:
 	_close_sub_menu()
+
+func _on_main_menu_music_finished() -> void:
+	MainMenuMusic.play()
