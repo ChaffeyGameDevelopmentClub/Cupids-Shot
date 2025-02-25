@@ -23,10 +23,15 @@ position = Vector2(96, 117)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Objective" parent="CanvasLayer" instance=ExtResource("5_wisrf")]
-offset_left = 352.0
-offset_top = 174.0
-offset_right = 352.0
-offset_bottom = 174.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 393.0
+offset_top = 82.0
+offset_right = 393.0
+offset_bottom = 82.0
 
 [connection signal="area_entered" from="Special-tileSet/Balloon_Fun" to="Special-tileSet/Balloon_Fun" method="_on_area_entered"]
 [connection signal="area_entered" from="Special-tileSet/@Area2D@100193" to="Special-tileSet/@Area2D@100193" method="_on_area_entered"]
