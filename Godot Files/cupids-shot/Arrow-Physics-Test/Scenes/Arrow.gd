@@ -8,8 +8,7 @@ extends Area2D
 @onready var tip: CollisionPolygon2D = $Tip
 @onready var bounce_timer: Timer = $"Bounce Timer"
 
-#Fun
-@onready var arrow_trail: GPUParticles2D = $"Arrow Trail"
+
 
 
 #Lol what do you think this is for
@@ -35,14 +34,10 @@ var directional_influence = .5
 var fuel : float = 100
 var boost :Vector2
 
-func _ready() -> void:
-	arrow_trail.emitting = false
-	pass
 
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
 	if arrowLaunched && !stuck:
-		arrow_trail.emitting = true
 		true_velocity +=  (gravity_direction * gravity)
 		var input_dir = Input.get_axis("ui_right", "ui_left")
 		true_velocity += input_dir * true_velocity.normalized().orthogonal() * 1.5
