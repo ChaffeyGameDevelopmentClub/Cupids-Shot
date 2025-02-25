@@ -7,6 +7,3 @@
 [node name="Slide Path" type="Path2D"]
 curve = SubResource("Curve2D_5pflr")
 script = ExtResource("1_cxnu5")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="."]
-rotates = false

@@ -68,10 +68,10 @@ func _on_area_entered(area: Area2D) -> void:
 		var cameraTween:Tween = get_tree().create_tween()
 		cameraTween.tween_property(arrow.get_child(1), "position", Vector2(0,0), 1)
 
-
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
 		arrow = null
+
 
 func update_trajectory(input:Vector2, delta:float):
 	var max_points = 300
