@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpaf8dhqipfy4"
-path="res://.godot/imported/CupidBallistaBow.png-befc998957677bec51b9bd38875c3f75.ctex"
+uid="uid://bl76fok1hcomd"
+path="res://.godot/imported/MALE NPC LOVE REACTION 5.png-f093110986b9affc18241141beb488df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arrow-Physics-Test/Tileset Collection/Sprites/CupidBallistaBow.png"
-dest_files=["res://.godot/imported/CupidBallistaBow.png-befc998957677bec51b9bd38875c3f75.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 5.png"
+dest_files=["res://.godot/imported/MALE NPC LOVE REACTION 5.png-f093110986b9affc18241141beb488df.ctex"]
 
 [params]
 

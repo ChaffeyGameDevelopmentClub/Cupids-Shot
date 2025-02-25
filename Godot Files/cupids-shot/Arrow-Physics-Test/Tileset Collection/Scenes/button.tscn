@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://csn0ivmt8rbn4"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/button.gd" id="1_yj1uy"]
-[ext_resource type="Texture2D" uid="uid://c3lpdpyj6ov8k" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/button-pressed.png" id="2_ulkqp"]
-[ext_resource type="Texture2D" uid="uid://bymbi8jwpkh3b" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/button-normal.png" id="3_vawlt"]
+[ext_resource type="Texture2D" uid="uid://c3lpdpyj6ov8k" path="res://Sprites-And-Stuff/Sprites/Special Tiles/button-pressed.png" id="2_ulkqp"]
+[ext_resource type="Texture2D" uid="uid://bymbi8jwpkh3b" path="res://Sprites-And-Stuff/Sprites/Special Tiles/button-normal.png" id="3_vawlt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj00e"]
 

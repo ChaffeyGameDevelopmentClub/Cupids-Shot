@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3kwmfx04osxw"
-path="res://.godot/imported/bouncy_tileset.png-de7b504bf73131fd77d73673ad65d42e.ctex"
+uid="uid://dq5s1ga0bk8ld"
+path="res://.godot/imported/MALE NPC LOVE REACTION 3.png-ba9e7bcc9e6463ef2c409525ef31376c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arrow-Physics-Test/Tileset Collection/Sprites/bouncy_tileset.png"
-dest_files=["res://.godot/imported/bouncy_tileset.png-de7b504bf73131fd77d73673ad65d42e.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 3.png"
+dest_files=["res://.godot/imported/MALE NPC LOVE REACTION 3.png-ba9e7bcc9e6463ef2c409525ef31376c.ctex"]
 
 [params]
 

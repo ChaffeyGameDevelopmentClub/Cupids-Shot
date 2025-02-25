@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duu3h04wqkjq5"
-path="res://.godot/imported/clouds.png-cc20b47564004ce85992c6828a7690da.ctex"
+uid="uid://fniuijhwtbid"
+path="res://.godot/imported/Cupid Shot NPC 2.png-340affdcaa41fc834437dc5042aa2273.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites-And-Stuff/Sprites/clouds.png"
-dest_files=["res://.godot/imported/clouds.png-cc20b47564004ce85992c6828a7690da.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 2.png"
+dest_files=["res://.godot/imported/Cupid Shot NPC 2.png-340affdcaa41fc834437dc5042aa2273.ctex"]
 
 [params]
 

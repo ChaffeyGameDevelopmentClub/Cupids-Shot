@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfnf4nwj33ypr"
-path="res://.godot/imported/Cupid Shot You Win.png-8a5e0301214ff7574fe91da13aed4ef8.ctex"
+uid="uid://d4l15hbd2umgi"
+path="res://.godot/imported/Bouncy Growth Example.png-0e79b10d2e70535be492c5c71577a12c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites-And-Stuff/Sprites/Cupid Shot You Win.png"
-dest_files=["res://.godot/imported/Cupid Shot You Win.png-8a5e0301214ff7574fe91da13aed4ef8.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/Tileset/Bouncy Growth Example.png"
+dest_files=["res://.godot/imported/Bouncy Growth Example.png-0e79b10d2e70535be492c5c71577a12c.ctex"]
 
 [params]
 

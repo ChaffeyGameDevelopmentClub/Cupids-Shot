@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0ob0b6ie4xkj"
-path="res://.godot/imported/CupidBallistaBase.png-587eb85aa9f4560d1017353a229ffd44.ctex"
+uid="uid://culje8jvckw6a"
+path="res://.godot/imported/light_gray_tile_tileset.png-b60ae77be13c4b2791544870b846739f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arrow-Physics-Test/Tileset Collection/Sprites/CupidBallistaBase.png"
-dest_files=["res://.godot/imported/CupidBallistaBase.png-587eb85aa9f4560d1017353a229ffd44.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/Tileset/light_gray_tile_tileset.png"
+dest_files=["res://.godot/imported/light_gray_tile_tileset.png-b60ae77be13c4b2791544870b846739f.ctex"]
 
 [params]
 

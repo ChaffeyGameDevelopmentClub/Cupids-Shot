@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beedkssgy8o1u"
-path="res://.godot/imported/Sprite-0001-Sheet-export.png-442fc62b1797d765646c329410732e44.ctex"
+uid="uid://dqpxcuyqvcx2g"
+path="res://.godot/imported/MALE NPC LOVE REACTION 2.png-57a61f02e641206cf035df0428d59f4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites-And-Stuff/Sprites/Sprite-0001-Sheet-export.png"
-dest_files=["res://.godot/imported/Sprite-0001-Sheet-export.png-442fc62b1797d765646c329410732e44.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 2.png"
+dest_files=["res://.godot/imported/MALE NPC LOVE REACTION 2.png-57a61f02e641206cf035df0428d59f4a.ctex"]
 
 [params]
 

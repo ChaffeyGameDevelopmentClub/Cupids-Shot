@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/Balloon_Pop_Fun.gd" id="1_yn8cr"]
 [ext_resource type="Texture2D" uid="uid://fbhcvfuunr04" path="res://Arrow-Physics-Test/Temporary Assets/Balloon.png" id="2_nxhyo"]
-[ext_resource type="Texture2D" uid="uid://beedkssgy8o1u" path="res://Sprites-And-Stuff/Sprites/Sprite-0001-Sheet-export.png" id="3_rr6sw"]
+[ext_resource type="Texture2D" uid="uid://beedkssgy8o1u" path="res://Sprites-And-Stuff/Sprites/Special Tiles/Sprite-0001-Sheet-export.png" id="3_rr6sw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buogt"]
 radius = 8.0

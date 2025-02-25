@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cokyhntufsxai"
-path="res://.godot/imported/Trajectory Line.png-4c0daa2609bf26dd195df2e523a585c5.ctex"
+uid="uid://bymbi8jwpkh3b"
+path="res://.godot/imported/button-normal.png-7baa34a763a7a5199f06455f65af3a63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arrow-Physics-Test/Tileset Collection/Sprites/Trajectory Line.png"
-dest_files=["res://.godot/imported/Trajectory Line.png-4c0daa2609bf26dd195df2e523a585c5.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/Special Tiles/button-normal.png"
+dest_files=["res://.godot/imported/button-normal.png-7baa34a763a7a5199f06455f65af3a63.ctex"]
 
 [params]
 

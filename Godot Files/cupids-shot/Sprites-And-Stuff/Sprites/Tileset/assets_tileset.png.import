@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnqc2ns0h57t8"
-path="res://.godot/imported/cupid shot arrow.png-4fe00e9014c087f8fd2a226093fcbaaa.ctex"
+uid="uid://ukhqhtofubfx"
+path="res://.godot/imported/assets_tileset.png-0dfa3ac24d68f803f57f5db24b4bbd4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arrow-Physics-Test/Tileset Collection/Sprites/cupid shot arrow.png"
-dest_files=["res://.godot/imported/cupid shot arrow.png-4fe00e9014c087f8fd2a226093fcbaaa.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/Tileset/assets_tileset.png"
+dest_files=["res://.godot/imported/assets_tileset.png-0dfa3ac24d68f803f57f5db24b4bbd4d.ctex"]
 
 [params]
 

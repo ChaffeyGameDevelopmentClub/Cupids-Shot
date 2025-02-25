@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpqrghmkh03a5"
-path="res://.godot/imported/looping skybox.png-d100f84c7f9beb2af3760b47b4a93910.ctex"
+uid="uid://c3lpdpyj6ov8k"
+path="res://.godot/imported/button-pressed.png-0cf84443dde35b840b07793569880238.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites-And-Stuff/Sprites/looping skybox.png"
-dest_files=["res://.godot/imported/looping skybox.png-d100f84c7f9beb2af3760b47b4a93910.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/Special Tiles/button-pressed.png"
+dest_files=["res://.godot/imported/button-pressed.png-0cf84443dde35b840b07793569880238.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cdmofxvfpl6p1"]
 
-[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/looping skybox.png" id="1_j2uky"]
+[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_j2uky"]
 [ext_resource type="Script" path="res://Level assets/Scenes/Backgrounds/level_background_lol.gd" id="1_q1gnn"]
-[ext_resource type="Texture2D" uid="uid://duu3h04wqkjq5" path="res://Sprites-And-Stuff/Sprites/clouds.png" id="2_qntcd"]
+[ext_resource type="Texture2D" uid="uid://duu3h04wqkjq5" path="res://Sprites-And-Stuff/Sprites/BG stuff/clouds.png" id="2_qntcd"]
 
 [sub_resource type="Animation" id="Animation_nbcfy"]
 resource_name = "RESET"

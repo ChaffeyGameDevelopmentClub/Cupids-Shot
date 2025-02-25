@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://8bqn2rmct5tn"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/arrow.gd" id="1_v48jd"]
-[ext_resource type="Texture2D" uid="uid://bnqc2ns0h57t8" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/cupid shot arrow.png" id="2_iwkp1"]
+[ext_resource type="Texture2D" uid="uid://bnqc2ns0h57t8" path="res://Sprites-And-Stuff/Sprites/cupid shot arrow.png" id="2_iwkp1"]
 [ext_resource type="PackedScene" uid="uid://coduvyg4ug5p5" path="res://Arrow-Physics-Test/Scenes/ArrowTrail.tscn" id="3_duiqk"]
 
 [node name="Arrow" type="Node2D"]

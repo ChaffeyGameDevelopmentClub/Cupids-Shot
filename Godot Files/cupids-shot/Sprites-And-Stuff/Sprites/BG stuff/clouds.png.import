@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coknsx74w7k3x"
-path="res://.godot/imported/Cupid Shoot Sprite Sheet.png-aadd64d90bcdd8114c0957060bacfc3e.ctex"
+uid="uid://duu3h04wqkjq5"
+path="res://.godot/imported/clouds.png-587d9a15c15684d30b7633053e84e17e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arrow-Physics-Test/Tileset Collection/Sprites/Cupid Shoot Sprite Sheet.png"
-dest_files=["res://.godot/imported/Cupid Shoot Sprite Sheet.png-aadd64d90bcdd8114c0957060bacfc3e.ctex"]
+source_file="res://Sprites-And-Stuff/Sprites/BG stuff/clouds.png"
+dest_files=["res://.godot/imported/clouds.png-587d9a15c15684d30b7633053e84e17e.ctex"]
 
 [params]
 
