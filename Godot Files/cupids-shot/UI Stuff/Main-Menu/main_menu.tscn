@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=14 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 [ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
-[ext_resource type="AudioStream" uid="uid://crrrirqrtca8x" path="res://Sound & Music/Game BGM.wav" id="3_qghdg"]
 [ext_resource type="Texture2D" uid="uid://xbjygtpxd5dl" path="res://UI Stuff/UI-Assets/CupidShotTitleScreenv2.png" id="3_qtjaa"]
 [ext_resource type="Texture2D" uid="uid://5yimmwtk1rh" path="res://UI Stuff/UI-Assets/StartGameNeutral.png" id="3_ve14k"]
 [ext_resource type="Texture2D" uid="uid://faxlexxlti53" path="res://UI Stuff/UI-Assets/StartGamePress.png" id="4_sum63"]
@@ -175,7 +174,7 @@ _data = {
 "RESET": SubResource("Animation_pn40o")
 }
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("LevelSelectContainer", "MenuContainer", "BackButton", "MainMenuMusic")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("LevelSelectContainer", "MenuContainer", "BackButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -187,16 +186,11 @@ LevelSelectPackedScene = ExtResource("2_yjon0")
 LevelSelectContainer = NodePath("LevelSelectContainer")
 MenuContainer = NodePath("MenuContainer")
 BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
-MainMenuMusic = NodePath("MainMenuMusic")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_fituc")
 }
-
-[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_qghdg")
-autoplay = true
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false
@@ -304,7 +298,6 @@ offset_right = 62.0
 grow_vertical = 0
 text = "Back"
 
-[connection signal="finished" from="MainMenuMusic" to="." method="_on_main_menu_music_finished"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="FlowControlContainer/FlowControl/BackButton" to="." method="_on_back_button_pressed"]
