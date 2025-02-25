@@ -20,6 +20,9 @@ tile_map_data = PackedByteArray("AABGACMAAAAAAAAAAQBGACIAAAAAAAAAAQBGACEAAAAAAAA
 [node name="Balloon_Fun" parent="." instance=ExtResource("5_ar25m")]
 position = Vector2(447, 426)
 
+[node name="Balloon_Fun2" parent="." instance=ExtResource("5_ar25m")]
+position = Vector2(656, 396)
+
 [node name="Wind" parent="." instance=ExtResource("6_hnoq4")]
 position = Vector2(181, 136)
 
