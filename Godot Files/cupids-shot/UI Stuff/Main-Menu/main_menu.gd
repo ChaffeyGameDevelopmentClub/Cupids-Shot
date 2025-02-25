@@ -9,18 +9,17 @@ extends Control
 @export var MenuContainer : MarginContainer
 @export var BackButton : Button
 
-# Label shit, might not need in the future anyways if we draw our logo
-@export var TitleLabel: Label
+# Music
+@export var MainMenuMusic : AudioStreamPlayer
 
 # Vars to designate 
 var levels_scene
 var sub_menu
+var animation_state_machine : AnimationNodeStateMachinePlayback
 
-func _ready() -> void:
+func _ready():
 	_setup_select()
-
-func _process(delta: float) -> void:
-	pass
+	$MenuAnimationPlayer.play("Intro")
 
 # Hotkey functionality
 func _input(event):
@@ -58,3 +57,6 @@ func _setup_select():
 
 func _on_back_button_pressed() -> void:
 	_close_sub_menu()
+
+func _on_main_menu_music_finished() -> void:
+	MainMenuMusic.play()

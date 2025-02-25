@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://w6p3knpnnear"]
+[gd_scene load_steps=2 format=3 uid="uid://w6p3knpnnear"]
 
 [ext_resource type="Script" path="res://UI Stuff/Level-Select/level_select_menu.gd" id="1_q81fv"]
-[ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_ishhk"]
 
 [node name="LevelSelectMenu" type="Control"]
 layout_mode = 3
@@ -38,7 +37,7 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MenuPanelContainer"]
 layout_mode = 2
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.701961)
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuPanelContainer"]
 layout_mode = 2
@@ -56,7 +55,7 @@ layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 12
 text = "Level Select"
 horizontal_alignment = 1
 
@@ -68,32 +67,42 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 16
 
-[node name="TestLvLDisplay" type="VBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="TestLvLButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "0"
 
-[node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay"]
-custom_minimum_size = Vector2(98, 98)
+[node name="LvL1Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("2_ishhk")
-expand_mode = 1
+theme_override_font_sizes/font_size = 12
+text = "1
+"
 
-[node name="TestLvLButton" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay"]
-custom_minimum_size = Vector2(98, 0)
+[node name="LvL2Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-text = "Test Level"
+theme_override_font_sizes/font_size = 12
+text = "2
+"
 
-[node name="1stLvLDisplay" type="VBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="LvL3Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "3"
 
-[node name="TestImage" type="TextureRect" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/1stLvLDisplay"]
-custom_minimum_size = Vector2(98, 98)
+[node name="LvL4Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("2_ishhk")
-expand_mode = 1
+theme_override_font_sizes/font_size = 12
+text = "4"
 
-[node name="LvL1Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/1stLvLDisplay"]
-custom_minimum_size = Vector2(98, 0)
+[node name="LvL5Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-text = "Level 1"
+theme_override_font_sizes/font_size = 12
+text = "5"
 
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLDisplay/TestLvLButton" to="." method="_on_test_lvl_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TestLvLButton" to="." method="_on_test_lvl_button_pressed"]
