@@ -66,7 +66,6 @@ animations = [{
 }]
 
 [node name="Balloon_Fun" type="Area2D" groups=["Balloon"]]
-scale = Vector2(4, 4)
 script = ExtResource("1_yn8cr")
 
 [node name="Balloon Normal" type="Sprite2D" parent="."]

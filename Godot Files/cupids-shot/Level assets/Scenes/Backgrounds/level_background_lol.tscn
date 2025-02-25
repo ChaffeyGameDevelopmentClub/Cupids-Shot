@@ -98,6 +98,7 @@ texture_repeat = 2
 offset_right = 643.0
 offset_bottom = 360.0
 texture = ExtResource("1_j2uky")
+stretch_mode = 6
 metadata/_edit_use_anchors_ = true
 
 [node name="Clouds" type="Sprite2D" parent="."]
