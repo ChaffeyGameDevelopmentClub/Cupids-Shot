@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdmofxvfpl6p1"]
+
+[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/looping skybox.png" id="1_j2uky"]
+[ext_resource type="Texture2D" uid="uid://duu3h04wqkjq5" path="res://Sprites-And-Stuff/Sprites/clouds.png" id="2_qntcd"]
+
+[node name="Level background lol" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+offset_right = 643.0
+offset_bottom = 360.0
+texture = ExtResource("1_j2uky")
+
+[node name="Clouds2" type="Sprite2D" parent="."]
+position = Vector2(567, 52)
+scale = Vector2(3.1372, 2.4375)
+texture = ExtResource("2_qntcd")
+
+[node name="Clouds3" type="Sprite2D" parent="."]
+position = Vector2(129, 93)
+scale = Vector2(3.1372, 2.4375)
+texture = ExtResource("2_qntcd")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(357, 98)
+scale = Vector2(2.84375, 2.5)
+texture = ExtResource("2_qntcd")
