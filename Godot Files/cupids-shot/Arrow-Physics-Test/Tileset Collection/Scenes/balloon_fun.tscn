@@ -1,9 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bva5m4o7obgxu"]
+[gd_scene load_steps=13 format=3 uid="uid://bva5m4o7obgxu"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/Balloon_Pop_Fun.gd" id="1_yn8cr"]
 [ext_resource type="Texture2D" uid="uid://fbhcvfuunr04" path="res://Arrow-Physics-Test/Temporary Assets/Balloon.png" id="2_nxhyo"]
 [ext_resource type="Texture2D" uid="uid://beedkssgy8o1u" path="res://Sprites-And-Stuff/Sprites/Sprite-0001-Sheet-export.png" id="3_rr6sw"]
-[ext_resource type="AudioStream" uid="uid://c63sspu1cwetk" path="res://Sound & Music/Balloon Pop.wav" id="4_6vha6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buogt"]
 radius = 8.0
@@ -82,8 +81,5 @@ position = Vector2(0, 4.25)
 sprite_frames = SubResource("SpriteFrames_ejmd3")
 animation = &"popped"
 frame_progress = 0.00488958
-
-[node name="BalloonPop" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_6vha6")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

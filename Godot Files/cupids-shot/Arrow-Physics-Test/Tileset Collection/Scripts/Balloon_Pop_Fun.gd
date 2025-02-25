@@ -1,13 +1,11 @@
 extends Area2D
-@onready var balloon_pop: AudioStreamPlayer = $BalloonPop
+
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 @onready var balloon_normal: Sprite2D = $"Balloon Normal"
 @onready var balloon_popped: AnimatedSprite2D = $BalloonPopped
 const CONFETTI_PARTICLES = preload("res://Sprites-And-Stuff/Scenes/Confetti/Confetti Particles.tscn")
 func BalloonPop() -> void:
-	balloon_pop.pitch_scale = randi_range(1,2)
-	balloon_pop.play()
 	balloon_normal.visible = false
 	balloon_popped.visible = true
 	balloon_popped.play("popped")
@@ -17,7 +15,6 @@ func BalloonPop() -> void:
 	get_parent().add_child(new_confetti_spawn)
 	await(balloon_popped.animation_looped)
 	balloon_popped.hide()
-	await(balloon_pop.finished)
 	queue_free()
 
 func _on_area_entered(area: Area2D) -> void:
