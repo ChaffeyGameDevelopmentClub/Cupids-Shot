@@ -12,15 +12,6 @@ var arrow = null
 
 @export var base_rotation = 0
 
-#This is not real maybe
-#Get the parent of the level, it might work per level but honestly I don't know, it might be better 
-#and optimal just to do
-#var current_level = get_parent(), but as it turns out it's always NULL
-#IDK WHY
-
-
-@onready var test_world: Node2D = $".."
-
 #Messing with the force
 var force = Vector2.ZERO
 @export var force_influence : int
@@ -48,7 +39,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_released("left_click"):
 		touch_down = false
 		force = Vector2(abs(new_vector.x) / force_influence, abs(new_vector.y) /force_influence)
-		test_world._launch(new_vector*force)
+		arrow._launch_arrow(new_vector*force)
 		queue_redraw()
 		
 		
@@ -59,23 +50,20 @@ func _input(event: InputEvent) -> void:
 			new_vector = new_vector.normalized()*maximum_length
 		queue_redraw()
 
-#Follows the arrow while bouncing
-func _process(delta: float) -> void:
-	#arrow_location = test_world.get_arrow_location()
-	#position = arrow_location
-	pass
 	
 #Lets the input function happen
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("left_click"):
+		print("heuaoef")
 		touch_down = true
 		position_start = event.position
-	pass # Replace with function body.
 
 
 func _on_area_entered(area: Area2D) -> void:
+	print("area entered")
 	if area.is_in_group("arrow"):
-		arrow = area
+		arrow = area.get_parent()
+		print(arrow)
 		arrow.arrowLaunched = false
 		var positionTween:Tween = get_tree().create_tween()
 		positionTween.tween_property(arrow, "global_position", global_position, 1)

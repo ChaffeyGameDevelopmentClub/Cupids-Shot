@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 @onready var arrow: Area2D = $Arrow
 @onready var camera_2d: Camera2D = $Camera2D

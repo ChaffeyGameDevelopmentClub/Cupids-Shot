@@ -1,28 +1,28 @@
 [gd_scene load_steps=3 format=3 uid="uid://8bqn2rmct5tn"]
 
-[ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/Arrow.gd" id="1_2ukvh"]
-[ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_g1ey8"]
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Scenes/arrow.gd" id="1_v48jd"]
+[ext_resource type="Texture2D" uid="uid://bnqc2ns0h57t8" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/cupid shot arrow.png" id="2_iwkp1"]
 
-[node name="Arrow" type="Area2D" groups=["arrow"]]
-collision_layer = 3
-priority = 1
-gravity = 1.0
-script = ExtResource("1_2ukvh")
-mass = 3.0
+[node name="Arrow" type="Node2D"]
+script = ExtResource("1_v48jd")
+
+[node name="Area2D" type="Area2D" parent="." groups=["arrow"]]
+position = Vector2(5, 0)
+
+[node name="Tip" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(9, 0)
+scale = Vector2(1.09028, 1.0625)
+polygon = PackedVector2Array(-2.02673, -3.76471, 4.39364, -0.941176, 4.39364, 0.941176, -2.02673, 3.76471)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(165, 0)
+position_smoothing_enabled = true
 
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
-position = Vector2(-53, 0)
-scale = Vector2(1, 0.171875)
-texture = ExtResource("2_g1ey8")
-
-[node name="Tip" type="CollisionPolygon2D" parent="."]
-position = Vector2(14.2097, 0)
-scale = Vector2(1.09028, 1.0625)
-polygon = PackedVector2Array(-8, -10, 8.97961, -1.88235, 8.97961, 0, 8.97961, 1.88235, -8, 10)
+texture = ExtResource("2_iwkp1")
 
 [node name="Bounce Timer" type="Timer" parent="."]
 wait_time = 0.001
 one_shot = true
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Bounce Timer" to="." method="_on_bounce_timer_timeout"]

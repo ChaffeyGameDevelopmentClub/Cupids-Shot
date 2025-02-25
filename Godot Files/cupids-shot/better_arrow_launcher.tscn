@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://br3bpyk2eu6wg"]
+
+[ext_resource type="Script" path="res://better_arrow_launcher.gd" id="1_jaibq"]
+[ext_resource type="Texture2D" uid="uid://c0ob0b6ie4xkj" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/CupidBallistaBase.png" id="2_3pqe6"]
+[ext_resource type="Texture2D" uid="uid://dpaf8dhqipfy4" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/CupidBallistaBow.png" id="3_l6ubh"]
+[ext_resource type="Texture2D" uid="uid://cokyhntufsxai" path="res://Arrow-Physics-Test/Tileset Collection/Sprites/Trajectory Line.png" id="4_d2nro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3lb5"]
+size = Vector2(200, 200)
+
+[node name="better arrow launcher" type="Area2D"]
+script = ExtResource("1_jaibq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i3lb5")
+
+[node name="Base" type="Sprite2D" parent="."]
+texture = ExtResource("2_3pqe6")
+
+[node name="Bow" type="Sprite2D" parent="."]
+texture = ExtResource("3_l6ubh")
+
+[node name="Line2D" type="Line2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("4_d2nro")
+texture_mode = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
