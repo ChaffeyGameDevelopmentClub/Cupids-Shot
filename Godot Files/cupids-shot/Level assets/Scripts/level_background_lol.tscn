@@ -1,0 +1,121 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdmofxvfpl6p1"]
+
+[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/looping skybox.png" id="1_j2uky"]
+[ext_resource type="Script" path="res://Level assets/Scenes/Backgrounds/level_background_lol.gd" id="1_q1gnn"]
+[ext_resource type="Texture2D" uid="uid://duu3h04wqkjq5" path="res://Sprites-And-Stuff/Sprites/clouds.png" id="2_qntcd"]
+
+[sub_resource type="Animation" id="Animation_nbcfy"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clouds:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(711, 39)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clouds3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(802, 93)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clouds2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(673, 134)]
+}
+
+[sub_resource type="Animation" id="Animation_us0uj"]
+resource_name = "cloud move"
+length = 20.0
+step = 0.33
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clouds:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 16.6667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(711, 39), Vector2(-80, 39)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clouds3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 17.9867),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(802, 93), Vector2(-50, 93)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clouds2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 15.0167),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(673, 134), Vector2(-30, 134)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4x5nf"]
+_data = {
+"RESET": SubResource("Animation_nbcfy"),
+"cloud move": SubResource("Animation_us0uj")
+}
+
+[node name="GeneralBG" type="Node2D"]
+script = ExtResource("1_q1gnn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+offset_right = 643.0
+offset_bottom = 360.0
+texture = ExtResource("1_j2uky")
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Clouds" type="Sprite2D" parent="."]
+position = Vector2(711, 39)
+scale = Vector2(3.78125, 3.28125)
+texture = ExtResource("2_qntcd")
+
+[node name="Clouds2" type="Sprite2D" parent="."]
+position = Vector2(673, 134)
+texture = ExtResource("2_qntcd")
+
+[node name="Clouds3" type="Sprite2D" parent="."]
+position = Vector2(802, 93)
+scale = Vector2(3.3125, 2.3125)
+texture = ExtResource("2_qntcd")
+
+[node name="Cloud mover lol" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4x5nf")
+}
