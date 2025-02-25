@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cu1fepnu7er4n"]
+[gd_scene load_steps=7 format=4 uid="uid://cu1fepnu7er4n"]
 
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="2_8inbh"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="4_wllj4"]
@@ -6,15 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://csn0ivmt8rbn4" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/button.tscn" id="7_he7e6"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://better_arrow_launcher.tscn" id="7_knp4c"]
 [ext_resource type="PackedScene" uid="uid://c1k75pfu4yjn8" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/slide_path.tscn" id="8_320vn"]
-[ext_resource type="PackedScene" uid="uid://cfoh4qknguryk" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/bounce-block.tscn" id="8_pfmjh"]
 
 [node name="Test-World" type="Node2D"]
-
-[node name="Slide Path2_PathFollow2D#Bounce-block" parent="." instance=ExtResource("8_pfmjh")]
-
-[node name="Slide Path_PathFollow2D#Button" parent="." instance=ExtResource("7_he7e6")]
-position = Vector2(-7.62939e-06, 0)
-scale = Vector2(2, 2)
 
 [node name="Arrow" parent="." instance=ExtResource("2_8inbh")]
 z_index = 1
