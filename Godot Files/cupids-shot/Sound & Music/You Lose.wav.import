@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dkw77o2geio1r"
+path="res://.godot/imported/You Lose.wav-4c00e75ff5607aae0a56611642b7128e.sample"
+
+[deps]
+
+source_file="res://Sound & Music/You Lose.wav"
+dest_files=["res://.godot/imported/You Lose.wav-4c00e75ff5607aae0a56611642b7128e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

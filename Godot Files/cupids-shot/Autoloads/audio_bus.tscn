@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfdxgnjq7c776"]
+
+[ext_resource type="Script" path="res://Autoloads/audio_bus.gd" id="1_j713l"]
+
+[node name="AudioBus" type="Node"]
+script = ExtResource("1_j713l")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="Sound Effects" type="AudioStreamPlayer" parent="."]

@@ -31,6 +31,7 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("left_click"):
 		touch_down = true
+		AudioBus.play_sound("Arrow Charge")
 		
 	
 	if not touch_down:
