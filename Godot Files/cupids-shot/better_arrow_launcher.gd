@@ -46,17 +46,16 @@ func _input(event: InputEvent) -> void:
 		var bowTween:Tween = get_tree().create_tween()
 		bowTween.tween_property(bow, "rotation", base_rotation, .5)
 		trajectory.clear_points()
+		AudioBus.play_sound("Arrow Shoot")
+		arrow = null
 
-		
+
 	if event is InputEventMouseMotion and touch_down:
 		new_vector =  get_global_mouse_position() - global_position
 		if new_vector.length() > maximum_length:
 			new_vector = new_vector.normalized()*maximum_length
 		bow.rotation = new_vector.angle()
-
-		print(arrow.rotation)
 		arrow.rotation = bow.rotation
-
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
@@ -72,7 +71,6 @@ func _on_area_entered(area: Area2D) -> void:
 func _on_area_exited(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
 		arrow = null
-
 
 func update_trajectory(input:Vector2, delta:float):
 	var max_points = 300

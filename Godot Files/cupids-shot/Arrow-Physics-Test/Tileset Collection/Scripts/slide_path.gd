@@ -10,7 +10,6 @@ extends Path2D
 
 func _ready() -> void:
 	path.loop = type == 0
-	print(path)
 	var temp_curve = Curve2D.new()
 	for point in custom_path.points:
 		temp_curve.add_point(point)

@@ -33,3 +33,13 @@ func play_music(music:String):
 		music_bus.stop()
 		music_bus.stream = BGMusic
 		music_bus.play()
+
+
+func _on_music_finished() -> void:
+	music_bus.play()
+
+
+func _on_sound_effects_finished() -> void:
+	if sound_bus.stream == soundsList["Arrow Charge"] || sound_bus.stream == soundsList["Charge Loop"]:
+		sound_bus.stream = soundsList["Charge Loop"]
+		sound_bus.play()

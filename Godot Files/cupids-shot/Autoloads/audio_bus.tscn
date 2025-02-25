@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfdxgnjq7c776"]
+[gd_scene load_steps=3 format=3 uid="uid://bfdxgnjq7c776"]
 
 [ext_resource type="Script" path="res://Autoloads/audio_bus.gd" id="1_j713l"]
+[ext_resource type="AudioStream" uid="uid://b5pd4ci5mcrhs" path="res://Sound & Music/Game BGM.wav" id="2_xvvbm"]
 
 [node name="AudioBus" type="Node"]
 script = ExtResource("1_j713l")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xvvbm")
 autoplay = true
 
 [node name="Sound Effects" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="finished" from="Sound Effects" to="." method="_on_sound_effects_finished"]
