@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cu1fepnu7er4n"]
+[gd_scene load_steps=14 format=4 uid="uid://cu1fepnu7er4n"]
 
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="2_8inbh"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="4_wllj4"]
@@ -7,6 +7,36 @@
 [ext_resource type="PackedScene" uid="uid://csn0ivmt8rbn4" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/button.tscn" id="7_he7e6"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="7_knp4c"]
 [ext_resource type="PackedScene" uid="uid://c1k75pfu4yjn8" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/slide_path.tscn" id="8_320vn"]
+[ext_resource type="PackedScene" uid="uid://dtqgvxof5o0yq" path="res://Arrow-Physics-Test/npc.tscn" id="8_t355t"]
+[ext_resource type="Texture2D" uid="uid://fniuijhwtbid" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 2.png" id="9_urmj0"]
+[ext_resource type="Texture2D" uid="uid://dqpxcuyqvcx2g" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 2.png" id="10_82re4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnjm0"]
+atlas = ExtResource("9_urmj0")
+region = Rect2(0, 0, 60, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tiumm"]
+atlas = ExtResource("10_82re4")
+region = Rect2(0, 0, 60, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvicr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnjm0")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tiumm")
+}],
+"loop": true,
+"name": &"Love",
+"speed": 5.0
+}]
 
 [node name="Test-World" type="Node2D"]
 
@@ -61,3 +91,10 @@ width = 1.0
 
 [node name="Glass Block" parent="." instance=ExtResource("7_fhgi5")]
 position = Vector2(364, 415)
+
+[node name="NPC" parent="." instance=ExtResource("8_t355t")]
+position = Vector2(212, 364)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC"]
+sprite_frames = SubResource("SpriteFrames_dvicr")
+animation = &"Default"
