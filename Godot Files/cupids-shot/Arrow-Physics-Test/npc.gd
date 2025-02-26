@@ -10,15 +10,25 @@ func _ready() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("arrow"):
 		
+		var arrow = area.get_parent()
+		arrow.stuck = true
+		var posTween:Tween = get_tree().create_tween()
+		posTween.tween_property(arrow.get_child(1), "position", Vector2(0,0), 1)
+		
+		var volumeTween:Tween = get_tree().create_tween()
+		volumeTween.tween_property(AudioBus.music_bus, "volume_db", -20, 1.5)
+		
 		if isLover:
 			AudioBus.play_sound("Arrow Success")
 			sprite.play("Love")
+			await get_tree().create_timer(2.5).timeout 
 			WinLose.Win()
 			#Play love sound
 			#Put up win screen
 		else:
 			AudioBus.play_sound("Arrow Fail")
 			sprite.play("Love")
+			await get_tree().create_timer(2).timeout 
 			WinLose.Lose()
 			pass
 			#Play sad love sound
