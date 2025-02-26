@@ -118,6 +118,7 @@ offset_left = 333.0
 offset_top = 60.0
 offset_right = 333.0
 offset_bottom = 60.0
+metadata/_edit_use_anchors_ = true
 
 [node name="lose" type="Sprite2D" parent="CanvasLayer"]
 visible = false

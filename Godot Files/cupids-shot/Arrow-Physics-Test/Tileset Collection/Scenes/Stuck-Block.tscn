@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://6d0iaxxvf0eo"]
+[gd_scene load_steps=3 format=3 uid="uid://6d0iaxxvf0eo"]
+
+[ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/stuck_block.gd" id="1_b6uew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3he7a"]
 
 [node name="Stuck-block" type="Area2D"]
+script = ExtResource("1_b6uew")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3he7a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
