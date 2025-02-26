@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Autoloads/win_lose.gd" id="1_qvrry"]
 [ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="2_31prn"]
-[ext_resource type="PackedScene" uid="uid://cw4xypgf1bkvd" path="res://UI Stuff/lose_screen.tscn" id="4_4ex2x"]
-[ext_resource type="PackedScene" uid="uid://j42ahe46gfc2" path="res://UI Stuff/win_screen.tscn" id="5_lgucs"]
+[ext_resource type="PackedScene" uid="uid://bx3kbuec04eba" path="res://UI Stuff/lose_screen.tscn" id="4_4ex2x"]
+[ext_resource type="PackedScene" uid="uid://bulnsrkofmk5d" path="res://UI Stuff/win_screen.tscn" id="5_lgucs"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvqxp"]
 load_path = "res://.godot/imported/Cupid Shot aint no way dawg.png-dbd66250c8b9a3b49c178b178366d852.ctex"
