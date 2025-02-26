@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 AudioBus="*res://Autoloads/audio_bus.tscn"
 ScreenTransition="*res://Autoloads/screen_transition.tscn"
+WinLose="*res://Autoloads/Win_Lose.tscn"
 
 [display]
 
