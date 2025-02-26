@@ -114,4 +114,5 @@ animation = &"Idle"
 script = ExtResource("2_4xkle")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(173, 3.5)
+position = Vector2(46, 2)
+zoom = Vector2(3, 3)
