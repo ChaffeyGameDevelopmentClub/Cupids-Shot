@@ -35,7 +35,6 @@ func play_music(music:String):
 		music_bus.stream = BGMusic
 		music_bus.play()
 
-
 func _on_music_finished() -> void:
 	music_bus.play()
 
