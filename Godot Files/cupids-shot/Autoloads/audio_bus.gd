@@ -3,8 +3,10 @@ extends Node
 @onready var music_bus: AudioStreamPlayer = $Music
 @onready var sound_bus: AudioStreamPlayer = $"Sound Effects"
 
-var BGMusic = preload("res://Sound & Music/Game BGM.wav")
-var MenuMusic = preload("res://Sound & Music/Menu Theme.wav")
+var songsList:Dictionary = {
+	"BGM":preload("res://Sound & Music/Game BGM.wav"),
+	"Menu":preload("res://Sound & Music/Menu Theme.wav")
+}
 
 var soundsList:Dictionary = {
 	"Arrow Charge":preload("res://Sound & Music/Arrow Charge.wav"),
@@ -31,16 +33,20 @@ func play_sound(sound:String):
 		print("Sound not in soundslist")
 
 func play_music(music:String):
-	if music == "BGM":
+	if music in songsList:
 		music_bus.stop()
-		music_bus.stream = BGMusic
-		music_bus.play()
-	if music == "Menu":
-		music_bus.stop()
-		music_bus.stream = MenuMusic
+		music_bus.stream = songsList[music]
 		music_bus.play()
 
-func music_transition(volume:float, duration:float):
+func music_transition(volume:float, duration:float, music:String = ""):
+	if music!="":
+		if !(music in songsList):
+				print("this isnt a song bruh")
+				return
+		if music_bus.stream != songsList[music]:
+			music_bus.stop()
+			music_bus.stream = songsList[music]
+			music_bus.play()
 	var volumeTween = get_tree().create_tween()
 	volumeTween.tween_property(music_bus, "volume_db", volume, duration)
 

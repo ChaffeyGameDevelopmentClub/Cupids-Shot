@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dawjed135dtwu"]
+[gd_scene load_steps=24 format=4 uid="uid://dawjed135dtwu"]
 
 [ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_3tddy"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="1_50syp"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dqpxcuyqvcx2g" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 2.png" id="12_huo6g"]
 [ext_resource type="Texture2D" uid="uid://ceq0gvnqk4dv0" path="res://Sprites-And-Stuff/Sprites/NPCs/male npc.png" id="16_353b6"]
 [ext_resource type="Texture2D" uid="uid://bl76fok1hcomd" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 5.png" id="17_vkx55"]
+[ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="18_1p6cw"]
 
 [sub_resource type="Resource" id="Resource_u8vod"]
 script = ExtResource("4_6q3ej")
@@ -105,11 +106,10 @@ offset_right = 1.0
 offset_bottom = 1.0
 
 [node name="Objective" parent="CanvasLayer" instance=ExtResource("4_7iwek")]
-visible = false
 offset_left = 333.0
 offset_top = 60.0
-offset_right = 333.0
-offset_bottom = 60.0
+offset_right = -307.0
+offset_bottom = -300.0
 Target = SubResource("Resource_u8vod")
 metadata/_edit_use_anchors_ = true
 
@@ -164,3 +164,12 @@ sprite = NodePath("AnimatedSprite2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC3"]
 sprite_frames = SubResource("SpriteFrames_igr8i")
 animation = &"Default"
+
+[node name="Level Start" parent="." node_paths=PackedStringArray("main_cam", "cupid", "objective") instance=ExtResource("18_1p6cw")]
+main_cam = NodePath("../Cupid/Camera2D")
+zoomOutSize = Vector2(0.9, 0.9)
+zoomPosition = Vector2(374, 190)
+cupid = NodePath("../Cupid")
+objective = NodePath("../CanvasLayer/Objective")
+
+[editable path="Cupid"]
