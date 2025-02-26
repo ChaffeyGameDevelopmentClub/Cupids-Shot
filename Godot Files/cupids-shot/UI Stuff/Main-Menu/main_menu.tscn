@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=19 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 [ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://wvwj1x2pwl0y" path="res://UI Stuff/UI-Assets/QuitNeutral.png" id="6_2cixy"]
 [ext_resource type="Texture2D" uid="uid://c4rw2n4ckkffd" path="res://UI Stuff/UI-Assets/QuitPress.png" id="7_xf5km"]
 [ext_resource type="Texture2D" uid="uid://dtm6rdgoeiudo" path="res://UI Stuff/UI-Assets/QuitHover.png" id="8_6ng6s"]
+[ext_resource type="Texture2D" uid="uid://ngummjsqsl5n" path="res://UI Stuff/UI-Assets/Back Button Neutral.png" id="14_1l8jo"]
 
 [sub_resource type="Animation" id="Animation_y72rp"]
 resource_name = "Intro"
@@ -110,58 +111,46 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("FlowControlContainer/FlowControl/BackButton:visible")
+tracks/1/path = NodePath("FlowControlContainer:mouse_filter")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [2]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("FlowControlContainer:mouse_filter")
+tracks/2/path = NodePath("MenuContainer/TitleMargin:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("MenuContainer/TitleMargin:modulate")
+tracks/3/path = NodePath("BackgroundContainer:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("BackgroundContainer:position")
+tracks/4/path = NodePath("MenuContainer/PresentationMargin:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("MenuContainer/PresentationMargin:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -197,46 +186,34 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("FlowControlContainer/FlowControl/BackButton:visible")
+tracks/2/path = NodePath("FlowControlContainer:mouse_filter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [2]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("FlowControlContainer:mouse_filter")
+tracks/3/path = NodePath("BackgroundContainer:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
+"update": 0,
+"values": [Vector2(0, -360)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("BackgroundContainer:position")
+tracks/4/path = NodePath("MenuContainer/PresentationMargin:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -360)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("MenuContainer/PresentationMargin:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -407,16 +384,32 @@ theme_override_constants/margin_bottom = 16
 layout_mode = 2
 mouse_filter = 2
 
-[node name="BackButton" type="Button" parent="FlowControlContainer/FlowControl"]
+[node name="BackButton" type="TextureButton" parent="FlowControlContainer/FlowControl"]
 visible = false
-custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -32.0
-offset_right = 32.0
+offset_top = -40.0
+offset_right = 64.0
 grow_vertical = 0
+texture_normal = ExtResource("14_1l8jo")
+
+[node name="Label" type="Label" parent="FlowControlContainer/FlowControl/BackButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.0
+offset_right = 20.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Quit" to="." method="_on_quit_pressed"]

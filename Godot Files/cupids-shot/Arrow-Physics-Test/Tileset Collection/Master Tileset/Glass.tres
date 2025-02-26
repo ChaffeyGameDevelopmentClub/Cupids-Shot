@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://diw5u20q54jto"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://0ao3uroab0yy"]
 
 [ext_resource type="PackedScene" uid="uid://cmvvkgep6rhlw" path="res://Arrow-Physics-Test/Tileset Collection/Scenes/glass_block.tscn" id="1_30hkw"]
 

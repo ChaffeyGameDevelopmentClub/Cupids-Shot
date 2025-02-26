@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8uwf21io7rya"
-path="res://.godot/imported/Cupid Shot Restart Button.png-e417eb4980d595f36db1491a01f15319.ctex"
+uid="uid://cagk3t4hedcfq"
+path="res://.godot/imported/Cupid Shot Playbutton Neutral.png-d48e99bf9747f1242d3ae49af17053d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI Stuff/UI-Assets/Cupid Shot Restart Button.png"
-dest_files=["res://.godot/imported/Cupid Shot Restart Button.png-e417eb4980d595f36db1491a01f15319.ctex"]
+source_file="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Playbutton Neutral.png"
+dest_files=["res://.godot/imported/Cupid Shot Playbutton Neutral.png-d48e99bf9747f1242d3ae49af17053d0.ctex"]
 
 [params]
 

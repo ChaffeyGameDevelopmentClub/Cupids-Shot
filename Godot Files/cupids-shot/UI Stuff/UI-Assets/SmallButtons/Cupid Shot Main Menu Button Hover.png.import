@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1k18vk08buci"
-path="res://.godot/imported/OutlineTest.png-f0072b531d2a5101ed0f282605a79aa9.ctex"
+uid="uid://b7pf5jkiele6h"
+path="res://.godot/imported/Cupid Shot Main Menu Button Hover.png-219344bd8c293acbfe1a2bc9fb1036f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI Stuff/UI-Assets/OutlineTest.png"
-dest_files=["res://.godot/imported/OutlineTest.png-f0072b531d2a5101ed0f282605a79aa9.ctex"]
+source_file="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Main Menu Button Hover.png"
+dest_files=["res://.godot/imported/Cupid Shot Main Menu Button Hover.png-219344bd8c293acbfe1a2bc9fb1036f3.ctex"]
 
 [params]
 
