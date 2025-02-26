@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://dmyguh6q0kp50"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_75rmx"]
+[ext_resource type="Texture2D" uid="uid://dqwk71dx23o26" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 1.png" id="2_u3t0m"]
+
+[resource]
+script = ExtResource("1_75rmx")
+target_name = "Scibby"
+target_image = ExtResource("2_u3t0m")
+target_description = "Hit him again."
