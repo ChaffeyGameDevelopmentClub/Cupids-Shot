@@ -21,14 +21,14 @@ func _on_area_entered(area: Area2D) -> void:
 		if isLover:
 			AudioBus.play_sound("Arrow Success")
 			sprite.play("Love")
-			await get_tree().create_timer(2.5).timeout 
+			await get_tree().create_timer(4).timeout 
 			WinLose.Win()
 			#Play love sound
 			#Put up win screen
 		else:
 			AudioBus.play_sound("Arrow Fail")
 			sprite.play("Love")
-			await get_tree().create_timer(2).timeout 
+			await get_tree().create_timer(3).timeout 
 			WinLose.Lose()
 			pass
 			#Play sad love sound
