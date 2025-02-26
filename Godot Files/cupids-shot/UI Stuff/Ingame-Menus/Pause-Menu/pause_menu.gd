@@ -39,4 +39,4 @@ func _on_main_menu_button_pressed() -> void:
 	get_tree().paused = false
 	AudioServer.remove_bus_effect(0, 0)
 	AudioBus.play_sound("UI Short")
-	ScreenTransition.change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")
+	ScreenTransition.change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn", "Menu")
