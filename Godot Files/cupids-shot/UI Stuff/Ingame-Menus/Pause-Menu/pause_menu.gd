@@ -27,11 +27,13 @@ func _on_unpause_button_pressed() -> void:
 	menu_up = false
 
 func _on_restart_button_pressed() -> void:
+	PauseMenu.hide()
 	get_tree().paused = false
 	AudioServer.remove_bus_effect(0, 0)
-	get_tree().reload_current_scene()
+	ScreenTransition.reset_level()
 
 func _on_main_menu_button_pressed() -> void:
+	PauseMenu.hide()
 	get_tree().paused = false
 	AudioServer.remove_bus_effect(0, 0)
-	get_tree().change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")
+	ScreenTransition.change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")

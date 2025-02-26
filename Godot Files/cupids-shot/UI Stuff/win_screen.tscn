@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://j42ahe46gfc2"]
+
+[ext_resource type="Script" path="res://UI Stuff/win_screen.gd" id="1_wvml1"]
+[ext_resource type="StyleBox" uid="uid://dlwklp5jpks86" path="res://UI Stuff/Panel-Stuff/Panel_Theme.tres" id="2_itom0"]
+[ext_resource type="Texture2D" uid="uid://c73qvnfpyo4vn" path="res://UI Stuff/UI-Assets/Cupid Shot Main Menu.png" id="3_bk80s"]
+[ext_resource type="Texture2D" uid="uid://8uwf21io7rya" path="res://UI Stuff/UI-Assets/Cupid Shot Restart Button.png" id="4_ka0j2"]
+[ext_resource type="Texture2D" uid="uid://4krqin5qysx" path="res://UI Stuff/UI-Assets/Cupid Shot Playbutton.png" id="5_j82u8"]
+
+[node name="Win Screen" type="Control" node_paths=PackedStringArray("WinScreen")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wvml1")
+WinScreen = NodePath(".")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.721569, 1, 0)
+
+[node name="PauseMenuContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_itom0")
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenuContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+
+[node name="BoxContainer" type="BoxContainer" parent="PauseMenuContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+vertical = true
+
+[node name="TitleMargin" type="MarginContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/TitleMargin"]
+layout_mode = 2
+text = "You Won!"
+horizontal_alignment = 1
+
+[node name="ButtonsMargin" type="MarginContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
+custom_minimum_size = Vector2(68, 64)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MainMenuButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_bk80s")
+stretch_mode = 3
+
+[node name="MainMenuLabel" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Main Menu"
+horizontal_alignment = 1
+
+[node name="RestartContainer" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
+custom_minimum_size = Vector2(68, 64)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RestartButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_ka0j2")
+stretch_mode = 3
+
+[node name="RestartLabel" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Restart"
+horizontal_alignment = 1
+
+[node name="NextLevelContainer" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
+custom_minimum_size = Vector2(68, 64)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NextLevelButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_j82u8")
+stretch_mode = 3
+
+[node name="NextLevelLabel" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Next Level"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

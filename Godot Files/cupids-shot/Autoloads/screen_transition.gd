@@ -2,11 +2,24 @@ extends CanvasLayer
 
 @onready var transitioner: AnimationPlayer = $transitioner
 
+var levels:Array = ["res://Level assets/Scenes/Levels/level-0.tscn","res://Levels/Tutorial/Level 1.tscn"]
+var current_level = 1;
 
 func change_scene_to_file(target: String) -> void:
 	transitioner.play("Scene Change")
+	AudioBus.music_transition(-20, 1)
 	await transitioner.animation_finished
 	get_tree().change_scene_to_file(target)
 	transitioner.play_backwards("Scene Change")
+	AudioBus.music_transition(0, 1)
 	await transitioner.animation_finished
 	transitioner.play("RESET")
+
+func next_level():
+	if current_level<levels.size():
+		change_scene_to_file(levels[current_level+1])
+	else:
+		change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")
+
+func reset_level():
+	change_scene_to_file(levels[current_level])

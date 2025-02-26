@@ -35,9 +35,12 @@ func play_music(music:String):
 		music_bus.stream = BGMusic
 		music_bus.play()
 
+func music_transition(volume:float, duration:float):
+	var volumeTween = get_tree().create_tween()
+	volumeTween.tween_property(music_bus, "volume_db", volume, duration)
+
 func _on_music_finished() -> void:
 	music_bus.play()
-
 
 func _on_sound_effects_finished() -> void:
 	if sound_bus.stream == soundsList["Arrow Charge"] || sound_bus.stream == soundsList["Charge Loop"]:

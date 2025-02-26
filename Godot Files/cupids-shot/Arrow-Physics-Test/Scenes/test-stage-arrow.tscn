@@ -94,7 +94,6 @@ position = Vector2(364, 415)
 
 [node name="NPC" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_t355t")]
 position = Vector2(212, 364)
-isLover = true
 sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC"]

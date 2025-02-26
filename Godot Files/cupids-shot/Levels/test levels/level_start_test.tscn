@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://coknsx74w7k3x" path="res://Sprites-And-Stuff/Sprites/Cupid/Cupid Shoot Sprite Sheet.png" id="1_3cei1"]
 [ext_resource type="Script" path="res://Levels/test levels/level_start_test.gd" id="1_tmqvh"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="3_vvnfl"]
-[ext_resource type="Texture2D" uid="uid://c4y0a4c1ffgxy" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot aint no way dawg.png" id="4_1huik"]
 [ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="5_pls8m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6e0oy"]
@@ -98,6 +97,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvqxp"]
+load_path = "res://.godot/imported/Cupid Shot aint no way dawg.png-dbd66250c8b9a3b49c178b178366d852.ctex"
+
 [node name="Level start test" type="Node2D" node_paths=PackedStringArray("main_camera")]
 script = ExtResource("1_tmqvh")
 main_camera = NodePath("Main Camera")
@@ -123,7 +125,7 @@ metadata/_edit_use_anchors_ = true
 [node name="lose" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(320, 540)
-texture = ExtResource("4_1huik")
+texture = SubResource("CompressedTexture2D_rvqxp")
 
 [node name="win" type="Sprite2D" parent="CanvasLayer"]
 visible = false

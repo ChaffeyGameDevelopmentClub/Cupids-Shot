@@ -1,18 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://no1m3lhtg6ol"]
+[gd_scene load_steps=6 format=3 uid="uid://no1m3lhtg6ol"]
 
 [ext_resource type="Script" path="res://Autoloads/win_lose.gd" id="1_qvrry"]
 [ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="2_31prn"]
-[ext_resource type="Texture2D" uid="uid://c4y0a4c1ffgxy" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot aint no way dawg.png" id="3_tfcjp"]
+[ext_resource type="PackedScene" uid="uid://cw4xypgf1bkvd" path="res://UI Stuff/lose_screen.tscn" id="4_4ex2x"]
+[ext_resource type="PackedScene" uid="uid://j42ahe46gfc2" path="res://UI Stuff/win_screen.tscn" id="5_lgucs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvqxp"]
+load_path = "res://.godot/imported/Cupid Shot aint no way dawg.png-dbd66250c8b9a3b49c178b178366d852.ctex"
 
 [node name="WinLose" type="CanvasLayer"]
 script = ExtResource("1_qvrry")
 
 [node name="Win" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(320, 540)
 texture = ExtResource("2_31prn")
 
 [node name="Lose" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(320, 540)
-texture = ExtResource("3_tfcjp")
+texture = SubResource("CompressedTexture2D_rvqxp")
+
+[node name="Lose Screen" parent="." instance=ExtResource("4_4ex2x")]
+offset_top = 360.0
+offset_bottom = 360.0
+
+[node name="Win Screen" parent="." instance=ExtResource("5_lgucs")]
+offset_top = 360.0
+offset_bottom = 360.0

@@ -174,7 +174,7 @@ _data = {
 "RESET": SubResource("Animation_pn40o")
 }
 
-[node name="MainMenu" type="Control" node_paths=PackedStringArray("LevelSelectContainer", "MenuContainer", "BackButton", "MainMenuMusic")]
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("LevelSelectContainer", "MenuContainer", "BackButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -186,7 +186,6 @@ LevelSelectPackedScene = ExtResource("2_yjon0")
 LevelSelectContainer = NodePath("LevelSelectContainer")
 MenuContainer = NodePath("MenuContainer")
 BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
-MainMenuMusic = NodePath("")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
