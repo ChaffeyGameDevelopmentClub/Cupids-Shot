@@ -16,13 +16,32 @@ extends Control
 var levels_scene
 var sub_menu
 var animation_state_machine : AnimationNodeStateMachinePlayback
+var in_intro
 
 func _ready():
 	_setup_select()
+	in_intro = true
 	$MenuAnimationPlayer.play("Intro")
+
+# Animation Stuff
+func intro_done():
+	in_intro = false
+	$MenuAnimationPlayer.play("OpenMainMenu")
+
+func _event_is_mouse_button_released(event : InputEvent):
+	return event is InputEventMouseButton and not event.is_pressed()
+
+func _event_skips_intro(event : InputEvent):
+	return event.is_action_released("ui_accept") or \
+		event.is_action_released("ui_select") or \
+		event.is_action_released("ui_cancel") or \
+		_event_is_mouse_button_released(event)
 
 # Hotkey functionality
 func _input(event):
+	if in_intro and _event_skips_intro(event):
+		intro_done()
+		return
 	if event.is_action_released("ui_cancel"):
 		if sub_menu:
 			_close_sub_menu()
@@ -57,6 +76,3 @@ func _setup_select():
 
 func _on_back_button_pressed() -> void:
 	_close_sub_menu()
-
-func _on_main_menu_music_finished() -> void:
-	MainMenuMusic.play()

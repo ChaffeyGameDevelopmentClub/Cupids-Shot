@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://7ajl66fivs5q"]
+[gd_scene load_steps=7 format=4 uid="uid://7ajl66fivs5q"]
 
 [ext_resource type="PackedScene" uid="uid://cdmofxvfpl6p1" path="res://Level assets/Scripts/level_background_lol.tscn" id="1_240nl"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="2_e7b8u"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="3_mrfg5"]
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="4_irx40"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="5_wisrf"]
+[ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="6_185u1"]
 
 [node name="Level-0" type="Node2D"]
 
@@ -32,3 +33,5 @@ offset_left = 393.0
 offset_top = 82.0
 offset_right = 393.0
 offset_bottom = 82.0
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("6_185u1")]
