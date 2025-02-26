@@ -1,64 +1,63 @@
 [gd_scene load_steps=12 format=3 uid="uid://cmvvkgep6rhlw"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/glass_block.gd" id="1_rsq8c"]
-[ext_resource type="Texture2D" uid="uid://s2kabpsru1jw" path="res://icon.svg" id="2_3n40q"]
+[ext_resource type="Texture2D" uid="uid://dl3s7cm77stbf" path="res://Sprites-And-Stuff/Sprites/Special Tiles/glass breaking-Sheet.png" id="2_3yme5"]
+[ext_resource type="Texture2D" uid="uid://7h5wd007ncvp" path="res://Sprites-And-Stuff/Sprites/Tileset/city tileset simple.png" id="3_dvpdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bff2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xa64s"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_eiu1x"]
+atlas = ExtResource("2_3yme5")
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kuaib"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak8n3"]
+atlas = ExtResource("2_3yme5")
+region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8biw"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(64, 32, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5vap"]
+atlas = ExtResource("2_3yme5")
+region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1yfgl"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(64, 64, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcjus"]
+atlas = ExtResource("2_3yme5")
+region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a5bek"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(32, 64, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpnjf"]
+atlas = ExtResource("2_3yme5")
+region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ercg"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n683g"]
-atlas = ExtResource("2_3n40q")
-region = Rect2(0, 96, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6epes"]
+atlas = ExtResource("3_dvpdb")
+region = Rect2(160, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i1y2h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xa64s")
+"texture": SubResource("AtlasTexture_eiu1x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kuaib")
+"texture": SubResource("AtlasTexture_ak8n3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x8biw")
+"texture": SubResource("AtlasTexture_d5vap")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1yfgl")
+"texture": SubResource("AtlasTexture_vcjus")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a5bek")
+"texture": SubResource("AtlasTexture_qpnjf")
+}],
+"loop": false,
+"name": &"Break",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ercg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n683g")
+"texture": SubResource("AtlasTexture_6epes")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Default",
 "speed": 5.0
 }]
 
@@ -70,5 +69,6 @@ shape = SubResource("RectangleShape2D_5bff2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_i1y2h")
+animation = &"Break"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
