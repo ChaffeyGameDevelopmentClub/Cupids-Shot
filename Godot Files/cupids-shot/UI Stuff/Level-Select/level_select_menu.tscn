@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://w6p3knpnnear"]
+[gd_scene load_steps=5 format=3 uid="uid://w6p3knpnnear"]
 
 [ext_resource type="Script" path="res://UI Stuff/Level-Select/level_select_menu.gd" id="1_q81fv"]
 [ext_resource type="StyleBox" uid="uid://dlwklp5jpks86" path="res://UI Stuff/Panel-Stuff/Panel_Theme.tres" id="2_a6k88"]
+[ext_resource type="Texture2D" uid="uid://m7e8u4lueirn" path="res://UI Stuff/UI-Assets/SmallButtons/Level 1 Button Neutral.png" id="3_fei7b"]
+[ext_resource type="Texture2D" uid="uid://ba8bgtgjf7boi" path="res://UI Stuff/UI-Assets/SmallButtons/Level 2 Button Neutral.png" id="4_c8mqu"]
 
 [node name="LevelSelectMenu" type="Control"]
 layout_mode = 3
@@ -69,19 +71,13 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 16
 
-[node name="LvL1Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
-custom_minimum_size = Vector2(32, 32)
+[node name="LvL1Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "1
-"
+texture_normal = ExtResource("3_fei7b")
 
-[node name="LvL2Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
-custom_minimum_size = Vector2(32, 32)
+[node name="LvL2Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "2
-"
+texture_normal = ExtResource("4_c8mqu")
 
 [node name="LvL3Button" type="Button" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 custom_minimum_size = Vector2(32, 32)
@@ -102,7 +98,6 @@ theme_override_font_sizes/font_size = 12
 text = "5"
 
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL1Button" to="." method="_on_lv_l_1_button_pressed"]
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL2Button" to="." method="_on_lv_l_2_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL3Button" to="." method="_on_lv_l_3_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL4Button" to="." method="_on_lv_l_4_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL5Button" to="." method="_on_lv_l_5_button_pressed"]

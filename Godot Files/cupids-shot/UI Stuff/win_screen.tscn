@@ -1,12 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://j42ahe46gfc2"]
+[gd_scene load_steps=12 format=3 uid="uid://bulnsrkofmk5d"]
 
 [ext_resource type="Script" path="res://UI Stuff/win_screen.gd" id="1_wvml1"]
 [ext_resource type="StyleBox" uid="uid://dlwklp5jpks86" path="res://UI Stuff/Panel-Stuff/Panel_Theme.tres" id="2_itom0"]
-[ext_resource type="Texture2D" uid="uid://c73qvnfpyo4vn" path="res://UI Stuff/UI-Assets/Cupid Shot Main Menu.png" id="3_bk80s"]
-[ext_resource type="Texture2D" uid="uid://8uwf21io7rya" path="res://UI Stuff/UI-Assets/Cupid Shot Restart Button.png" id="4_ka0j2"]
-[ext_resource type="Texture2D" uid="uid://4krqin5qysx" path="res://UI Stuff/UI-Assets/Cupid Shot Playbutton.png" id="5_j82u8"]
+[ext_resource type="Texture2D" uid="uid://cw5vv441p1ehq" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Main Menu Button Neutral.png" id="3_ejgdi"]
+[ext_resource type="Texture2D" uid="uid://mr4e1ks07c62" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Main Menu Button Press.png" id="4_hrf4i"]
+[ext_resource type="Texture2D" uid="uid://b7pf5jkiele6h" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Main Menu Button Hover.png" id="5_pyl58"]
+[ext_resource type="Texture2D" uid="uid://2lw8wpestt5q" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Restart Button Neutral.png" id="6_hmit5"]
+[ext_resource type="Texture2D" uid="uid://dsi5k15dfpqfj" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Restart Button Pressed.png" id="7_dwwjc"]
+[ext_resource type="Texture2D" uid="uid://c2vrhmn0wopc6" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Restart Button Hover.png" id="8_igk3w"]
+[ext_resource type="Texture2D" uid="uid://cagk3t4hedcfq" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Playbutton Neutral.png" id="9_iikql"]
+[ext_resource type="Texture2D" uid="uid://q8v0jbfh4atm" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Playbutton Press.png" id="10_54uua"]
+[ext_resource type="Texture2D" uid="uid://bgdi05qpgild3" path="res://UI Stuff/UI-Assets/SmallButtons/Cupid Shot Playbutton Hover.png" id="11_wluf7"]
 
-[node name="Win Screen" type="Control" node_paths=PackedStringArray("WinScreen")]
+[node name="Win Screen" type="Control" node_paths=PackedStringArray("WinScreen", "ButtonDesc")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wvml1")
 WinScreen = NodePath(".")
+ButtonDesc = NodePath("PauseMenuContainer/MarginContainer/BoxContainer/ButtonDesc")
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
@@ -69,54 +76,37 @@ layout_mode = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="MainMenuContainer" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
-custom_minimum_size = Vector2(68, 64)
+[node name="MainMenuButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="MainMenuButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuContainer"]
-layout_mode = 2
-texture_normal = ExtResource("3_bk80s")
+texture_normal = ExtResource("3_ejgdi")
+texture_pressed = ExtResource("4_hrf4i")
+texture_hover = ExtResource("5_pyl58")
 stretch_mode = 3
 
-[node name="MainMenuLabel" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuContainer"]
+[node name="RestartButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Main Menu"
-horizontal_alignment = 1
-
-[node name="RestartContainer" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
-custom_minimum_size = Vector2(68, 64)
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="RestartButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartContainer"]
-layout_mode = 2
-texture_normal = ExtResource("4_ka0j2")
+texture_normal = ExtResource("6_hmit5")
+texture_pressed = ExtResource("7_dwwjc")
+texture_hover = ExtResource("8_igk3w")
 stretch_mode = 3
 
-[node name="RestartLabel" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartContainer"]
+[node name="NextLevelButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Restart"
-horizontal_alignment = 1
-
-[node name="NextLevelContainer" type="VBoxContainer" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer"]
-custom_minimum_size = Vector2(68, 64)
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="NextLevelButton" type="TextureButton" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelContainer"]
-layout_mode = 2
-texture_normal = ExtResource("5_j82u8")
+texture_normal = ExtResource("9_iikql")
+texture_pressed = ExtResource("10_54uua")
+texture_hover = ExtResource("11_wluf7")
 stretch_mode = 3
 
-[node name="NextLevelLabel" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelContainer"]
+[node name="ButtonDesc" type="Label" parent="PauseMenuContainer/MarginContainer/BoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "Next Level"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
-[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartContainer/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="mouse_entered" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_mouse_exited"]
+[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="mouse_entered" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartButton" to="." method="_on_restart_button_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartButton" to="." method="_on_restart_button_mouse_exited"]
+[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="mouse_entered" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_mouse_exited"]
+[connection signal="pressed" from="PauseMenuContainer/MarginContainer/BoxContainer/ButtonsMargin/HBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://q5uf2qadn8ka"]
+[gd_scene load_steps=23 format=4 uid="uid://5xusqjqmemkw"]
 
 [ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_kqa1o"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_1pul1"]
@@ -15,8 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://dqpxcuyqvcx2g" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 2.png" id="13_ibptk"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="14_pi8fs"]
 [ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="15_30mwu"]
-[ext_resource type="Resource" uid="uid://dmyguh6q0kp50" path="res://Level assets/Resources/Target Data/Level2.tres" id="16_hmi6e"]
+[ext_resource type="Resource" path="res://Level assets/Resources/Target Data/Level2.tres" id="16_hmi6e"]
 [ext_resource type="Texture2D" uid="uid://bdnscctxfia8" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot aint no way dawg.png" id="17_2o6al"]
+[ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="17_yq76h"]
 [ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="18_ot6yk"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="19_qfjid"]
 
@@ -165,6 +166,12 @@ offset_bottom = -320.0
 Target = SubResource("Resource_8qq7h")
 metadata/_edit_use_anchors_ = true
 
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("17_yq76h")]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
 [node name="lose" type="Sprite2D" parent="CanvasLayer"]
 visible = false
 position = Vector2(320, 540)
@@ -174,12 +181,3 @@ texture = ExtResource("17_2o6al")
 visible = false
 position = Vector2(320, 541)
 texture = ExtResource("18_ot6yk")
-
-[node name="Level Start" parent="." node_paths=PackedStringArray("main_cam", "cupid", "objective") instance=ExtResource("19_qfjid")]
-main_cam = NodePath("../Cupid/Camera2D")
-zoomOutSize = Vector2(0.75, 0.75)
-zoomPosition = Vector2(303, 186)
-cupid = NodePath("../Cupid")
-objective = NodePath("../CanvasLayer/Objective")
-
-[editable path="Cupid"]

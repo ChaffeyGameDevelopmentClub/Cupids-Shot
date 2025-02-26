@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://cahxdqaxgmy1c"]
+
+[ext_resource type="Script" path="res://Autoloads/screen_transition.gd" id="1_sbyp2"]
+
+[sub_resource type="Animation" id="Animation_o5ljy"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cp12u"]
+resource_name = "Scene Change"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_566bi"]
+resource_name = "Screen Change"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_od4iq"]
+_data = {
+"RESET": SubResource("Animation_o5ljy"),
+"Scene Change": SubResource("Animation_cp12u"),
+"Screen Change": SubResource("Animation_566bi")
+}
+
+[node name="Screen Transition" type="CanvasLayer"]
+script = ExtResource("1_sbyp2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="transitioner" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_od4iq")
+}
