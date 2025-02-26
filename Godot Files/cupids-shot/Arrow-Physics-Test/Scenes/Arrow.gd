@@ -4,32 +4,17 @@ extends Node2D
 
 #We're basically cheating by rotating the area 2d body to simulate arrow movement
 @onready var arrow: Area2D = $Area2D
+
 @onready var bounce_timer: Timer = $"Bounce Timer"
-
-
-
+var just_bounced:bool = false
 
 #Lol what do you think this is for
 var true_velocity = Vector2(0,0)
 @export var custom_gravity : float = 40
-var acceleration : Vector2
-
-
-var just_bounced:bool = false
 
 #Two states really - arrowAiming is going to be probably for aiming but right now we're just trying to get the physics right
 var arrowLaunched = false
-
-var gliding = false
-var pointing_to = Vector2.ZERO
-
 var stuck = false
-
-var directional_influence = .5
-
-#OK THIS MIGHT BE COOL
-var fuel : float = 100
-var boost :Vector2
 
 
 #Can work on the physics for this later, it's pretty weak feeling right now
