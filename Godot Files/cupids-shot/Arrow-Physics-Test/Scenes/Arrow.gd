@@ -19,6 +19,10 @@ var stuck = false
 
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
+	
+	if stuck:
+		WinLose.Lose()
+	
 	if arrowLaunched && !stuck:
 		
 		if true_velocity.y>=0:
