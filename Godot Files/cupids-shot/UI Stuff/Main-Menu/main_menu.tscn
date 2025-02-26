@@ -1,18 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=18 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 [ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
+[ext_resource type="Texture2D" uid="uid://tbwxbpggwf4e" path="res://UI Stuff/UI-Assets/MainMenuBackground/MAIN MENU BACKGROUND COLOR.png" id="3_4gorn"]
 [ext_resource type="Texture2D" uid="uid://xbjygtpxd5dl" path="res://UI Stuff/UI-Assets/CupidShotTitleScreenv2.png" id="3_qtjaa"]
 [ext_resource type="Texture2D" uid="uid://5yimmwtk1rh" path="res://UI Stuff/UI-Assets/StartGameNeutral.png" id="3_ve14k"]
+[ext_resource type="Texture2D" uid="uid://1mk2vx0c4poq" path="res://UI Stuff/UI-Assets/MainMenuBackground/LEFT SIDE CLOUD.png" id="4_ftt62"]
 [ext_resource type="Texture2D" uid="uid://faxlexxlti53" path="res://UI Stuff/UI-Assets/StartGamePress.png" id="4_sum63"]
 [ext_resource type="Texture2D" uid="uid://dp2it2lybo6qf" path="res://UI Stuff/UI-Assets/StartGameHover.png" id="5_8wvv7"]
+[ext_resource type="Texture2D" uid="uid://cppspal07upvu" path="res://UI Stuff/UI-Assets/MainMenuBackground/RIGHT SIDE CLOUD.png" id="5_v0fs7"]
+[ext_resource type="Texture2D" uid="uid://blbk57phruee1" path="res://UI Stuff/UI-Assets/MainMenuBackground/COLORFUL MIDDLE CLOUDS-export.png" id="6_0iny7"]
 [ext_resource type="Texture2D" uid="uid://wvwj1x2pwl0y" path="res://UI Stuff/UI-Assets/QuitNeutral.png" id="6_2cixy"]
 [ext_resource type="Texture2D" uid="uid://c4rw2n4ckkffd" path="res://UI Stuff/UI-Assets/QuitPress.png" id="7_xf5km"]
 [ext_resource type="Texture2D" uid="uid://dtm6rdgoeiudo" path="res://UI Stuff/UI-Assets/QuitHover.png" id="8_6ng6s"]
 
 [sub_resource type="Animation" id="Animation_y72rp"]
 resource_name = "Intro"
-length = 2.5
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -20,10 +24,10 @@ tracks/0/path = NodePath("MenuContainer/TitleMargin:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.933333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -32,7 +36,7 @@ tracks/1/path = NodePath("MenuContainer/MenuButtonsMargin:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.933333, 2),
+"times": PackedFloat32Array(0, 3, 4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -44,7 +48,7 @@ tracks/2/path = NodePath("FlowControlContainer:mouse_filter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 2]
@@ -56,12 +60,36 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(2.06667),
+"times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"intro_done"
 }]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BackgroundContainer:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -360), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuContainer/PresentationMargin:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_y66w7"]
@@ -115,6 +143,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BackgroundContainer:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuContainer/PresentationMargin:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_pn40o"]
 length = 0.001
@@ -166,6 +218,30 @@ tracks/3/keys = {
 "update": 1,
 "values": [2]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BackgroundContainer:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -360)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MenuContainer/PresentationMargin:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fituc"]
 _data = {
@@ -192,14 +268,38 @@ libraries = {
 "": SubResource("AnimationLibrary_fituc")
 }
 
-[node name="Background" type="TextureRect" parent="."]
-visible = false
+[node name="BackgroundContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -720.0
+offset_right = 320.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+
+[node name="TopClouds" type="MarginContainer" parent="BackgroundContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Sky" type="TextureRect" parent="BackgroundContainer/TopClouds"]
+layout_mode = 2
+texture = ExtResource("3_4gorn")
+
+[node name="LeftCloud" type="TextureRect" parent="BackgroundContainer/TopClouds"]
+layout_mode = 2
+texture = ExtResource("4_ftt62")
+
+[node name="RightCloud" type="TextureRect" parent="BackgroundContainer/TopClouds"]
+layout_mode = 2
+texture = ExtResource("5_v0fs7")
+
+[node name="FrontClouds" type="TextureRect" parent="BackgroundContainer"]
+layout_mode = 2
+texture = ExtResource("6_0iny7")
 
 [node name="MenuContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -209,9 +309,30 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="PresentationMargin" type="MarginContainer" parent="MenuContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MenuContainer/PresentationMargin"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuContainer/PresentationMargin/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Team 𝓵𝓮 𝓯𝓲𝓼𝓱𝓮 presents..."
+
 [node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
 layout_mode = 2
-theme_override_constants/margin_top = 16
+theme_override_constants/margin_top = -12
 
 [node name="TitleContainer" type="Control" parent="MenuContainer/TitleMargin"]
 layout_mode = 2

@@ -7,5 +7,5 @@ func _ready() -> void:
 	OpeningTimer.start()
 
 func _on_opening_timer_timeout() -> void:
-	AudioBus.play_music("BGM")
+	AudioBus.play_music("Menu")
 	get_tree().change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")
