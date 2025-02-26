@@ -20,7 +20,7 @@ func Win():
 	win.visible = true
 	var posTween:Tween = get_tree().create_tween()
 	posTween.tween_property(win, "position", Vector2(320, 198), 3)
-	lose_screen.visible = true
+	win_screen.visible = true
 	posTween.tween_property(win_screen, "position", Vector2(0,0), 1)
 
 func reset():

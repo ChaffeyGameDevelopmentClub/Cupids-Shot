@@ -4,6 +4,7 @@ extends Node
 @onready var sound_bus: AudioStreamPlayer = $"Sound Effects"
 
 var BGMusic = preload("res://Sound & Music/Game BGM.wav")
+var MenuMusic = preload("res://Sound & Music/Menu Theme.wav")
 
 var soundsList:Dictionary = {
 	"Arrow Charge":preload("res://Sound & Music/Arrow Charge.wav"),
@@ -33,6 +34,10 @@ func play_music(music:String):
 	if music == "BGM":
 		music_bus.stop()
 		music_bus.stream = BGMusic
+		music_bus.play()
+	if music == "Menu":
+		music_bus.stop()
+		music_bus.stream = MenuMusic
 		music_bus.play()
 
 func music_transition(volume:float, duration:float):
