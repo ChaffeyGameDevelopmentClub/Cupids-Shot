@@ -33,6 +33,7 @@ folder_colors={
 "res://Level assets/": "red",
 "res://Levels/": "teal",
 "res://Sprites-And-Stuff/": "green",
+"res://Touch ups/": "pink",
 "res://UI Stuff/": "blue"
 }
 

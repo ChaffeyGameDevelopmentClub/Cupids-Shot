@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfnv32c8gfuwl"]
+
+[ext_resource type="Shader" path="res://Touch ups/ANYTHING GOES/Clouds.gdshader" id="1_paca2"]
+[ext_resource type="Texture2D" uid="uid://ba2t1fke0xv26" path="res://Touch ups/ANYTHING GOES/true clouds.png" id="2_c1jh8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hpi44"]
+shader = ExtResource("1_paca2")
+shader_parameter/h_speed = 0.1
+
+[node name="Clouds" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hpi44")
+offset_left = 3.0
+offset_top = 8.0
+offset_right = 642.0
+offset_bottom = 40.0
+texture = ExtResource("2_c1jh8")
+stretch_mode = 1
