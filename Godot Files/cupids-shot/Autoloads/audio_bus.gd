@@ -7,7 +7,8 @@ var BGMusic = preload("res://Sound & Music/Game BGM.wav")
 
 var soundsList:Dictionary = {
 	"Arrow Charge":preload("res://Sound & Music/Arrow Charge.wav"),
-	"Arrow Hit":preload("res://Sound & Music/Arrow Hit.wav"),
+	"Arrow Fail":preload("res://Sound & Music/Arrow Fail.wav"),
+	"Arrow Success":preload("res://Sound & Music/Arrow Success.wav"),
 	"Arrow Ricochet":preload("res://Sound & Music/Arrow Ricochet.wav"),
 	"Arrow Shoot":preload("res://Sound & Music/Arrow Shoot.wav"),
 	"Balloon Pop":preload("res://Sound & Music/Balloon Pop.wav"),

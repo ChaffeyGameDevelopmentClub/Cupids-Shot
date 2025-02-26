@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bx7l1li7ddaht"
-path="res://.godot/imported/Arrow Hit.wav-11cb3317d6922fe945d8c1cd3e684c43.sample"
+path="res://.godot/imported/Arrow Success.wav-4047db64adb189617722e18b7c0c6b2f.sample"
 
 [deps]
 
-source_file="res://Sound & Music/Arrow Hit.wav"
-dest_files=["res://.godot/imported/Arrow Hit.wav-11cb3317d6922fe945d8c1cd3e684c43.sample"]
+source_file="res://Sound & Music/Arrow Success.wav"
+dest_files=["res://.godot/imported/Arrow Success.wav-4047db64adb189617722e18b7c0c6b2f.sample"]
 
 [params]
 
