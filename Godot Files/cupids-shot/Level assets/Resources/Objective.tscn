@@ -36,18 +36,18 @@ texture = ExtResource("2_7c371")
 
 [node name="Picture" type="TextureRect" parent="TextureRect"]
 layout_mode = 0
-offset_left = 120.5
-offset_top = 102.0
-offset_right = 160.5
-offset_bottom = 142.0
+offset_left = 114.0
+offset_top = 101.0
+offset_right = 154.0
+offset_bottom = 141.0
 texture = ExtResource("3_1egkw")
 
 [node name="Description" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 86.5
-offset_top = 149.0
-offset_right = 198.5
-offset_bottom = 172.0
+offset_left = 87.0
+offset_top = 163.0
+offset_right = 199.0
+offset_bottom = 186.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "LOL lets go kill"
 horizontal_alignment = 1

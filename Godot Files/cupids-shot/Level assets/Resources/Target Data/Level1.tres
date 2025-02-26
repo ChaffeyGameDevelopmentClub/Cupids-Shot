@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://b1dewu0f8y4j5"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_c68ab"]
+[ext_resource type="Texture2D" uid="uid://dqwk71dx23o26" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 1.png" id="2_hvl1y"]
+
+[resource]
+script = ExtResource("1_c68ab")
+target_name = "Skibby"
+target_image = ExtResource("2_hvl1y")
+target_description = "Loveless jerk."

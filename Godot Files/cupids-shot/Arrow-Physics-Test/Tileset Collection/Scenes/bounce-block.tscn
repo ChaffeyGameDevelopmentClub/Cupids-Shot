@@ -1,9 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cfoh4qknguryk"]
 
+[ext_resource type="Texture2D" uid="uid://b7gll0m3eoyae" path="res://Sprites-And-Stuff/Sprites/Tileset/bouncy_tileset.png" id="1_1yfcx"]
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/bounce_block_tileset.gd" id="1_hk1md"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hmlbv"]
-load_path = "res://.godot/imported/bouncy_tileset.png-de7b504bf73131fd77d73673ad65d42e.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seoay"]
 size = Vector2(16, 16)
@@ -12,7 +10,7 @@ size = Vector2(16, 16)
 scale = Vector2(4, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("CompressedTexture2D_hmlbv")
+texture = ExtResource("1_1yfcx")
 region_enabled = true
 region_rect = Rect2(48, 16, 16, 16)
 
