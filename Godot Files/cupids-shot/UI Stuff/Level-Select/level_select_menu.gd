@@ -11,7 +11,7 @@ extends Control
 func lvl_select_button_press(target: String, lvl: int):
 	AudioBus.play_sound("UI Long")
 	ScreenTransition.current_level = lvl
-	ScreenTransition.change_scene_to_file(target)
+	ScreenTransition.change_scene_to_file(target, "BGM")
 
 func _on_lv_l_1_button_pressed() -> void:
 	lvl_select_button_press(lvl1path, 1)

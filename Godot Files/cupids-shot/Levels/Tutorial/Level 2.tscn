@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://5xusqjqmemkw"]
+[gd_scene load_steps=22 format=4 uid="uid://5xusqjqmemkw"]
 
 [ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_kqa1o"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_1pul1"]
@@ -15,11 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://dqpxcuyqvcx2g" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 2.png" id="13_ibptk"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="14_pi8fs"]
 [ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="15_30mwu"]
-[ext_resource type="Resource" path="res://Level assets/Resources/Target Data/Level2.tres" id="16_hmi6e"]
-[ext_resource type="Texture2D" uid="uid://bdnscctxfia8" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot aint no way dawg.png" id="17_2o6al"]
+[ext_resource type="Resource" uid="uid://dmyguh6q0kp50" path="res://Level assets/Resources/Target Data/Level2.tres" id="16_hmi6e"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="17_yq76h"]
-[ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="18_ot6yk"]
-[ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="19_qfjid"]
+[ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="20_7jcbr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6w5rb"]
 animations = [{
@@ -125,35 +123,11 @@ animation = &"Love"
 flip_h = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_left = -321.0
-offset_top = -116.0
-offset_right = 4.0
-offset_bottom = 519.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 485.0
-offset_right = 1079.0
-offset_bottom = 734.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = -215.0
-offset_right = 1145.0
-offset_bottom = 133.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="ColorRect"]
-layout_mode = 0
-offset_left = 930.0
-offset_top = -203.0
-offset_right = 1279.0
-offset_bottom = 726.0
+z_index = -20
+offset_left = -623.0
+offset_top = -502.0
+offset_right = 1643.0
+offset_bottom = 921.0
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -172,12 +146,11 @@ offset_top = 1.0
 offset_right = 1.0
 offset_bottom = 1.0
 
-[node name="lose" type="Sprite2D" parent="CanvasLayer"]
-visible = false
-position = Vector2(320, 540)
-texture = ExtResource("17_2o6al")
+[node name="Level Start" parent="." node_paths=PackedStringArray("main_cam", "cupid", "objective") instance=ExtResource("20_7jcbr")]
+main_cam = NodePath("../Cupid/Camera2D")
+zoomOutSize = Vector2(0.9, 0.9)
+zoomPosition = Vector2(375, 200)
+cupid = NodePath("../Cupid")
+objective = NodePath("../CanvasLayer/Objective")
 
-[node name="win" type="Sprite2D" parent="CanvasLayer"]
-visible = false
-position = Vector2(320, 541)
-texture = ExtResource("18_ot6yk")
+[editable path="Cupid"]

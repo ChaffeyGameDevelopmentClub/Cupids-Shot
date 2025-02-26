@@ -98,6 +98,7 @@ theme_override_font_sizes/font_size = 12
 text = "5"
 
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL1Button" to="." method="_on_lv_l_1_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL2Button" to="." method="_on_lv_l_2_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL3Button" to="." method="_on_lv_l_3_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL4Button" to="." method="_on_lv_l_4_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL5Button" to="." method="_on_lv_l_5_button_pressed"]

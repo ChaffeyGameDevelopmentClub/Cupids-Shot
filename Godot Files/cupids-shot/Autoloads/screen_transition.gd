@@ -12,21 +12,13 @@ var levels:Array = [
 
 var current_level = 1;
 
-func change_scene_to_file(target: String) -> void:
-	AudioServer.remove_bus_effect(0, 0)
+func change_scene_to_file(target: String, music:String = "") -> void:
 	transitioner.play("Scene Change")
 	AudioBus.music_transition(-20, 1)
 	await transitioner.animation_finished
-	AudioBus.music_bus.stop()
 	get_tree().change_scene_to_file(target)
-	# Music change because I am smart -kev
-	if target == "res://UI Stuff/Main-Menu/main_menu.tscn":
-		AudioBus.play_music("Menu")
-	else:
-		AudioBus.play_music("BGM")
 	transitioner.play_backwards("Scene Change")
-	AudioBus.music_bus.play()
-	AudioBus.music_transition(0, 1)
+	AudioBus.music_transition(0, 1, music)
 	await transitioner.animation_finished
 	transitioner.play("RESET")
 
