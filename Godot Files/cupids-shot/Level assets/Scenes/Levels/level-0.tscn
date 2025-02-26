@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://7ajl66fivs5q"]
+[gd_scene load_steps=7 format=4 uid="uid://7ajl66fivs5q"]
 
 [ext_resource type="PackedScene" uid="uid://cdmofxvfpl6p1" path="res://Level assets/Scripts/level_background_lol.tscn" id="1_240nl"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="2_e7b8u"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="3_mrfg5"]
 [ext_resource type="PackedScene" uid="uid://8bqn2rmct5tn" path="res://Arrow-Physics-Test/Scenes/arrow-test.tscn" id="4_irx40"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="5_wisrf"]
+[ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="6_185u1"]
 
 [node name="Level-0" type="Node2D"]
 
@@ -32,3 +33,34 @@ offset_left = 393.0
 offset_top = 82.0
 offset_right = 393.0
 offset_bottom = 82.0
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("6_185u1")]
+
+[connection signal="area_entered" from="Special-tileSet/Balloon_Fun" to="Special-tileSet/Balloon_Fun" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247963" to="Special-tileSet/@Area2D@247963" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247964" to="Special-tileSet/@Area2D@247964" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247965" to="Special-tileSet/@Area2D@247965" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247966" to="Special-tileSet/@Area2D@247966" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247967" to="Special-tileSet/@Area2D@247967" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247968" to="Special-tileSet/@Area2D@247968" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247969" to="Special-tileSet/@Area2D@247969" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247970" to="Special-tileSet/@Area2D@247970" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247971" to="Special-tileSet/@Area2D@247971" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247972" to="Special-tileSet/@Area2D@247972" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247973" to="Special-tileSet/@Area2D@247973" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247974" to="Special-tileSet/@Area2D@247974" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247975" to="Special-tileSet/@Area2D@247975" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247976" to="Special-tileSet/@Area2D@247976" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247977" to="Special-tileSet/@Area2D@247977" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247978" to="Special-tileSet/@Area2D@247978" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247979" to="Special-tileSet/@Area2D@247979" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247980" to="Special-tileSet/@Area2D@247980" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247981" to="Special-tileSet/@Area2D@247981" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247982" to="Special-tileSet/@Area2D@247982" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247983" to="Special-tileSet/@Area2D@247983" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247984" to="Special-tileSet/@Area2D@247984" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247985" to="Special-tileSet/@Area2D@247985" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247986" to="Special-tileSet/@Area2D@247986" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247987" to="Special-tileSet/@Area2D@247987" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247988" to="Special-tileSet/@Area2D@247988" method="_on_area_entered"]
+[connection signal="area_entered" from="Special-tileSet/@Area2D@247989" to="Special-tileSet/@Area2D@247989" method="_on_area_entered"]

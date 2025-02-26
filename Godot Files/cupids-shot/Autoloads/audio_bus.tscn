@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://b5pd4ci5mcrhs" path="res://Sound & Music/Game BGM.wav" id="2_xvvbm"]
 
 [node name="AudioBus" type="Node"]
+process_mode = 3
 script = ExtResource("1_j713l")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]

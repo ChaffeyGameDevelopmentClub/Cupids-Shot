@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=14 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 [ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
-[ext_resource type="AudioStream" uid="uid://crrrirqrtca8x" path="res://Sound & Music/Game BGM.wav" id="3_qghdg"]
 [ext_resource type="Texture2D" uid="uid://xbjygtpxd5dl" path="res://UI Stuff/UI-Assets/CupidShotTitleScreenv2.png" id="3_qtjaa"]
 [ext_resource type="Texture2D" uid="uid://5yimmwtk1rh" path="res://UI Stuff/UI-Assets/StartGameNeutral.png" id="3_ve14k"]
 [ext_resource type="Texture2D" uid="uid://faxlexxlti53" path="res://UI Stuff/UI-Assets/StartGamePress.png" id="4_sum63"]
@@ -38,31 +37,31 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/2/type = "method"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath(".")
+tracks/2/path = NodePath("FlowControlContainer:mouse_filter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(2.5),
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.06667),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"intro_done"
 }]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("FlowControlContainer:mouse_filter")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 2]
 }
 
 [sub_resource type="Animation" id="Animation_y66w7"]
@@ -95,10 +94,22 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MenuContainer:modulate")
+tracks/2/path = NodePath("FlowControlContainer:mouse_filter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MenuContainer/TitleMargin:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -155,18 +166,6 @@ tracks/3/keys = {
 "update": 1,
 "values": [2]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("MenuContainer:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fituc"]
 _data = {
@@ -187,16 +186,12 @@ LevelSelectPackedScene = ExtResource("2_yjon0")
 LevelSelectContainer = NodePath("LevelSelectContainer")
 MenuContainer = NodePath("MenuContainer")
 BackButton = NodePath("FlowControlContainer/FlowControl/BackButton")
-MainMenuMusic = NodePath("MainMenuMusic")
+MainMenuMusic = NodePath("")
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_fituc")
 }
-
-[node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_qghdg")
-autoplay = true
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false
@@ -294,17 +289,15 @@ mouse_filter = 2
 
 [node name="BackButton" type="Button" parent="FlowControlContainer/FlowControl"]
 visible = false
-custom_minimum_size = Vector2(62, 40)
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 62.0
+offset_top = -32.0
+offset_right = 32.0
 grow_vertical = 0
-text = "Back"
 
-[connection signal="finished" from="MainMenuMusic" to="." method="_on_main_menu_music_finished"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBox/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="FlowControlContainer/FlowControl/BackButton" to="." method="_on_back_button_pressed"]
