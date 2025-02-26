@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=4 uid="uid://dju35fg1npimf"]
+
+[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_kct8l"]
+[ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_6kkht"]
+[ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="3_avshw"]
+[ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="4_nbmcp"]
+[ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="5_7q0lx"]
+
+[node name="Level5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(433, 196)
+scale = Vector2(3.48633, 3.36719)
+texture = ExtResource("1_kct8l")
+
+[node name="Cupid" parent="." instance=ExtResource("2_6kkht")]
+position = Vector2(236, 69)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAEAAAAAAAAAAYAAAAFAAAAAAACAAYAAAAGAAAAAAACAAYAAAAHAAAAAAACAAYAAAAHAP//AAABAAUAAAAIAAAAAAABAAYAAAAJAAAAAAACAAYAAAAKAAAAAAACAAYAAAALAAAAAAACAAYAAAAMAAAAAAABAAYAAAANAAAAAAABAAYAAAAOAAAAAAABAAYAAAAPAAAAAAABAAYAAAAQAAAAAAABAAYAAAARAAAAAAABAAYAAAASAAAAAAABAAYAAAATAAAAAAACAAYAAAAUAAAAAAACAAYAAAAVAAAAAAABAAYAAAAWAAAAAAACAAYAAAAXAAAAAAACAAYAAAAYAAAAAAAAAAYAAAAZAAAAAAAAAAYAAAAZAP//AAACAAUAAAAYAP//AAACAAUAAAAXAP//AAABAAUAAAAWAP//AAABAAUAAAAVAP//AAACAAUAAAAUAP//AAABAAUAAAATAP//AAACAAUAAAASAP//AAACAAUAAAARAP//AAACAAUAAAAQAP//AAACAAUAAAAPAP//AAABAAUAAAAOAP//AAACAAUAAAANAP//AAABAAUAAAAMAP//AAACAAUAAAALAP//AAACAAUAAAAKAP//AAACAAUAAAAJAP//AAACAAUAAAAIAP//AAABAAUAAAAGAP//AAAAAAUAAAAFAP//AAAAAAUAAAAEAP//AAAAAAUAAAA=")
+tile_set = ExtResource("3_avshw")
+
+[node name="Special-tileSet" parent="." instance=ExtResource("4_nbmcp")]
+tile_map_data = PackedByteArray("AAAAAAMAAAAAAAAAAQAAAAQAAAAAAAAAAQAAAAUAAAAAAAAAAQAAAAYAAAAAAAAAAQAAAAcAAAAAAAAAAQA=")
+
+[node name="better arrow launcher2" parent="." instance=ExtResource("5_7q0lx")]
+position = Vector2(468, 225)
+
+[node name="better arrow launcher3" parent="." instance=ExtResource("5_7q0lx")]
+position = Vector2(474, 672)
+
+[node name="better arrow launcher4" parent="." instance=ExtResource("5_7q0lx")]
+position = Vector2(697, -149)
+
+[editable path="Cupid"]
