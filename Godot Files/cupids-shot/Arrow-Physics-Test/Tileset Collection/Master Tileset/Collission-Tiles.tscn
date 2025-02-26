@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cidi1p8hxqgyp"]
+
+[ext_resource type="TileSet" uid="uid://bka1cdfdxh335" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/collission_tileset.tres" id="1_dgitq"]
+
+[node name="Collission-tiles" type="TileMapLayer"]
+tile_set = ExtResource("1_dgitq")
