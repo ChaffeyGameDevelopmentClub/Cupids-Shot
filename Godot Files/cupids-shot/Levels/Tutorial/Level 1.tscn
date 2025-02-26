@@ -1,108 +1,16 @@
-[gd_scene load_steps=21 format=4 uid="uid://dawjed135dtwu"]
+[gd_scene load_steps=7 format=4 uid="uid://dawjed135dtwu"]
 
+[ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="1_50syp"]
 [ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="1_lbkhx"]
-[ext_resource type="Script" path="res://Levels/test levels/level_start_test.gd" id="1_v8dqi"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="4_7iwek"]
 [ext_resource type="Texture2D" uid="uid://c4y0a4c1ffgxy" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot aint no way dawg.png" id="5_fa5n1"]
 [ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="6_anggr"]
-[ext_resource type="Texture2D" uid="uid://coknsx74w7k3x" path="res://Sprites-And-Stuff/Sprites/Cupid/Cupid Shoot Sprite Sheet.png" id="6_o0djj"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="7_wfgmp"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6e0oy"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(0, 0, 64, 64)
+[node name="Level1" type="Node2D"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0kkja"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tln3t"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxx77"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1twn"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4tjxi"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_glvmn"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hu6wf"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(192, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0eak"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(0, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_itmhd"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(64, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4bmvc"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(128, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8knnv"]
-atlas = ExtResource("6_o0djj")
-region = Rect2(192, 128, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_egwyn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6e0oy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0kkja")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tln3t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yxx77")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l1twn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4tjxi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_glvmn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hu6wf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x0eak")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_itmhd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4bmvc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8knnv")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[node name="Level1" type="Node2D" node_paths=PackedStringArray("main_camera")]
-script = ExtResource("1_v8dqi")
-main_camera = NodePath("Main Camera")
+[node name="Cupid" parent="." instance=ExtResource("1_50syp")]
+position = Vector2(56, 43)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAABMAAAAAAAUAAAAGABMAAAAAAAUAAAAPABMAAAAAAAUAAAAZABMAAAAAAAUAAAAcABMAAAAAAAUAAAACABMAAAABAAUAAAADABMAAAABAAUAAAAMABMAAAACAAUAAAALABMAAAACAAUAAAAKABMAAAABAAUAAAAIABMAAAACAAUAAAASABMAAAABAAUAAAATABMAAAAAAAUAAAAWABMAAAABAAUAAAAaABMAAAABAAUAAAAdABMAAAABAAUAAAAmABMAAAACAAUAAAAlABMAAAABAAUAAAAkABMAAAACAAUAAAAjABMAAAACAAUAAAAiABMAAAABAAUAAAAfABMAAAACAAUAAAAgABMAAAAAAAUAAAAnABMAAAACAAUAAAAhABMAAAACAAUAAAAeABMAAAACAAUAAAAbABMAAAACAAUAAAABABMAAAACAAUAAAAEABMAAAACAAUAAAAFABMAAAACAAUAAAAJABMAAAACAAUAAAAHABMAAAACAAUAAAAOABMAAAACAAUAAAAQABMAAAACAAUAAAAVABMAAAABAAUAAAAYABMAAAACAAUAAAANABMAAAABAAUAAAARABMAAAABAAUAAAAUABMAAAAAAAUAAAAXABMAAAABAAUAAAAAABQAAAABAAYAAAAJABQAAAABAAYAAAAKABQAAAABAAYAAAALABQAAAABAAYAAAALABUAAAABAAYAAAAMABUAAAAAAAYAAAANABUAAAAAAAYAAAAOABUAAAAAAAYAAAAPABUAAAAAAAYAAAAQABUAAAABAAYAAAARABUAAAABAAYAAAAYABUAAAABAAYAAAAZABUAAAAAAAYAAAAaABUAAAABAAYAAAAeABQAAAACAAYAAAAfABQAAAABAAYAAAAgABQAAAABAAYAAAAiABUAAAABAAYAAAAiABYAAAABAAYAAAAGABYAAAABAAYAAAAFABYAAAABAAYAAAAEABYAAAABAAYAAAADABYAAAACAAYAAAADABUAAAACAAYAAAAFABUAAAABAAYAAAAGABUAAAABAAYAAAAHABUAAAABAAYAAAAHABYAAAABAAYAAAAIABYAAAABAAYAAAATABYAAAACAAYAAAAUABYAAAABAAYAAAAVABYAAAABAAYAAAAWABUAAAABAAYAAAAmABYAAAABAAYAAAAnABYAAAABAAYAAAAnABUAAAABAAYAAAAnABQAAAABAAYAAAAAABYAAAAAAAYAAAAAABUAAAAAAAYAAAABABUAAAAAAAYAAAABABQAAAAAAAYAAAACABQAAAAAAAYAAAADABQAAAAAAAYAAAAEABQAAAAAAAYAAAAFABQAAAAAAAYAAAAGABQAAAAAAAYAAAAHABQAAAAAAAYAAAAIABQAAAAAAAYAAAAKABYAAAACAAYAAAALABYAAAAAAAYAAAAMABYAAAAAAAYAAAANABYAAAAAAAYAAAAPABQAAAAAAAYAAAAOABQAAAAAAAYAAAANABQAAAAAAAYAAAAMABQAAAAAAAYAAAAdABYAAAAAAAYAAAAeABYAAAAAAAYAAAAfABYAAAAAAAYAAAAgABYAAAAAAAYAAAAhABYAAAAAAAYAAAAjABUAAAAAAAYAAAAkABUAAAAAAAYAAAAkABQAAAAAAAYAAAAlABQAAAAAAAYAAAAlABUAAAAAAAYAAAABABYAAAABAAYAAAACABYAAAACAAYAAAACABUAAAABAAYAAAAIABUAAAACAAYAAAAJABUAAAACAAYAAAAJABYAAAACAAYAAAAKABUAAAACAAYAAAAEABUAAAACAAYAAAAPABYAAAACAAYAAAAOABYAAAACAAYAAAAQABYAAAACAAYAAAARABYAAAACAAYAAAASABYAAAACAAYAAAATABUAAAACAAYAAAASABUAAAACAAYAAAASABQAAAACAAYAAAARABQAAAACAAYAAAAQABQAAAACAAYAAAATABQAAAABAAYAAAAUABQAAAABAAYAAAAUABUAAAACAAYAAAAVABUAAAACAAYAAAAVABQAAAABAAYAAAAXABQAAAACAAYAAAAXABUAAAABAAYAAAAXABYAAAACAAYAAAAWABYAAAACAAYAAAAWABQAAAABAAYAAAAYABYAAAABAAYAAAAZABYAAAABAAYAAAAaABYAAAABAAYAAAAbABYAAAACAAYAAAAcABUAAAABAAYAAAAbABUAAAABAAYAAAAbABQAAAACAAYAAAAaABQAAAACAAYAAAAZABQAAAACAAYAAAAYABQAAAACAAYAAAAcABQAAAACAAYAAAAcABYAAAACAAYAAAAdABUAAAABAAYAAAAdABQAAAABAAYAAAAeABUAAAACAAYAAAAfABUAAAACAAYAAAAgABUAAAACAAYAAAAhABUAAAACAAYAAAAhABQAAAACAAYAAAAiABQAAAACAAYAAAAjABQAAAACAAYAAAAjABYAAAACAAYAAAAkABYAAAACAAYAAAAlABYAAAACAAYAAAAmABUAAAACAAYAAAAmABQAAAACAAYAAAA=")
@@ -128,12 +36,5 @@ visible = false
 position = Vector2(320, 541)
 texture = ExtResource("6_anggr")
 
-[node name="Main Camera" type="Camera2D" parent="."]
-position = Vector2(295, 202)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(60, 93)
-sprite_frames = SubResource("SpriteFrames_egwyn")
-
 [node name="better arrow launcher" parent="." instance=ExtResource("7_wfgmp")]
-position = Vector2(308, 161)
+position = Vector2(326, 127)
