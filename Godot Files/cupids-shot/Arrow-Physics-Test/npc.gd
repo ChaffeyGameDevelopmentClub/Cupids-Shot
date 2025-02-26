@@ -15,8 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 		var posTween:Tween = get_tree().create_tween()
 		posTween.tween_property(arrow.get_child(1), "position", Vector2(0,0), 1)
 		
-		var volumeTween:Tween = get_tree().create_tween()
-		volumeTween.tween_property(AudioBus.music_bus, "volume_db", -20, 1.5)
+		AudioBus.music_transition(-20, 1)
 		
 		if isLover:
 			AudioBus.play_sound("Arrow Success")
