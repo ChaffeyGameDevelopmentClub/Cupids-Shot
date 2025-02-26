@@ -64,6 +64,7 @@ func _close_sub_menu():
 	MenuContainer.show()
 
 func _on_start_game_pressed() -> void:
+	AudioBus.play_sound("UI Long")
 	_open_sub_menu(levels_scene)
 
 func _on_quit_pressed() -> void:
@@ -75,4 +76,5 @@ func _setup_select():
 	LevelSelectContainer.call_deferred("add_child", levels_scene)
 
 func _on_back_button_pressed() -> void:
+	AudioBus.play_sound("UI Short")
 	_close_sub_menu()

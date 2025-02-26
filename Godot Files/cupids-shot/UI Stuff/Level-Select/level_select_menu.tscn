@@ -11,7 +11,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q81fv")
-lvl1path = "res://Level assets/Scenes/Levels/level-0.tscn"
+lvl1path = "res://Levels/Tutorial/Level 1.tscn"
+lvl2path = "res://Levels/Tutorial/Level 2.tscn"
+lvl3path = "res://Levels/Tutorial/Level 3.tscn"
+lvl4path = "res://Levels/Tutorial/Level 4.tscn"
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1

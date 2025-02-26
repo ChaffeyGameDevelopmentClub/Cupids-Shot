@@ -23,6 +23,7 @@ func _input(event):
 func _on_unpause_button_pressed() -> void:
 	PauseMenu.hide()
 	AudioServer.remove_bus_effect(0, 0)
+	AudioBus.play_sound("UI Short")
 	get_tree().paused = false
 	menu_up = false
 
@@ -30,10 +31,12 @@ func _on_restart_button_pressed() -> void:
 	PauseMenu.hide()
 	get_tree().paused = false
 	AudioServer.remove_bus_effect(0, 0)
+	AudioBus.play_sound("UI Short")
 	ScreenTransition.reset_level()
 
 func _on_main_menu_button_pressed() -> void:
 	PauseMenu.hide()
 	get_tree().paused = false
 	AudioServer.remove_bus_effect(0, 0)
+	AudioBus.play_sound("UI Short")
 	ScreenTransition.change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")
