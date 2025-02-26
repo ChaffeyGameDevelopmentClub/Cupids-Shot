@@ -2,9 +2,12 @@ extends AnimatedSprite2D
 
 var arrow_resource = preload("res://Arrow-Physics-Test/Scenes/arrow-test.tscn")
 
+var shot = false
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click") && !shot:
+		shot = true
+		shoot_arrow()
 		pass
 		#shoot_arrow()
 

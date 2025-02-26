@@ -1,0 +1,406 @@
+[gd_scene load_steps=22 format=4 uid="uid://dawjed135dtwu"]
+
+[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_3tddy"]
+[ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="1_50syp"]
+[ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="1_lbkhx"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="4_6q3ej"]
+[ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="4_7iwek"]
+[ext_resource type="Texture2D" uid="uid://c4y0a4c1ffgxy" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot aint no way dawg.png" id="5_fa5n1"]
+[ext_resource type="Resource" uid="uid://b1dewu0f8y4j5" path="res://Level assets/Resources/Target Data/Level1.tres" id="5_svskq"]
+[ext_resource type="Texture2D" uid="uid://dfnf4nwj33ypr" path="res://Sprites-And-Stuff/Sprites/WinLose/Cupid Shot You Win.png" id="6_anggr"]
+[ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="7_cdxvb"]
+[ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="7_wfgmp"]
+[ext_resource type="PackedScene" uid="uid://dtqgvxof5o0yq" path="res://Arrow-Physics-Test/npc.tscn" id="8_owiu0"]
+[ext_resource type="Texture2D" uid="uid://dqwk71dx23o26" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 1.png" id="9_xskbk"]
+[ext_resource type="Texture2D" uid="uid://di5vuu3byqo2a" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 1.png" id="10_ccdc6"]
+[ext_resource type="Texture2D" uid="uid://fniuijhwtbid" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 2.png" id="11_v0bis"]
+[ext_resource type="Texture2D" uid="uid://dqpxcuyqvcx2g" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 2.png" id="12_huo6g"]
+[ext_resource type="Texture2D" uid="uid://ceq0gvnqk4dv0" path="res://Sprites-And-Stuff/Sprites/NPCs/male npc.png" id="16_353b6"]
+[ext_resource type="Texture2D" uid="uid://bl76fok1hcomd" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 5.png" id="17_vkx55"]
+
+[sub_resource type="Resource" id="Resource_u8vod"]
+script = ExtResource("4_6q3ej")
+target_name = ExtResource("5_svskq")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rvxvb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_xskbk")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ccdc6")
+}],
+"loop": true,
+"name": &"Love",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t86p4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_v0bis")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_huo6g")
+}],
+"loop": true,
+"name": &"Love",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igr8i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_353b6")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_vkx55")
+}],
+"loop": true,
+"name": &"Love",
+"speed": 5.0
+}]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320.5, 185)
+scale = Vector2(2.51953, 1.46094)
+texture = ExtResource("1_3tddy")
+
+[node name="Cupid" parent="." instance=ExtResource("1_50syp")]
+position = Vector2(56, 43)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAABMAAAAAAAUAAAAGABMAAAAAAAUAAAAPABMAAAAAAAUAAAAZABMAAAAAAAUAAAAcABMAAAAAAAUAAAACABMAAAABAAUAAAADABMAAAABAAUAAAAMABMAAAACAAUAAAALABMAAAACAAUAAAAKABMAAAABAAUAAAAIABMAAAACAAUAAAASABMAAAABAAUAAAATABMAAAAAAAUAAAAWABMAAAABAAUAAAAaABMAAAABAAUAAAAdABMAAAABAAUAAAAmABMAAAACAAUAAAAlABMAAAABAAUAAAAkABMAAAACAAUAAAAjABMAAAACAAUAAAAiABMAAAABAAUAAAAfABMAAAACAAUAAAAgABMAAAAAAAUAAAAnABMAAAACAAUAAAAhABMAAAACAAUAAAAeABMAAAACAAUAAAAbABMAAAACAAUAAAABABMAAAACAAUAAAAEABMAAAACAAUAAAAFABMAAAACAAUAAAAJABMAAAACAAUAAAAHABMAAAACAAUAAAAOABMAAAACAAUAAAAQABMAAAACAAUAAAAVABMAAAABAAUAAAAYABMAAAACAAUAAAANABMAAAABAAUAAAARABMAAAABAAUAAAAUABMAAAAAAAUAAAAXABMAAAABAAUAAAAAABQAAAABAAYAAAAJABQAAAABAAYAAAAKABQAAAABAAYAAAALABQAAAABAAYAAAALABUAAAABAAYAAAAMABUAAAAAAAYAAAANABUAAAAAAAYAAAAOABUAAAAAAAYAAAAPABUAAAAAAAYAAAAQABUAAAABAAYAAAARABUAAAABAAYAAAAYABUAAAABAAYAAAAZABUAAAAAAAYAAAAaABUAAAABAAYAAAAeABQAAAACAAYAAAAfABQAAAABAAYAAAAgABQAAAABAAYAAAAiABUAAAABAAYAAAAiABYAAAABAAYAAAAGABYAAAABAAYAAAAFABYAAAABAAYAAAAEABYAAAABAAYAAAADABYAAAACAAYAAAADABUAAAACAAYAAAAFABUAAAABAAYAAAAGABUAAAABAAYAAAAHABUAAAABAAYAAAAHABYAAAABAAYAAAAIABYAAAABAAYAAAATABYAAAACAAYAAAAUABYAAAABAAYAAAAVABYAAAABAAYAAAAWABUAAAABAAYAAAAmABYAAAABAAYAAAAnABYAAAABAAYAAAAnABUAAAABAAYAAAAnABQAAAABAAYAAAAAABYAAAAAAAYAAAAAABUAAAAAAAYAAAABABUAAAAAAAYAAAABABQAAAAAAAYAAAACABQAAAAAAAYAAAADABQAAAAAAAYAAAAEABQAAAAAAAYAAAAFABQAAAAAAAYAAAAGABQAAAAAAAYAAAAHABQAAAAAAAYAAAAIABQAAAAAAAYAAAAKABYAAAACAAYAAAALABYAAAAAAAYAAAAMABYAAAAAAAYAAAANABYAAAAAAAYAAAAPABQAAAAAAAYAAAAOABQAAAAAAAYAAAANABQAAAAAAAYAAAAMABQAAAAAAAYAAAAdABYAAAAAAAYAAAAeABYAAAAAAAYAAAAfABYAAAAAAAYAAAAgABYAAAAAAAYAAAAhABYAAAAAAAYAAAAjABUAAAAAAAYAAAAkABUAAAAAAAYAAAAkABQAAAAAAAYAAAAlABQAAAAAAAYAAAAlABUAAAAAAAYAAAABABYAAAABAAYAAAACABYAAAACAAYAAAACABUAAAABAAYAAAAIABUAAAACAAYAAAAJABUAAAACAAYAAAAJABYAAAACAAYAAAAKABUAAAACAAYAAAAEABUAAAACAAYAAAAPABYAAAACAAYAAAAOABYAAAACAAYAAAAQABYAAAACAAYAAAARABYAAAACAAYAAAASABYAAAACAAYAAAATABUAAAACAAYAAAASABUAAAACAAYAAAASABQAAAACAAYAAAARABQAAAACAAYAAAAQABQAAAACAAYAAAATABQAAAABAAYAAAAUABQAAAABAAYAAAAUABUAAAACAAYAAAAVABUAAAACAAYAAAAVABQAAAABAAYAAAAXABQAAAACAAYAAAAXABUAAAABAAYAAAAXABYAAAACAAYAAAAWABYAAAACAAYAAAAWABQAAAABAAYAAAAYABYAAAABAAYAAAAZABYAAAABAAYAAAAaABYAAAABAAYAAAAbABYAAAACAAYAAAAcABUAAAABAAYAAAAbABUAAAABAAYAAAAbABQAAAACAAYAAAAaABQAAAACAAYAAAAZABQAAAACAAYAAAAYABQAAAACAAYAAAAcABQAAAACAAYAAAAcABYAAAACAAYAAAAdABUAAAABAAYAAAAdABQAAAABAAYAAAAeABUAAAACAAYAAAAfABUAAAACAAYAAAAgABUAAAACAAYAAAAhABUAAAACAAYAAAAhABQAAAACAAYAAAAiABQAAAACAAYAAAAjABQAAAACAAYAAAAjABYAAAACAAYAAAAkABYAAAACAAYAAAAlABYAAAACAAYAAAAmABUAAAACAAYAAAAmABQAAAACAAYAAAA=")
+tile_set = ExtResource("1_lbkhx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Objective" parent="CanvasLayer" instance=ExtResource("4_7iwek")]
+visible = false
+offset_left = 333.0
+offset_top = 60.0
+offset_right = 333.0
+offset_bottom = 60.0
+Target = SubResource("Resource_u8vod")
+metadata/_edit_use_anchors_ = true
+
+[node name="lose" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(320, 540)
+texture = ExtResource("5_fa5n1")
+
+[node name="win" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(320, 541)
+texture = ExtResource("6_anggr")
+
+[node name="better arrow launcher" parent="." instance=ExtResource("7_wfgmp")]
+position = Vector2(326, 127)
+
+[node name="Collission-tiles" parent="." instance=ExtResource("7_cdxvb")]
+tile_map_data = PackedByteArray("AAAAABMAAAAAAAAAAQABABMAAAAAAAAAAQACABMAAAAAAAAAAQADABMAAAAAAAAAAQAEABMAAAAAAAAAAQAFABMAAAAAAAAAAQAGABMAAAAAAAAAAQAHABMAAAAAAAAAAQAIABMAAAAAAAAAAQAJABMAAAAAAAAAAQAKABMAAAAAAAAAAQALABMAAAAAAAAAAQAMABMAAAAAAAAAAQANABMAAAAAAAAAAQAOABMAAAAAAAAAAQAPABMAAAAAAAAAAQAQABMAAAAAAAAAAQARABMAAAAAAAAAAQASABMAAAAAAAAAAQATABMAAAAAAAAAAQAUABMAAAAAAAAAAQAVABMAAAAAAAAAAQAWABMAAAAAAAAAAQAXABMAAAAAAAAAAQAYABMAAAAAAAAAAQAZABMAAAAAAAAAAQAaABMAAAAAAAAAAQAbABMAAAAAAAAAAQAcABMAAAAAAAAAAQAdABMAAAAAAAAAAQAeABMAAAAAAAAAAQAfABMAAAAAAAAAAQAgABMAAAAAAAAAAQAhABMAAAAAAAAAAQAiABMAAAAAAAAAAQAjABMAAAAAAAAAAQAkABMAAAAAAAAAAQAlABMAAAAAAAAAAQAmABMAAAAAAAAAAQAnABMAAAAAAAAAAQD//xcAAAAAAAAAAQAAABcAAAAAAAAAAQABABcAAAAAAAAAAQACABcAAAAAAAAAAQADABcAAAAAAAAAAQAEABcAAAAAAAAAAQAFABcAAAAAAAAAAQAGABcAAAAAAAAAAQAHABcAAAAAAAAAAQAIABcAAAAAAAAAAQAJABcAAAAAAAAAAQAKABcAAAAAAAAAAQALABgAAAAAAAAAAQAMABgAAAAAAAAAAQANABgAAAAAAAAAAQAOABgAAAAAAAAAAQAPABgAAAAAAAAAAQAQABgAAAAAAAAAAQARABgAAAAAAAAAAQASABgAAAAAAAAAAQATABgAAAAAAAAAAQAUABgAAAAAAAAAAQAVABgAAAAAAAAAAQAWABgAAAAAAAAAAQAXABgAAAAAAAAAAQAYABgAAAAAAAAAAQAZABgAAAAAAAAAAQAaABgAAAAAAAAAAQAbABgAAAAAAAAAAQAcABgAAAAAAAAAAQAdABgAAAAAAAAAAQAeABgAAAAAAAAAAQAfABgAAAAAAAAAAQAgABgAAAAAAAAAAQAhABgAAAAAAAAA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")
+
+[node name="NPC" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_owiu0")]
+position = Vector2(463, 278)
+isLover = true
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC"]
+position = Vector2(2, -6)
+sprite_frames = SubResource("SpriteFrames_rvxvb")
+animation = &"Default"
+
+[node name="NPC2" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_owiu0")]
+position = Vector2(520, 280)
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC2"]
+position = Vector2(-2, -8)
+sprite_frames = SubResource("SpriteFrames_t86p4")
+animation = &"Default"
+flip_h = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -274.0
+offset_top = 358.0
+offset_right = 977.0
+offset_bottom = 796.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -268.0
+offset_top = -57.0
+offset_right = 1.0
+offset_bottom = 381.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 20.0
+offset_right = 1245.0
+offset_bottom = 496.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = -267.0
+offset_top = -305.0
+offset_right = 988.0
+offset_bottom = 8.0
+color = Color(0, 0, 0, 1)
+
+[node name="NPC3" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("8_owiu0")]
+position = Vector2(134, 271)
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC3"]
+sprite_frames = SubResource("SpriteFrames_igr8i")
+animation = &"Default"
+
+[connection signal="area_entered" from="Collission-tiles/Stuck-block" to="Collission-tiles/Stuck-block" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84561" to="Collission-tiles/@Area2D@84561" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84562" to="Collission-tiles/@Area2D@84562" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84563" to="Collission-tiles/@Area2D@84563" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84564" to="Collission-tiles/@Area2D@84564" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84565" to="Collission-tiles/@Area2D@84565" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84566" to="Collission-tiles/@Area2D@84566" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84567" to="Collission-tiles/@Area2D@84567" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84568" to="Collission-tiles/@Area2D@84568" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84569" to="Collission-tiles/@Area2D@84569" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84570" to="Collission-tiles/@Area2D@84570" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84571" to="Collission-tiles/@Area2D@84571" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84572" to="Collission-tiles/@Area2D@84572" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84573" to="Collission-tiles/@Area2D@84573" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84574" to="Collission-tiles/@Area2D@84574" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84575" to="Collission-tiles/@Area2D@84575" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84576" to="Collission-tiles/@Area2D@84576" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84577" to="Collission-tiles/@Area2D@84577" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84578" to="Collission-tiles/@Area2D@84578" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84579" to="Collission-tiles/@Area2D@84579" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84580" to="Collission-tiles/@Area2D@84580" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84581" to="Collission-tiles/@Area2D@84581" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84582" to="Collission-tiles/@Area2D@84582" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84583" to="Collission-tiles/@Area2D@84583" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84584" to="Collission-tiles/@Area2D@84584" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84585" to="Collission-tiles/@Area2D@84585" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84586" to="Collission-tiles/@Area2D@84586" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84587" to="Collission-tiles/@Area2D@84587" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84588" to="Collission-tiles/@Area2D@84588" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84589" to="Collission-tiles/@Area2D@84589" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84590" to="Collission-tiles/@Area2D@84590" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84591" to="Collission-tiles/@Area2D@84591" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84592" to="Collission-tiles/@Area2D@84592" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84593" to="Collission-tiles/@Area2D@84593" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84594" to="Collission-tiles/@Area2D@84594" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84595" to="Collission-tiles/@Area2D@84595" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84596" to="Collission-tiles/@Area2D@84596" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84597" to="Collission-tiles/@Area2D@84597" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84598" to="Collission-tiles/@Area2D@84598" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84599" to="Collission-tiles/@Area2D@84599" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84600" to="Collission-tiles/@Area2D@84600" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84601" to="Collission-tiles/@Area2D@84601" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84602" to="Collission-tiles/@Area2D@84602" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84603" to="Collission-tiles/@Area2D@84603" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84604" to="Collission-tiles/@Area2D@84604" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84605" to="Collission-tiles/@Area2D@84605" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84606" to="Collission-tiles/@Area2D@84606" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84607" to="Collission-tiles/@Area2D@84607" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84608" to="Collission-tiles/@Area2D@84608" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84609" to="Collission-tiles/@Area2D@84609" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84610" to="Collission-tiles/@Area2D@84610" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84611" to="Collission-tiles/@Area2D@84611" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84612" to="Collission-tiles/@Area2D@84612" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84613" to="Collission-tiles/@Area2D@84613" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84614" to="Collission-tiles/@Area2D@84614" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84615" to="Collission-tiles/@Area2D@84615" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84616" to="Collission-tiles/@Area2D@84616" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84617" to="Collission-tiles/@Area2D@84617" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84618" to="Collission-tiles/@Area2D@84618" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84619" to="Collission-tiles/@Area2D@84619" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84620" to="Collission-tiles/@Area2D@84620" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84621" to="Collission-tiles/@Area2D@84621" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84622" to="Collission-tiles/@Area2D@84622" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84623" to="Collission-tiles/@Area2D@84623" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84624" to="Collission-tiles/@Area2D@84624" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84625" to="Collission-tiles/@Area2D@84625" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84626" to="Collission-tiles/@Area2D@84626" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84627" to="Collission-tiles/@Area2D@84627" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84628" to="Collission-tiles/@Area2D@84628" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84629" to="Collission-tiles/@Area2D@84629" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84630" to="Collission-tiles/@Area2D@84630" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84631" to="Collission-tiles/@Area2D@84631" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84632" to="Collission-tiles/@Area2D@84632" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84633" to="Collission-tiles/@Area2D@84633" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84634" to="Collission-tiles/@Area2D@84634" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84635" to="Collission-tiles/@Area2D@84635" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84636" to="Collission-tiles/@Area2D@84636" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84637" to="Collission-tiles/@Area2D@84637" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84638" to="Collission-tiles/@Area2D@84638" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84639" to="Collission-tiles/@Area2D@84639" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84640" to="Collission-tiles/@Area2D@84640" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84641" to="Collission-tiles/@Area2D@84641" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84642" to="Collission-tiles/@Area2D@84642" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84643" to="Collission-tiles/@Area2D@84643" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84644" to="Collission-tiles/@Area2D@84644" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84645" to="Collission-tiles/@Area2D@84645" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84646" to="Collission-tiles/@Area2D@84646" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84647" to="Collission-tiles/@Area2D@84647" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84648" to="Collission-tiles/@Area2D@84648" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84649" to="Collission-tiles/@Area2D@84649" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84650" to="Collission-tiles/@Area2D@84650" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84651" to="Collission-tiles/@Area2D@84651" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84652" to="Collission-tiles/@Area2D@84652" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84653" to="Collission-tiles/@Area2D@84653" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84654" to="Collission-tiles/@Area2D@84654" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84655" to="Collission-tiles/@Area2D@84655" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84656" to="Collission-tiles/@Area2D@84656" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84657" to="Collission-tiles/@Area2D@84657" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84658" to="Collission-tiles/@Area2D@84658" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84659" to="Collission-tiles/@Area2D@84659" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84660" to="Collission-tiles/@Area2D@84660" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84661" to="Collission-tiles/@Area2D@84661" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84662" to="Collission-tiles/@Area2D@84662" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84663" to="Collission-tiles/@Area2D@84663" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84664" to="Collission-tiles/@Area2D@84664" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84665" to="Collission-tiles/@Area2D@84665" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84666" to="Collission-tiles/@Area2D@84666" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84667" to="Collission-tiles/@Area2D@84667" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84668" to="Collission-tiles/@Area2D@84668" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84669" to="Collission-tiles/@Area2D@84669" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84670" to="Collission-tiles/@Area2D@84670" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84671" to="Collission-tiles/@Area2D@84671" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84672" to="Collission-tiles/@Area2D@84672" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84673" to="Collission-tiles/@Area2D@84673" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84674" to="Collission-tiles/@Area2D@84674" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84675" to="Collission-tiles/@Area2D@84675" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84676" to="Collission-tiles/@Area2D@84676" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84677" to="Collission-tiles/@Area2D@84677" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84678" to="Collission-tiles/@Area2D@84678" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84679" to="Collission-tiles/@Area2D@84679" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84680" to="Collission-tiles/@Area2D@84680" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84681" to="Collission-tiles/@Area2D@84681" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84682" to="Collission-tiles/@Area2D@84682" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84683" to="Collission-tiles/@Area2D@84683" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84684" to="Collission-tiles/@Area2D@84684" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84685" to="Collission-tiles/@Area2D@84685" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84686" to="Collission-tiles/@Area2D@84686" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84687" to="Collission-tiles/@Area2D@84687" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84688" to="Collission-tiles/@Area2D@84688" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84689" to="Collission-tiles/@Area2D@84689" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84690" to="Collission-tiles/@Area2D@84690" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84691" to="Collission-tiles/@Area2D@84691" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84692" to="Collission-tiles/@Area2D@84692" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84693" to="Collission-tiles/@Area2D@84693" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84694" to="Collission-tiles/@Area2D@84694" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84695" to="Collission-tiles/@Area2D@84695" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84696" to="Collission-tiles/@Area2D@84696" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84697" to="Collission-tiles/@Area2D@84697" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84698" to="Collission-tiles/@Area2D@84698" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84699" to="Collission-tiles/@Area2D@84699" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84700" to="Collission-tiles/@Area2D@84700" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84701" to="Collission-tiles/@Area2D@84701" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84702" to="Collission-tiles/@Area2D@84702" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84703" to="Collission-tiles/@Area2D@84703" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84704" to="Collission-tiles/@Area2D@84704" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84705" to="Collission-tiles/@Area2D@84705" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84706" to="Collission-tiles/@Area2D@84706" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84707" to="Collission-tiles/@Area2D@84707" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84708" to="Collission-tiles/@Area2D@84708" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84709" to="Collission-tiles/@Area2D@84709" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84710" to="Collission-tiles/@Area2D@84710" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84711" to="Collission-tiles/@Area2D@84711" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84712" to="Collission-tiles/@Area2D@84712" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84713" to="Collission-tiles/@Area2D@84713" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84714" to="Collission-tiles/@Area2D@84714" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84715" to="Collission-tiles/@Area2D@84715" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84716" to="Collission-tiles/@Area2D@84716" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84717" to="Collission-tiles/@Area2D@84717" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84718" to="Collission-tiles/@Area2D@84718" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84719" to="Collission-tiles/@Area2D@84719" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84720" to="Collission-tiles/@Area2D@84720" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84721" to="Collission-tiles/@Area2D@84721" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84722" to="Collission-tiles/@Area2D@84722" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84723" to="Collission-tiles/@Area2D@84723" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84724" to="Collission-tiles/@Area2D@84724" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84725" to="Collission-tiles/@Area2D@84725" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84726" to="Collission-tiles/@Area2D@84726" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84727" to="Collission-tiles/@Area2D@84727" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84728" to="Collission-tiles/@Area2D@84728" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84729" to="Collission-tiles/@Area2D@84729" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84730" to="Collission-tiles/@Area2D@84730" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84731" to="Collission-tiles/@Area2D@84731" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84732" to="Collission-tiles/@Area2D@84732" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84733" to="Collission-tiles/@Area2D@84733" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84734" to="Collission-tiles/@Area2D@84734" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84735" to="Collission-tiles/@Area2D@84735" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84736" to="Collission-tiles/@Area2D@84736" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84737" to="Collission-tiles/@Area2D@84737" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84738" to="Collission-tiles/@Area2D@84738" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84739" to="Collission-tiles/@Area2D@84739" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84740" to="Collission-tiles/@Area2D@84740" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84741" to="Collission-tiles/@Area2D@84741" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84742" to="Collission-tiles/@Area2D@84742" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84743" to="Collission-tiles/@Area2D@84743" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84744" to="Collission-tiles/@Area2D@84744" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84745" to="Collission-tiles/@Area2D@84745" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84746" to="Collission-tiles/@Area2D@84746" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84747" to="Collission-tiles/@Area2D@84747" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84748" to="Collission-tiles/@Area2D@84748" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84749" to="Collission-tiles/@Area2D@84749" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84750" to="Collission-tiles/@Area2D@84750" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84751" to="Collission-tiles/@Area2D@84751" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84752" to="Collission-tiles/@Area2D@84752" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84753" to="Collission-tiles/@Area2D@84753" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84754" to="Collission-tiles/@Area2D@84754" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84755" to="Collission-tiles/@Area2D@84755" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84756" to="Collission-tiles/@Area2D@84756" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84757" to="Collission-tiles/@Area2D@84757" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84758" to="Collission-tiles/@Area2D@84758" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84759" to="Collission-tiles/@Area2D@84759" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84760" to="Collission-tiles/@Area2D@84760" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84761" to="Collission-tiles/@Area2D@84761" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84762" to="Collission-tiles/@Area2D@84762" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84763" to="Collission-tiles/@Area2D@84763" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84764" to="Collission-tiles/@Area2D@84764" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84765" to="Collission-tiles/@Area2D@84765" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84766" to="Collission-tiles/@Area2D@84766" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84767" to="Collission-tiles/@Area2D@84767" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84768" to="Collission-tiles/@Area2D@84768" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84769" to="Collission-tiles/@Area2D@84769" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84770" to="Collission-tiles/@Area2D@84770" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84771" to="Collission-tiles/@Area2D@84771" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84772" to="Collission-tiles/@Area2D@84772" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84773" to="Collission-tiles/@Area2D@84773" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84774" to="Collission-tiles/@Area2D@84774" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84775" to="Collission-tiles/@Area2D@84775" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84776" to="Collission-tiles/@Area2D@84776" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84777" to="Collission-tiles/@Area2D@84777" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84778" to="Collission-tiles/@Area2D@84778" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84779" to="Collission-tiles/@Area2D@84779" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84780" to="Collission-tiles/@Area2D@84780" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84781" to="Collission-tiles/@Area2D@84781" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84782" to="Collission-tiles/@Area2D@84782" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84783" to="Collission-tiles/@Area2D@84783" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84784" to="Collission-tiles/@Area2D@84784" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84785" to="Collission-tiles/@Area2D@84785" method="_on_area_entered"]
+[connection signal="area_entered" from="Collission-tiles/@Area2D@84786" to="Collission-tiles/@Area2D@84786" method="_on_area_entered"]
