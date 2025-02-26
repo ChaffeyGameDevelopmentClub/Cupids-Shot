@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://cfo63luahogpo"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_sjpg0"]
+[ext_resource type="Texture2D" uid="uid://c6r41ikr42axs" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 3.png" id="2_jddsm"]
+
+[resource]
+script = ExtResource("1_sjpg0")
+target_name = "Virgil"
+target_image = ExtResource("2_jddsm")
+target_description = "Avoids people."

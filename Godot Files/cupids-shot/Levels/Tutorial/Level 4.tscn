@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://y8sq2fmkmega" path="res://Sprites-And-Stuff/Sprites/NPCs/MALE NPC LOVE REACTION 4.png" id="10_rhoaj"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="11_s1qqk"]
 [ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="12_f7xhj"]
-[ext_resource type="Resource" uid="uid://dmyguh6q0kp50" path="res://Level assets/Resources/Target Data/Level2.tres" id="13_gb3l1"]
+[ext_resource type="Resource" uid="uid://cfo63luahogpo" path="res://Level assets/Resources/Target Data/Level4.tres" id="13_jncfv"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="14_55q2g"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="17_k533x"]
 
@@ -56,7 +56,7 @@ animations = [{
 
 [sub_resource type="Resource" id="Resource_lc6fy"]
 script = ExtResource("12_f7xhj")
-target_name = ExtResource("13_gb3l1")
+target_name = ExtResource("13_jncfv")
 
 [node name="Level4" type="Node2D"]
 
