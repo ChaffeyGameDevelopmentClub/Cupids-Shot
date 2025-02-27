@@ -9,6 +9,7 @@ script = ExtResource("1_j713l")
 [node name="Music" type="AudioStreamPlayer" parent="."]
 
 [node name="Sound Effects" type="AudioStreamPlayer" parent="."]
+max_polyphony = 10
 
 [connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="finished" from="Sound Effects" to="." method="_on_sound_effects_finished"]

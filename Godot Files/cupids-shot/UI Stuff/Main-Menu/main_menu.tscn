@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cbapcpomtr2cl"]
+[gd_scene load_steps=20 format=3 uid="uid://cbapcpomtr2cl"]
 
 [ext_resource type="Script" path="res://UI Stuff/Main-Menu/main_menu.gd" id="1_5mrkf"]
 [ext_resource type="PackedScene" uid="uid://w6p3knpnnear" path="res://UI Stuff/Level-Select/level_select_menu.tscn" id="2_yjon0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cppspal07upvu" path="res://UI Stuff/UI-Assets/MainMenuBackground/RIGHT SIDE CLOUD.png" id="5_v0fs7"]
 [ext_resource type="Texture2D" uid="uid://blbk57phruee1" path="res://UI Stuff/UI-Assets/MainMenuBackground/COLORFUL MIDDLE CLOUDS-export.png" id="6_0iny7"]
 [ext_resource type="Texture2D" uid="uid://wvwj1x2pwl0y" path="res://UI Stuff/UI-Assets/QuitNeutral.png" id="6_2cixy"]
+[ext_resource type="Texture2D" uid="uid://bko66u6vdxcb1" path="res://UI Stuff/UI-Assets/Cupid Shot lefreake.png" id="7_qpct5"]
 [ext_resource type="Texture2D" uid="uid://c4rw2n4ckkffd" path="res://UI Stuff/UI-Assets/QuitPress.png" id="7_xf5km"]
 [ext_resource type="Texture2D" uid="uid://dtm6rdgoeiudo" path="res://UI Stuff/UI-Assets/QuitHover.png" id="8_6ng6s"]
 [ext_resource type="Texture2D" uid="uid://ngummjsqsl5n" path="res://UI Stuff/UI-Assets/Back Button Neutral.png" id="14_1l8jo"]
@@ -292,20 +293,10 @@ layout_mode = 2
 [node name="Control" type="Control" parent="MenuContainer/PresentationMargin"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MenuContainer/PresentationMargin/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Team 𝓵𝓮 𝓯𝓲𝓼𝓱𝓮 presents..."
+[node name="CupidShotLefreake" type="Sprite2D" parent="MenuContainer/PresentationMargin/Control"]
+position = Vector2(320, 180)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_qpct5")
 
 [node name="TitleMargin" type="MarginContainer" parent="MenuContainer"]
 layout_mode = 2

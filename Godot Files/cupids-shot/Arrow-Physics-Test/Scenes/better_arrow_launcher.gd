@@ -16,7 +16,8 @@ var arrow = null
 @onready var trajectory: Line2D = $Line2D
 @onready var bow: Sprite2D = $Bow
 
-
+func _ready() -> void:
+	bow.rotation_degrees = base_rotation
 
 func _process(delta: float) -> void:
 	
@@ -44,7 +45,7 @@ func _input(event: InputEvent) -> void:
 		var cameraTween:Tween = get_tree().create_tween()
 		cameraTween.tween_property(arrow.get_child(1), "position", Vector2(165, 0), .5)
 		var bowTween:Tween = get_tree().create_tween()
-		bowTween.tween_property(bow, "rotation", base_rotation, .5)
+		bowTween.tween_property(bow, "rotation_degrees", base_rotation, .5)
 		trajectory.clear_points()
 		AudioBus.play_sound("Arrow Shoot")
 		arrow = null
@@ -64,7 +65,7 @@ func _on_area_entered(area: Area2D) -> void:
 		var positionTween:Tween = get_tree().create_tween()
 		positionTween.tween_property(arrow, "global_position", global_position, 1)
 		var rotationTween:Tween = get_tree().create_tween()
-		rotationTween.tween_property(arrow, "rotation", base_rotation, 1)
+		rotationTween.tween_property(arrow, "rotation_degrees", base_rotation, 1)
 		var cameraTween:Tween = get_tree().create_tween()
 		cameraTween.tween_property(arrow.get_child(1), "position", Vector2(0,0), 1)
 

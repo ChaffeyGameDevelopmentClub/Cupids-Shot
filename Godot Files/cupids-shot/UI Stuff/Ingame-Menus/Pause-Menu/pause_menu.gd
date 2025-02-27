@@ -39,7 +39,7 @@ func _on_restart_button_pressed() -> void:
 
 func _on_main_menu_button_pressed() -> void:
 	pause_menu_button_press()
-	ScreenTransition.change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn")
+	ScreenTransition.change_scene_to_file("res://UI Stuff/Main-Menu/main_menu.tscn", "Menu")
 
 # Hover stuff teehee
 func _on_unpause_button_mouse_entered() -> void:

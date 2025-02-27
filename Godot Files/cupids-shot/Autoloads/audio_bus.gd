@@ -26,7 +26,7 @@ var soundsList:Dictionary = {
 
 func play_sound(sound:String):
 	if sound in soundsList:
-		sound_bus.stop()
+		#sound_bus.stop()
 		sound_bus.stream = soundsList[sound]
 		sound_bus.play()
 	else:
