@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="9_x11gg"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="10_y62kt"]
 [ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="11_ln87d"]
-[ext_resource type="Resource" uid="uid://dmyguh6q0kp50" path="res://Level assets/Resources/Target Data/Level2.tres" id="12_21u4b"]
+[ext_resource type="Resource" uid="uid://cy3sa10np2dsl" path="res://Level assets/Resources/Target Data/Level5.tres" id="13_aulq6"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="13_oxbh6"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="14_n7cg7"]
 [ext_resource type="PackedScene" uid="uid://dtqgvxof5o0yq" path="res://Arrow-Physics-Test/npc.tscn" id="15_cgpbp"]
@@ -21,7 +21,7 @@
 
 [sub_resource type="Resource" id="Resource_q2jl1"]
 script = ExtResource("11_ln87d")
-target_name = ExtResource("12_21u4b")
+target_name = ExtResource("13_aulq6")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_611dh"]
 animations = [{

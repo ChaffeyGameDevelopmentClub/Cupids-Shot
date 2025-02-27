@@ -20,6 +20,7 @@ lvl1path = "res://Levels/Tutorial/Level 1.tscn"
 lvl2path = "res://Levels/Tutorial/Level 2.tscn"
 lvl3path = "res://Levels/Tutorial/Level 3.tscn"
 lvl4path = "res://Levels/Tutorial/Level 4.tscn"
+lvl5path = "res://Levels/Tutorial/Level 5.tscn"
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
