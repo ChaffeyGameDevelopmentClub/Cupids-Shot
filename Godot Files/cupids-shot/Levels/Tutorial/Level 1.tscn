@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://dawjed135dtwu"]
 
-[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_3tddy"]
+[ext_resource type="Texture2D" uid="uid://ce8ta3bvk5mdr" path="res://Levels/Tutorial/TILESET_BACKGROUND.png" id="1_0rh6k"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="1_50syp"]
 [ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="1_lbkhx"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="4_1eklp"]
@@ -82,9 +82,9 @@ animations = [{
 [node name="Level1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(320.5, 185)
-scale = Vector2(2.51953, 1.46094)
-texture = ExtResource("1_3tddy")
+position = Vector2(320, 176)
+scale = Vector2(1, 1.06667)
+texture = ExtResource("1_0rh6k")
 
 [node name="Cupid" parent="." instance=ExtResource("1_50syp")]
 position = Vector2(56, 43)

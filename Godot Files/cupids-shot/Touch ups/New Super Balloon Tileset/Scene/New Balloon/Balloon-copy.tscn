@@ -1,0 +1,108 @@
+[gd_scene load_steps=17 format=3 uid="uid://c3fw3jyburkc"]
+
+[ext_resource type="Script" path="res://Touch ups/New Super Balloon Tileset/Scene/New Balloon/balloon_copy.gd" id="1_3g2xf"]
+[ext_resource type="Texture2D" uid="uid://fbhcvfuunr04" path="res://Arrow-Physics-Test/Temporary Assets/Balloon.png" id="2_b1nlf"]
+[ext_resource type="Texture2D" uid="uid://beedkssgy8o1u" path="res://Sprites-And-Stuff/Sprites/Special Tiles/Sprite-0001-Sheet-export.png" id="3_37ob7"]
+[ext_resource type="Texture2D" uid="uid://cqp0bsqx31a8v" path="res://Touch ups/New Super Balloon Tileset/Sprites/blue-balloon.png" id="3_pig5f"]
+[ext_resource type="Texture2D" uid="uid://br7ghg3wsoqch" path="res://Touch ups/New Super Balloon Tileset/Sprites/green-balloon.png" id="4_nwt0q"]
+[ext_resource type="Texture2D" uid="uid://blrix8h21sbvb" path="res://Touch ups/New Super Balloon Tileset/Sprites/cyan-balloon.png" id="5_l0b0w"]
+[ext_resource type="Texture2D" uid="uid://bunblrtieekhw" path="res://Touch ups/New Super Balloon Tileset/Sprites/magenta-balloon.png" id="6_e3j0g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4ckj"]
+radius = 8.0
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk50m"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikacy"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ton6s"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqmfm"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sobp7"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epaqv"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eeg0"]
+atlas = ExtResource("3_37ob7")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xmv63"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk50m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikacy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ton6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqmfm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sobp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epaqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eeg0")
+}],
+"loop": true,
+"name": &"popped",
+"speed": 15.0
+}]
+
+[node name="Balloon-copy" type="Area2D"]
+script = ExtResource("1_3g2xf")
+
+[node name="Balloon Normal" type="Sprite2D" parent="."]
+position = Vector2(0, 4)
+texture = ExtResource("2_b1nlf")
+
+[node name="Blue" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+texture = ExtResource("3_pig5f")
+
+[node name="Green" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+texture = ExtResource("4_nwt0q")
+
+[node name="Cyan" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+texture = ExtResource("5_l0b0w")
+
+[node name="Magenta" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 4)
+texture = ExtResource("6_e3j0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_g4ckj")
+
+[node name="BalloonPopped" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 4.25)
+sprite_frames = SubResource("SpriteFrames_xmv63")
+animation = &"popped"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

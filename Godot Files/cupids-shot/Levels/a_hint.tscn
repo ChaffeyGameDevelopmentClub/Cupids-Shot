@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://befc5jqapfl0j"]
+
+[ext_resource type="Script" path="res://a_hint.gd" id="1_348ep"]
+[ext_resource type="Texture2D" uid="uid://bnqc2ns0h57t8" path="res://Sprites-And-Stuff/Sprites/cupid shot arrow.png" id="2_ceedq"]
+[ext_resource type="Texture2D" uid="uid://cehplp7hmq186" path="res://Touch ups/ANYTHING GOES/left arrow.png" id="3_liblu"]
+[ext_resource type="Texture2D" uid="uid://ct2leaq3mqbda" path="res://Touch ups/ANYTHING GOES/right arrow.png" id="4_7lmjt"]
+
+[sub_resource type="Animation" id="Animation_i573n"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftArrow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RightArrow:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wixbn"]
+resource_name = "left_key"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftArrow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.17, 0.17, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightArrow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0862745)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arrow Sprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.436332]
+}
+
+[sub_resource type="Animation" id="Animation_iwvoo"]
+resource_name = "right_key"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftArrow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.133333)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RightArrow:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.19, 0.19, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arrow Sprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.436332]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qyiqm"]
+_data = {
+"RESET": SubResource("Animation_i573n"),
+"left_key": SubResource("Animation_wixbn"),
+"right_key": SubResource("Animation_iwvoo")
+}
+
+[node name="A hint" type="Node2D"]
+script = ExtResource("1_348ep")
+
+[node name="Arrow Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("2_ceedq")
+
+[node name="LeftArrow" type="Sprite2D" parent="."]
+position = Vector2(-36, -3)
+texture = ExtResource("3_liblu")
+
+[node name="RightArrow" type="Sprite2D" parent="."]
+position = Vector2(35, -3)
+texture = ExtResource("4_7lmjt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qyiqm")
+}
