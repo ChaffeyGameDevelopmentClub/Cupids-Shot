@@ -2,13 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="1_ot5ej"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="2_bsif5"]
+[ext_resource type="Texture2D" uid="uid://cw5che03m2ubt" path="res://Levels/Tutorial/TILESET BACKGROUND.png" id="3_d2bks"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="4_aljol"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="5_scdmk"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="6_li08b"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="7_084j4"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxygk"]
-load_path = "res://.godot/imported/TILESET_BACKGROUND.png-ac4bd230622f33e5083d3dc3e8d31fb8.ctex"
 
 [node name="Level 7" type="Node2D"]
 
@@ -32,7 +30,7 @@ offset_bottom = -6.0
 
 [node name="TilesetBackground" type="Sprite2D" parent="."]
 position = Vector2(316, 180)
-texture = SubResource("CompressedTexture2D_pxygk")
+texture = ExtResource("3_d2bks")
 
 [node name="Cupid" parent="." instance=ExtResource("4_aljol")]
 position = Vector2(98, 115)
