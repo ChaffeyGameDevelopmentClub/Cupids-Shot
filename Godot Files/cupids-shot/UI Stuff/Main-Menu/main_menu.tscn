@@ -390,6 +390,7 @@ texture = ExtResource("3_qtjaa")
 stretch_mode = 3
 
 [node name="MenuButtonsMargin" type="MarginContainer" parent="MenuContainer"]
+visible = false
 layout_mode = 2
 
 [node name="MenuButtonsContainer" type="Control" parent="MenuContainer/MenuButtonsMargin"]
