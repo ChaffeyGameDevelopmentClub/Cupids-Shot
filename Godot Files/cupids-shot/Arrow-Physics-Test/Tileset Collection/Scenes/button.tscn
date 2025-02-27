@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bymbi8jwpkh3b" path="res://Sprites-And-Stuff/Sprites/Special Tiles/button-normal.png" id="3_vawlt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj00e"]
+size = Vector2(12, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ya8h6"]
 atlas = ExtResource("2_ulkqp")
@@ -37,6 +38,7 @@ animations = [{
 script = ExtResource("1_yj1uy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_gj00e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
