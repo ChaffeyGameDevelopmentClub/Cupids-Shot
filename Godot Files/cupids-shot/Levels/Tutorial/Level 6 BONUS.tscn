@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cihtc5jtmacv1"]
+[gd_scene load_steps=16 format=4 uid="uid://cihtc5jtmacv1"]
 
 [ext_resource type="Texture2D" uid="uid://ce8ta3bvk5mdr" path="res://Levels/Tutorial/TILESET_BACKGROUND.png" id="1_f73ps"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_48yeu"]
@@ -11,6 +11,28 @@
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="9_5ovx2"]
 [ext_resource type="PackedScene" uid="uid://djaadxfu07hiv" path="res://Touch ups/New Super Balloon Tileset/Scene/Balloons only.tscn" id="10_it4ew"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="11_3s8fk"]
+[ext_resource type="PackedScene" uid="uid://dtqgvxof5o0yq" path="res://Arrow-Physics-Test/npc.tscn" id="12_gsxk2"]
+[ext_resource type="Texture2D" uid="uid://bk1wux0pn6wob" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/free monkey easter egg npc.png" id="13_dr8n2"]
+[ext_resource type="Texture2D" uid="uid://bkbs2rysqks4d" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/free monkey easter egg love reaction npc.png" id="14_2ra6l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hfvgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_dr8n2")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_2ra6l")
+}],
+"loop": true,
+"name": &"Love",
+"speed": 5.0
+}]
 
 [node name="Level6Bonus" type="Node2D"]
 
@@ -85,6 +107,16 @@ zoomOutSize = Vector2(0.7, 0.7)
 zoomPosition = Vector2(480, 200)
 cupid = NodePath("../Cupid")
 objective = NodePath("../CanvasLayer/Objective")
+
+[node name="NPC" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("12_gsxk2")]
+position = Vector2(706, 1013)
+isLover = true
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC"]
+position = Vector2(14, 16)
+sprite_frames = SubResource("SpriteFrames_hfvgo")
+animation = &"Love"
 
 [connection signal="area_entered" from="Special-tileSet/Balloon_Fun" to="Special-tileSet/Balloon_Fun" method="_on_area_entered"]
 [connection signal="area_entered" from="Special-tileSet/@Area2D@185298" to="Special-tileSet/@Area2D@185298" method="_on_area_entered"]
