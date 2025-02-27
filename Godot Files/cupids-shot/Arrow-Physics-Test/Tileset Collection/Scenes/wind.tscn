@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhy1fo1jsmw3w"]
+[gd_scene load_steps=20 format=3 uid="uid://bhy1fo1jsmw3w"]
 
 [ext_resource type="Script" path="res://Arrow-Physics-Test/Tileset Collection/Scripts/wind.gd" id="1_qu8s4"]
+[ext_resource type="Texture2D" uid="uid://dcx8x0ldd6flm" path="res://Sprites-And-Stuff/Sprites/Special Tiles/wind-Sheet.png" id="2_fod1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xkqnc"]
 size = Vector2(200, 200)
@@ -33,6 +34,84 @@ directional_velocity_curve = SubResource("CurveXYZTexture_ixjya")
 gravity = Vector3(0, -180, 0)
 alpha_curve = SubResource("CurveTexture_sdnwf")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_v47bl"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtbd"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuxu1"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2ntr"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ipoh"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54hx0"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui3dc"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qglb"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0srw"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0nbe"]
+atlas = ExtResource("2_fod1o")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s222c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v47bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gtbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuxu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2ntr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ipoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54hx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui3dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qglb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0srw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0nbe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
 [node name="Wind" type="Area2D"]
 script = ExtResource("1_qu8s4")
 
@@ -40,11 +119,18 @@ script = ExtResource("1_qu8s4")
 shape = SubResource("RectangleShape2D_xkqnc")
 
 [node name="Wind Particles" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2(1, 32)
 amount = 10
 process_material = SubResource("ParticleProcessMaterial_yhxv3")
 trail_enabled = true
 trail_lifetime = 0.5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.333333)
+position = Vector2(1.5, -9)
+scale = Vector2(5.96875, 5.3125)
+sprite_frames = SubResource("SpriteFrames_s222c")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
