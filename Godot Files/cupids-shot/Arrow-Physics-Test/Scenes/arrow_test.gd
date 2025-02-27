@@ -4,6 +4,7 @@ extends Node2D
 
 #We're basically cheating by rotating the area 2d body to simulate arrow movement
 @onready var arrow: Area2D = $Area2D
+@onready var arrow_trail: Node2D = $ArrowTrail
 
 @onready var bounce_timer: Timer = $"Bounce Timer"
 var just_bounced:bool = false
@@ -19,10 +20,10 @@ var stuck = false
 
 #Can work on the physics for this later, it's pretty weak feeling right now
 func _process(delta: float) -> void:
-	
-	
+	if !arrowLaunched:
+		arrow_trail.set_drawing_false()
 	if arrowLaunched && !stuck:
-		
+		arrow_trail.set_drawing_true()
 		if true_velocity.y>=0:
 			true_velocity +=  (arrow.gravity_direction * custom_gravity*1.5) * delta
 		if true_velocity.y<=0:

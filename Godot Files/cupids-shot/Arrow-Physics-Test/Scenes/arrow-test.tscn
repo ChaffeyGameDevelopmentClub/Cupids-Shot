@@ -20,6 +20,7 @@ position = Vector2(165, 0)
 position_smoothing_enabled = true
 
 [node name="ArrowTrail" parent="." instance=ExtResource("3_duiqk")]
+show_behind_parent = true
 position = Vector2(-17, 0)
 
 [node name="Arrow Sprite" type="Sprite2D" parent="."]
