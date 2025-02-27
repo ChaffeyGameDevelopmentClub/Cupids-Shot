@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://UI Stuff/Level-Select/level_select_menu.gd" id="1_q81fv"]
 [ext_resource type="StyleBox" uid="uid://dlwklp5jpks86" path="res://UI Stuff/Panel-Stuff/Panel_Theme.tres" id="2_a6k88"]
-[ext_resource type="Texture2D" uid="uid://chtk5amt4pra8" path="res://UI Stuff/UI-Assets/SmallButtons/number 1.png" id="3_dq62l"]
-[ext_resource type="Texture2D" uid="uid://cwqe24mtpiy5s" path="res://UI Stuff/UI-Assets/SmallButtons/Number 2.png" id="4_eqs72"]
-[ext_resource type="Texture2D" uid="uid://uhk4fhmbu7vd" path="res://UI Stuff/UI-Assets/SmallButtons/Number 3.png" id="5_ar4xe"]
-[ext_resource type="Texture2D" uid="uid://bog01kg4ycvte" path="res://UI Stuff/UI-Assets/SmallButtons/Number 4.png" id="6_qa7tr"]
-[ext_resource type="Texture2D" uid="uid://bpynpii8co8wt" path="res://UI Stuff/UI-Assets/SmallButtons/Number 5.png" id="7_647dp"]
-[ext_resource type="Texture2D" uid="uid://bbtlj7ypvg3an" path="res://UI Stuff/UI-Assets/SmallButtons/Number 6.png" id="8_okyhf"]
+[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/number 1.png" id="3_dq62l"]
+[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 2.png" id="4_eqs72"]
+[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 3.png" id="5_ar4xe"]
+[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 4.png" id="6_qa7tr"]
+[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 5.png" id="7_647dp"]
+[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 6.png" id="8_okyhf"]
 
 [node name="LevelSelectMenu" type="Control"]
 layout_mode = 3
@@ -41,16 +41,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -97.5
-offset_top = -50.5
-offset_right = 97.5
-offset_bottom = 50.5
+offset_left = -114.0
+offset_top = -107.5
+offset_right = 114.0
+offset_bottom = 107.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_a6k88")
 
 [node name="MarginContainer" type="MarginContainer" parent="MenuPanelContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
@@ -65,7 +66,7 @@ layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="MenuPanelContainer/MarginContainer/BoxContainer/TitleMargin"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "Level Select"
 horizontal_alignment = 1
 
@@ -75,35 +76,113 @@ layout_mode = 2
 [node name="MenuButtons" type="BoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 16
+theme_override_constants/separation = 8
+alignment = 1
+vertical = true
 
-[node name="LvL1Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="Row1" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="LvL1Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
 texture_normal = ExtResource("3_dq62l")
 
-[node name="LvL2Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="LvL2Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
 texture_normal = ExtResource("4_eqs72")
 
-[node name="LvL3Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="LvL3Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
 texture_normal = ExtResource("5_ar4xe")
 
-[node name="LvL4Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="LvL4Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
 texture_normal = ExtResource("6_qa7tr")
 
-[node name="LvL5Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="LvL5Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
 texture_normal = ExtResource("7_647dp")
 
-[node name="TextureButton" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+[node name="Row2" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="LvL6Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
 layout_mode = 2
 texture_normal = ExtResource("8_okyhf")
 
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL1Button" to="." method="_on_lv_l_1_button_pressed"]
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL2Button" to="." method="_on_lv_l_2_button_pressed"]
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL3Button" to="." method="_on_lv_l_3_button_pressed"]
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL4Button" to="." method="_on_lv_l_4_button_pressed"]
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL5Button" to="." method="_on_lv_l_5_button_pressed"]
-[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="LvL7Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL8Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL9Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL10Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="Row3" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="LvL11Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL12Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL13Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL14Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL15Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="Row4" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="LvL16Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL17Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL18Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL19Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[node name="LvL20Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL1Button" to="." method="_on_lv_l_1_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL2Button" to="." method="_on_lv_l_2_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL3Button" to="." method="_on_lv_l_3_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL4Button" to="." method="_on_lv_l_4_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL5Button" to="." method="_on_lv_l_5_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2/LvL6Button" to="." method="_on_lv_l_6_button_pressed"]
