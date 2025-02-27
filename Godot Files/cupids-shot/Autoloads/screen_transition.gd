@@ -15,11 +15,11 @@ var levels:Array = [
 var current_level = 1;
 
 func change_scene_to_file(target: String, music:String = "") -> void:
-	transitioner.play("Scene Change")
+	transitioner.play("Scene_Heart_Change_Start")
 	AudioBus.music_transition(-20, 1)
 	await transitioner.animation_finished
 	get_tree().change_scene_to_file(target)
-	transitioner.play_backwards("Scene Change")
+	transitioner.play("Scene_Heart_Change_End")
 	AudioBus.music_transition(0, 1, music)
 	await transitioner.animation_finished
 	transitioner.play("RESET")

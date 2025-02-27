@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cahxdqaxgmy1c"]
+[gd_scene load_steps=10 format=3 uid="uid://cahxdqaxgmy1c"]
 
 [ext_resource type="Script" path="res://Autoloads/screen_transition.gd" id="1_sbyp2"]
+[ext_resource type="Texture2D" uid="uid://wahf55fhno8" path="res://Autoloads/Heart1.png" id="2_ji0ph"]
+[ext_resource type="Texture2D" uid="uid://6hew8gioal6f" path="res://Autoloads/miniheart..png" id="3_q1crt"]
 
 [sub_resource type="Animation" id="Animation_o5ljy"]
 resource_name = "RESET"
@@ -15,6 +17,90 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heart 1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(339, 689)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Heart 5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1133, 235)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Heart 4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(922, 624)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Heart 3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-443, 712)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Heart 2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-177, 753)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Heart 6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(593, 655)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Heart 5:centered")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_cp12u"]
@@ -35,10 +121,162 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_566bi"]
 resource_name = "Screen Change"
 
+[sub_resource type="Animation" id="Animation_eemvc"]
+resource_name = "Scene_Heart_Change_Start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart 1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(339, 689), Vector2(345, 269)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heart 3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(32, 707), Vector2(33, 67)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Heart 4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(649, 693), Vector2(609, 319)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Heart 5:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(328, 874), Vector2(321, 47.0001)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Heart 2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(71, 542), Vector2(69, 364)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Heart 6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(593, 655), Vector2(602, -7)]
+}
+
+[sub_resource type="Animation" id="Animation_0jat3"]
+resource_name = "Scene_Heart_Change_End"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Heart 4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(609, 319), Vector2(606, -205)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Heart 1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(345, 269), Vector2(343, -377)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Heart 2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(69, 364), Vector2(40, -274)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Heart 3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(33, 67), Vector2(-84, -365)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Heart 5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(321, 47.0001), Vector2(188, -286)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Heart 6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(602, -7), Vector2(786, -404)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_od4iq"]
 _data = {
 "RESET": SubResource("Animation_o5ljy"),
 "Scene Change": SubResource("Animation_cp12u"),
+"Scene_Heart_Change_End": SubResource("Animation_0jat3"),
+"Scene_Heart_Change_Start": SubResource("Animation_eemvc"),
 "Screen Change": SubResource("Animation_566bi")
 }
 
@@ -46,6 +284,7 @@ _data = {
 script = ExtResource("1_sbyp2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 640.0
 offset_bottom = 360.0
 mouse_filter = 2
@@ -55,3 +294,33 @@ color = Color(0, 0, 0, 0)
 libraries = {
 "": SubResource("AnimationLibrary_od4iq")
 }
+
+[node name="Heart 1" type="Sprite2D" parent="."]
+position = Vector2(339, 689)
+scale = Vector2(11, 11)
+texture = ExtResource("2_ji0ph")
+
+[node name="Heart 2" type="Sprite2D" parent="."]
+position = Vector2(-177, 753)
+scale = Vector2(8.40625, 9.34375)
+texture = ExtResource("3_q1crt")
+
+[node name="Heart 3" type="Sprite2D" parent="."]
+position = Vector2(-443, 712)
+scale = Vector2(8.35938, 8.03125)
+texture = ExtResource("3_q1crt")
+
+[node name="Heart 4" type="Sprite2D" parent="."]
+position = Vector2(922, 624)
+scale = Vector2(8.1875, 8.34375)
+texture = ExtResource("3_q1crt")
+
+[node name="Heart 5" type="Sprite2D" parent="."]
+position = Vector2(1133, 235)
+scale = Vector2(10.1875, 10.0313)
+texture = ExtResource("3_q1crt")
+
+[node name="Heart 6" type="Sprite2D" parent="."]
+position = Vector2(593, 655)
+scale = Vector2(10.1875, 10.0313)
+texture = ExtResource("3_q1crt")
