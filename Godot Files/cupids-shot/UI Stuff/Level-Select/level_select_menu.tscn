@@ -1,13 +1,27 @@
-[gd_scene load_steps=9 format=3 uid="uid://w6p3knpnnear"]
+[gd_scene load_steps=23 format=3 uid="uid://w6p3knpnnear"]
 
 [ext_resource type="Script" path="res://UI Stuff/Level-Select/level_select_menu.gd" id="1_q81fv"]
 [ext_resource type="StyleBox" uid="uid://dlwklp5jpks86" path="res://UI Stuff/Panel-Stuff/Panel_Theme.tres" id="2_a6k88"]
-[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/number 1.png" id="3_dq62l"]
-[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 2.png" id="4_eqs72"]
-[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 3.png" id="5_ar4xe"]
-[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 4.png" id="6_qa7tr"]
-[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 5.png" id="7_647dp"]
-[ext_resource type="Texture2D" path="res://UI Stuff/UI-Assets/SmallButtons/Numbers/Number 6.png" id="8_okyhf"]
+[ext_resource type="Texture2D" uid="uid://chtk5amt4pra8" path="res://UI Stuff/UI-Assets/SmallButtons/number 1.png" id="3_fr7dc"]
+[ext_resource type="Texture2D" uid="uid://cwqe24mtpiy5s" path="res://UI Stuff/UI-Assets/SmallButtons/Number 2.png" id="4_dn15c"]
+[ext_resource type="Texture2D" uid="uid://uhk4fhmbu7vd" path="res://UI Stuff/UI-Assets/SmallButtons/Number 3.png" id="5_42q1l"]
+[ext_resource type="Texture2D" uid="uid://bog01kg4ycvte" path="res://UI Stuff/UI-Assets/SmallButtons/Number 4.png" id="6_nd1vl"]
+[ext_resource type="Texture2D" uid="uid://bpynpii8co8wt" path="res://UI Stuff/UI-Assets/SmallButtons/Number 5.png" id="7_81vy5"]
+[ext_resource type="Texture2D" uid="uid://bbtlj7ypvg3an" path="res://UI Stuff/UI-Assets/SmallButtons/Number 6.png" id="8_jlght"]
+[ext_resource type="Texture2D" uid="uid://kcx0al7o5iol" path="res://UI Stuff/UI-Assets/SmallButtons/Number 7.png" id="9_fl1lb"]
+[ext_resource type="Texture2D" uid="uid://bghcp8edwxspi" path="res://UI Stuff/UI-Assets/SmallButtons/Number 8.png" id="10_r4qtv"]
+[ext_resource type="Texture2D" uid="uid://bm3ngyv7dkcb7" path="res://UI Stuff/UI-Assets/SmallButtons/Number 9.png" id="11_pcejy"]
+[ext_resource type="Texture2D" uid="uid://cd5riu3c6xqof" path="res://UI Stuff/UI-Assets/SmallButtons/Number 10.png" id="12_aqbe6"]
+[ext_resource type="Texture2D" uid="uid://bv1xeavwc5h4c" path="res://UI Stuff/UI-Assets/SmallButtons/Number 11.png" id="13_tbh3k"]
+[ext_resource type="Texture2D" uid="uid://eas5hbgxs65q" path="res://UI Stuff/UI-Assets/SmallButtons/Number 12.png" id="14_ajfhw"]
+[ext_resource type="Texture2D" uid="uid://8sgg4k8itrrx" path="res://UI Stuff/UI-Assets/SmallButtons/Number 13.png" id="15_g0yha"]
+[ext_resource type="Texture2D" uid="uid://dk5njlhjkjrk1" path="res://UI Stuff/UI-Assets/SmallButtons/Number 14.png" id="16_0623v"]
+[ext_resource type="Texture2D" uid="uid://dfna2n02byqc6" path="res://UI Stuff/UI-Assets/SmallButtons/Number 15.png" id="17_clgeh"]
+[ext_resource type="Texture2D" uid="uid://ccshkb0wgbqws" path="res://UI Stuff/UI-Assets/SmallButtons/Number 16.png" id="18_svmp1"]
+[ext_resource type="Texture2D" uid="uid://cx1wmehaqvqa6" path="res://UI Stuff/UI-Assets/SmallButtons/Number 17.png" id="19_sj8ho"]
+[ext_resource type="Texture2D" uid="uid://b6ftxlcfvw25l" path="res://UI Stuff/UI-Assets/SmallButtons/Number 18.png" id="20_svs78"]
+[ext_resource type="Texture2D" uid="uid://i6tfm774s1rq" path="res://UI Stuff/UI-Assets/SmallButtons/Number 19.png" id="21_y7lj8"]
+[ext_resource type="Texture2D" uid="uid://cov34djt763fu" path="res://UI Stuff/UI-Assets/SmallButtons/Number 20.png" id="22_8puy3"]
 
 [node name="LevelSelectMenu" type="Control"]
 layout_mode = 3
@@ -41,10 +55,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -114.0
-offset_top = -107.5
-offset_right = 114.0
-offset_bottom = 107.5
+offset_left = -115.0
+offset_top = -52.0
+offset_right = 113.0
+offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_a6k88")
@@ -87,23 +101,23 @@ alignment = 1
 
 [node name="LvL1Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
-texture_normal = ExtResource("3_dq62l")
+texture_normal = ExtResource("3_fr7dc")
 
 [node name="LvL2Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
-texture_normal = ExtResource("4_eqs72")
+texture_normal = ExtResource("4_dn15c")
 
 [node name="LvL3Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
-texture_normal = ExtResource("5_ar4xe")
+texture_normal = ExtResource("5_42q1l")
 
 [node name="LvL4Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
-texture_normal = ExtResource("6_qa7tr")
+texture_normal = ExtResource("6_nd1vl")
 
 [node name="LvL5Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1"]
 layout_mode = 2
-texture_normal = ExtResource("7_647dp")
+texture_normal = ExtResource("7_81vy5")
 
 [node name="Row2" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 layout_mode = 2
@@ -112,23 +126,23 @@ alignment = 1
 
 [node name="LvL6Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("8_jlght")
 
 [node name="LvL7Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("9_fl1lb")
 
 [node name="LvL8Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("10_r4qtv")
 
 [node name="LvL9Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("11_pcejy")
 
 [node name="LvL10Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("12_aqbe6")
 
 [node name="Row3" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 layout_mode = 2
@@ -137,23 +151,23 @@ alignment = 1
 
 [node name="LvL11Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("13_tbh3k")
 
 [node name="LvL12Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("14_ajfhw")
 
 [node name="LvL13Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("15_g0yha")
 
 [node name="LvL14Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("16_0623v")
 
 [node name="LvL15Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("17_clgeh")
 
 [node name="Row4" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
 layout_mode = 2
@@ -162,23 +176,23 @@ alignment = 1
 
 [node name="LvL16Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("18_svmp1")
 
 [node name="LvL17Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("19_sj8ho")
 
 [node name="LvL18Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("20_svs78")
 
 [node name="LvL19Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("21_y7lj8")
 
 [node name="LvL20Button" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4"]
 layout_mode = 2
-texture_normal = ExtResource("8_okyhf")
+texture_normal = ExtResource("22_8puy3")
 
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL1Button" to="." method="_on_lv_l_1_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL2Button" to="." method="_on_lv_l_2_button_pressed"]

@@ -14,6 +14,7 @@ func lvl_select_button_press(target: String, lvl: int):
 	ScreenTransition.current_level = lvl
 	ScreenTransition.change_scene_to_file(target, "BGM")
 
+# Button signals, had I known we'd might have more i would have automated it but alas 3:
 func _on_lv_l_1_button_pressed() -> void:
 	lvl_select_button_press(lvl1path, 1)
 
