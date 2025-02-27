@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://w6p3knpnnear"]
+[gd_scene load_steps=9 format=3 uid="uid://w6p3knpnnear"]
 
 [ext_resource type="Script" path="res://UI Stuff/Level-Select/level_select_menu.gd" id="1_q81fv"]
 [ext_resource type="StyleBox" uid="uid://dlwklp5jpks86" path="res://UI Stuff/Panel-Stuff/Panel_Theme.tres" id="2_a6k88"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://uhk4fhmbu7vd" path="res://UI Stuff/UI-Assets/SmallButtons/Number 3.png" id="5_ar4xe"]
 [ext_resource type="Texture2D" uid="uid://bog01kg4ycvte" path="res://UI Stuff/UI-Assets/SmallButtons/Number 4.png" id="6_qa7tr"]
 [ext_resource type="Texture2D" uid="uid://bpynpii8co8wt" path="res://UI Stuff/UI-Assets/SmallButtons/Number 5.png" id="7_647dp"]
+[ext_resource type="Texture2D" uid="uid://bbtlj7ypvg3an" path="res://UI Stuff/UI-Assets/SmallButtons/Number 6.png" id="8_okyhf"]
 
 [node name="LevelSelectMenu" type="Control"]
 layout_mode = 3
@@ -21,6 +22,7 @@ lvl2path = "res://Levels/Tutorial/Level 2.tscn"
 lvl3path = "res://Levels/Tutorial/Level 3.tscn"
 lvl4path = "res://Levels/Tutorial/Level 4.tscn"
 lvl5path = "res://Levels/Tutorial/Level 5.tscn"
+lvl6path = "res://Levels/Tutorial/Level 6 BONUS.tscn"
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
@@ -95,8 +97,13 @@ texture_normal = ExtResource("6_qa7tr")
 layout_mode = 2
 texture_normal = ExtResource("7_647dp")
 
+[node name="TextureButton" type="TextureButton" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+layout_mode = 2
+texture_normal = ExtResource("8_okyhf")
+
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL1Button" to="." method="_on_lv_l_1_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL2Button" to="." method="_on_lv_l_2_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL3Button" to="." method="_on_lv_l_3_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL4Button" to="." method="_on_lv_l_4_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/LvL5Button" to="." method="_on_lv_l_5_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/TextureButton" to="." method="_on_texture_button_pressed"]

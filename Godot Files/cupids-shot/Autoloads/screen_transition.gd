@@ -8,7 +8,8 @@ var levels:Array = [
 "res://Levels/Tutorial/Level 2.tscn",
 "res://Levels/Tutorial/Level 3.tscn",
 "res://Levels/Tutorial/Level 4.tscn",
-"res://Levels/Tutorial/Level 5.tscn"
+"res://Levels/Tutorial/Level 5.tscn",
+"res://Levels/Tutorial/Level 6 BONUS.tscn"
 ]
 
 var current_level = 1;

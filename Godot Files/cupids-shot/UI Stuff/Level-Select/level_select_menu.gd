@@ -6,6 +6,7 @@ extends Control
 @export_file("*.tscn") var lvl3path : String
 @export_file("*.tscn") var lvl4path : String
 @export_file("*.tscn") var lvl5path : String
+@export_file("*.tscn") var lvl6path : String
 
 # Button function cuz i have decided against writing this 5 times
 func lvl_select_button_press(target: String, lvl: int):
@@ -27,3 +28,7 @@ func _on_lv_l_4_button_pressed() -> void:
 
 func _on_lv_l_5_button_pressed() -> void:
 	lvl_select_button_press(lvl5path, 5)
+
+
+func _on_texture_button_pressed() -> void:
+	lvl_select_button_press(lvl6path, 6)
