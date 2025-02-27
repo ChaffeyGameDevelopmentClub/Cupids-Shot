@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://clgmvn3vef8yw"]
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://ddmmarfm7hodt"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_65bo8"]
-[ext_resource type="Texture2D" uid="uid://1fd4gldeocpr" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 1.png" id="2_05mxl"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_7lfc8"]
+[ext_resource type="Texture2D" uid="uid://d1vdvtgla41mi" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 2.png" id="2_qgj6n"]
 
 [resource]
-script = ExtResource("1_65bo8")
-target_name = "Patricia"
-target_image = ExtResource("2_05mxl")
-target_description = "Bouncing around!"
+script = ExtResource("1_7lfc8")
+target_name = "Lilith"
+target_image = ExtResource("2_qgj6n")
+target_description = "ugh.. wind..."

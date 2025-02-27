@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://cmigtb6l2xwam"]
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://clgmvn3vef8yw"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_vqr23"]
-[ext_resource type="Texture2D" uid="uid://bp2tyhjaiasdm" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 5.png" id="2_ehceb"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_65bo8"]
+[ext_resource type="Texture2D" uid="uid://1fd4gldeocpr" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 1.png" id="2_05mxl"]
 
 [resource]
-script = ExtResource("1_vqr23")
-target_name = "IT girl"
-target_image = ExtResource("2_ehceb")
-target_description = "I-T G-I-R-L"
+script = ExtResource("1_65bo8")
+target_name = "Patricia"
+target_image = ExtResource("2_05mxl")
+target_description = "Bouncing around!"

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="target_data" load_steps=2 format=3 uid="uid://ct7h8eukkhqcj"]
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://bhk1oq4or6k3j"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_r7150"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_cis6q"]
+[ext_resource type="Texture2D" uid="uid://fniuijhwtbid" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 2.png" id="2_iecfw"]
 
 [resource]
-script = ExtResource("1_r7150")
-target_name = ""
-target_description = ""
+script = ExtResource("1_cis6q")
+target_name = "LeBron"
+target_image = ExtResource("2_iecfw")
+target_description = "Not James :("

@@ -36,7 +36,16 @@ lvl2path = "res://Levels/Tutorial/Level 2.tscn"
 lvl3path = "res://Levels/Tutorial/Level 3.tscn"
 lvl4path = "res://Levels/Tutorial/Level 4.tscn"
 lvl5path = "res://Levels/Tutorial/Level 5.tscn"
-lvl6path = "res://Levels/Tutorial/Level 6 BONUS.tscn"
+lvl6path = "res://Levels/Tutorial/level_6.tscn"
+lvl7path = "res://Levels/Tutorial/level_7.tscn"
+lvl8path = "res://Levels/Tutorial/level_8.tscn"
+lvl9path = "res://Levels/Tutorial/level_9.tscn"
+lvl10path = "res://Levels/Tutorial/level_10.tscn"
+lvl11path = "res://Levels/Tutorial/level_11.tscn"
+lvl12path = "res://Levels/Tutorial/level_12.tscn"
+lvl13path = "res://Levels/Tutorial/level_13.tscn"
+lvl14path = "res://Levels/Tutorial/level_14.tscn"
+lvl15path = "res://Levels/Tutorial/level_15.tscn"
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
@@ -170,6 +179,7 @@ layout_mode = 2
 texture_normal = ExtResource("17_clgeh")
 
 [node name="Row4" type="HBoxContainer" parent="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 8
 alignment = 1
@@ -200,3 +210,17 @@ texture_normal = ExtResource("22_8puy3")
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL4Button" to="." method="_on_lv_l_4_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row1/LvL5Button" to="." method="_on_lv_l_5_button_pressed"]
 [connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2/LvL6Button" to="." method="_on_lv_l_6_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2/LvL7Button" to="." method="_on_lv_l_7_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2/LvL8Button" to="." method="_on_lv_l_8_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2/LvL9Button" to="." method="_on_lv_l_9_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row2/LvL10Button" to="." method="_on_lv_l_10_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3/LvL11Button" to="." method="_on_lv_l_11_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3/LvL12Button" to="." method="_on_lv_l_12_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3/LvL13Button" to="." method="_on_lv_l_13_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3/LvL14Button" to="." method="_on_lv_l_14_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row3/LvL15Button" to="." method="_on_lv_l_15_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4/LvL16Button" to="." method="_on_lv_l_16_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4/LvL17Button" to="." method="_on_lv_l_17_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4/LvL18Button" to="." method="_on_lv_l_18_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4/LvL19Button" to="." method="_on_lv_l_19_button_pressed"]
+[connection signal="pressed" from="MenuPanelContainer/MarginContainer/BoxContainer/LevelButtonsMargin/MenuButtons/Row4/LvL20Button" to="." method="_on_lv_l_20_button_pressed"]

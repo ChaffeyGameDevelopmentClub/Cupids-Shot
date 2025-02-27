@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="target_slot" load_steps=3 format=3 uid="uid://cvf4533kawooe"]
+[gd_resource type="Resource" script_class="target_slot" load_steps=3 format=3 uid="uid://b22e7bdt70ymu"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_n6wt0"]
-[ext_resource type="Resource" uid="uid://ddmmarfm7hodt" path="res://Level assets/Resources/Target Data/Level10.tres" id="2_t3xsh"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_isd7q"]
+[ext_resource type="Resource" uid="uid://ct7h8eukkhqcj" path="res://Level assets/Resources/Target Data/Level10.tres" id="2_efeyb"]
 
 [resource]
-script = ExtResource("1_n6wt0")
-target_name = ExtResource("2_t3xsh")
+script = ExtResource("1_isd7q")
+target_name = ExtResource("2_efeyb")

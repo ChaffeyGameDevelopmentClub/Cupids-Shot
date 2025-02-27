@@ -17,6 +17,6 @@ func _on_area_entered(area: Area2D) -> void:
 		else:
 			arrow.Bounce_x()
 		
-		if (arrow_vector.dot(direction)/(arrow_vector.length()*direction.length()) >.5):
+		if (arrow_vector.dot(direction)/(arrow_vector.length()*direction.length()) >.1):
 			sprite.play("pressed")
 			slide_path.type = 3 #start slide path

@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="target_slot" load_steps=2 format=3 uid="uid://b22e7bdt70ymu"]
+[gd_resource type="Resource" script_class="target_slot" load_steps=3 format=3 uid="uid://dk24slsxsg17h"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_isd7q"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_ilksa"]
+[ext_resource type="Resource" uid="uid://bhk1oq4or6k3j" path="res://Level assets/Resources/Target Data/Level11.tres" id="2_cm7fx"]
 
 [resource]
-script = ExtResource("1_isd7q")
+script = ExtResource("1_ilksa")
+target_name = ExtResource("2_cm7fx")

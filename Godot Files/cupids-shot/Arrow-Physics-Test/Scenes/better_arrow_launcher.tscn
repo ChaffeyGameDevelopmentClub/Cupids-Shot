@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cokyhntufsxai" path="res://Sprites-And-Stuff/Sprites/Trajectory Line.png" id="4_d2nro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3lb5"]
-size = Vector2(200, 200)
+size = Vector2(100, 100)
 
 [node name="better arrow launcher" type="Area2D"]
 script = ExtResource("1_jaibq")

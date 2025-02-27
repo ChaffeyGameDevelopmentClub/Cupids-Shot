@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="target_slot" load_steps=2 format=3 uid="uid://dhch37jhqp6ya"]
-
-[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_rhcln"]
-
-[resource]
-script = ExtResource("1_rhcln")

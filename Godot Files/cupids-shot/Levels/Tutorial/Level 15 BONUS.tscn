@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="5_bbr6q"]
 [ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="6_lmlkf"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="7_1105w"]
-[ext_resource type="Resource" path="res://Level assets/Resources/Target Slot/Level6_slot.tres" id="8_8wcvi"]
+[ext_resource type="Resource" uid="uid://vd6em4ymvriv" path="res://Level assets/Resources/Target Slot/Level15_slot.tres" id="8_8wcvi"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="9_5ovx2"]
 [ext_resource type="PackedScene" uid="uid://djaadxfu07hiv" path="res://Touch ups/New Super Balloon Tileset/Scene/Balloons only.tscn" id="10_it4ew"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="11_3s8fk"]

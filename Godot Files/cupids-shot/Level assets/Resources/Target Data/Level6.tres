@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://dinakwfhni0wp"]
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://bblv6bv1neknd"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_2mtsg"]
-[ext_resource type="Texture2D" uid="uid://6840oq8afbgr" path="res://Sprites-And-Stuff/Sprites/NPCs/ima.png" id="2_axoaq"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_dkkvn"]
+[ext_resource type="Texture2D" uid="uid://c0j0og3o6nm7g" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 4.png" id="2_dag1q"]
 
 [resource]
-script = ExtResource("1_2mtsg")
-target_name = "Thank"
-target_image = ExtResource("2_axoaq")
-target_description = "for playing!"
+script = ExtResource("1_dkkvn")
+target_name = "Juliet"
+target_image = ExtResource("2_dag1q")
+target_description = "Help me Romeo!"

@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="target_data" load_steps=2 format=3 uid="uid://c0qltbxi8d8ae"]
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://batt6jodcrwqh"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_3ku7b"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_obxea"]
+[ext_resource type="Texture2D" uid="uid://b6x50sibfum5o" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 4.png" id="2_xjvi0"]
 
 [resource]
-script = ExtResource("1_3ku7b")
-target_name = ""
-target_description = ""
+script = ExtResource("1_obxea")
+target_name = "Cristi Messi"
+target_image = ExtResource("2_xjvi0")
+target_description = "Down hut"

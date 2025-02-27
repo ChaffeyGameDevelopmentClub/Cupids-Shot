@@ -9,7 +9,16 @@ var levels:Array = [
 "res://Levels/Tutorial/Level 3.tscn",
 "res://Levels/Tutorial/Level 4.tscn",
 "res://Levels/Tutorial/Level 5.tscn",
-"res://Levels/Tutorial/Level 6 BONUS.tscn"
+"res://Levels/Tutorial/level_6.tscn",
+"res://Levels/Tutorial/level_7.tscn",
+"res://Levels/Tutorial/level_8.tscn",
+"res://Levels/Tutorial/level_9.tscn",
+"res://Levels/Tutorial/level_10.tscn",
+"res://Levels/Tutorial/level_11.tscn",
+"res://Levels/Tutorial/level_12.tscn",
+"res://Levels/Tutorial/level_13.tscn",
+"res://Levels/Tutorial/level_14.tscn",
+"res://Levels/Tutorial/Level 15 BONUS.tscn"
 ]
 
 var current_level = 1;

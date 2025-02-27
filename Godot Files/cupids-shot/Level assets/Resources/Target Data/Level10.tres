@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://ddmmarfm7hodt"]
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://ct7h8eukkhqcj"]
 
-[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_7lfc8"]
-[ext_resource type="Texture2D" uid="uid://d1vdvtgla41mi" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 2.png" id="2_qgj6n"]
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_r7150"]
+[ext_resource type="Texture2D" uid="uid://duiif872bcjn" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 3.png" id="2_ehm4a"]
 
 [resource]
-script = ExtResource("1_7lfc8")
-target_name = "Lilith"
-target_image = ExtResource("2_qgj6n")
-target_description = "ugh.. wind..."
+script = ExtResource("1_r7150")
+target_name = "Vanessa"
+target_image = ExtResource("2_ehm4a")
+target_description = "Likes Vans idk"
