@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="12_f7xhj"]
 [ext_resource type="Resource" uid="uid://cfo63luahogpo" path="res://Level assets/Resources/Target Data/Level4.tres" id="13_jncfv"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="14_55q2g"]
-[ext_resource type="PackedScene" uid="uid://befc5jqapfl0j" path="res://Levels/a_hint.tscn" id="16_kcf18"]
+[ext_resource type="PackedScene" path="res://Levels/a_hint.tscn" id="16_kcf18"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="17_k533x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2vrd6"]
