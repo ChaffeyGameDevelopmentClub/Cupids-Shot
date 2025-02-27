@@ -16,7 +16,6 @@ func _ready() -> void:
 	objective.visible = true
 
 func _input(event: InputEvent) -> void:
-	print(count)
 	if event.is_action_pressed("left_click"):
 		if count==0:
 			count+=1
