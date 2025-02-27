@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="target_slot" load_steps=3 format=3 uid="uid://dy3g36l35dmke"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_jrnnf"]
+[ext_resource type="Resource" uid="uid://cy3sa10np2dsl" path="res://Level assets/Resources/Target Data/Level5.tres" id="2_428s0"]
+
+[resource]
+script = ExtResource("1_jrnnf")
+target_name = ExtResource("2_428s0")

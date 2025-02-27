@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=4 uid="uid://dphlsc1et7vt7"]
 
-[ext_resource type="Texture2D" uid="uid://bpqrghmkh03a5" path="res://Sprites-And-Stuff/Sprites/BG stuff/looping skybox.png" id="1_at3n0"]
+[ext_resource type="Texture2D" uid="uid://ce8ta3bvk5mdr" path="res://Levels/Tutorial/TILESET_BACKGROUND.png" id="1_dgj8i"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="2_42pff"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_qtudi"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="4_m4aj8"]
@@ -63,9 +63,9 @@ target_name = ExtResource("15_n6g4g")
 [node name="Level3" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(225.5, 178.5)
-scale = Vector2(4.18359, 2.12109)
-texture = ExtResource("1_at3n0")
+position = Vector2(304, 200)
+scale = Vector2(1.4, 1.28889)
+texture = ExtResource("1_dgj8i")
 
 [node name="better arrow launcher2" parent="." instance=ExtResource("2_42pff")]
 position = Vector2(-13, 253)
