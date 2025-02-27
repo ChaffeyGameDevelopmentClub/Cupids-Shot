@@ -29,6 +29,5 @@ func _on_lv_l_4_button_pressed() -> void:
 func _on_lv_l_5_button_pressed() -> void:
 	lvl_select_button_press(lvl5path, 5)
 
-
-func _on_texture_button_pressed() -> void:
+func _on_lv_l_6_button_pressed() -> void:
 	lvl_select_button_press(lvl6path, 6)
