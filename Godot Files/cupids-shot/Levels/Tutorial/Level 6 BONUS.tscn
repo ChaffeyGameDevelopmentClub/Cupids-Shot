@@ -1,13 +1,13 @@
-[gd_scene load_steps=16 format=4 uid="uid://cihtc5jtmacv1"]
+[gd_scene load_steps=16 format=4 uid="uid://cq7jvqsi4d6ok"]
 
-[ext_resource type="Texture2D" uid="uid://ce8ta3bvk5mdr" path="res://Levels/Tutorial/TILESET_BACKGROUND.png" id="1_f73ps"]
+[ext_resource type="Texture2D" uid="uid://cw5che03m2ubt" path="res://Levels/Tutorial/TILESET BACKGROUND.png" id="1_pehx5"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_48yeu"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="3_svg57"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="4_kfbvl"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="5_bbr6q"]
 [ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="6_lmlkf"]
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="7_1105w"]
-[ext_resource type="Resource" uid="uid://vd6em4ymvriv" path="res://Level assets/Resources/Target Slot/Level6_slot.tres" id="8_8wcvi"]
+[ext_resource type="Resource" path="res://Level assets/Resources/Target Slot/Level6_slot.tres" id="8_8wcvi"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="9_5ovx2"]
 [ext_resource type="PackedScene" uid="uid://djaadxfu07hiv" path="res://Touch ups/New Super Balloon Tileset/Scene/Balloons only.tscn" id="10_it4ew"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="11_3s8fk"]
@@ -47,7 +47,7 @@ color = Color(0, 0, 0, 1)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(734.5, 444)
 scale = Vector2(2.51094, 4.27222)
-texture = ExtResource("1_f73ps")
+texture = ExtResource("1_pehx5")
 
 [node name="Cupid" parent="." instance=ExtResource("2_48yeu")]
 position = Vector2(124, 22)

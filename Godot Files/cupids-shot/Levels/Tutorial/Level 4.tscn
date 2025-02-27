@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=4 uid="uid://c1keqk710bcm0"]
 
-[ext_resource type="Texture2D" uid="uid://ce8ta3bvk5mdr" path="res://Levels/Tutorial/TILESET_BACKGROUND.png" id="1_8uqwu"]
+[ext_resource type="Texture2D" uid="uid://cw5che03m2ubt" path="res://Levels/Tutorial/TILESET BACKGROUND.png" id="1_5o7pp"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_n4l62"]
 [ext_resource type="TileSet" uid="uid://bax2jee0m56cf" path="res://Levels/City.tres" id="3_w7sli"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="4_kfii7"]
@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="12_f7xhj"]
 [ext_resource type="Resource" uid="uid://cfo63luahogpo" path="res://Level assets/Resources/Target Data/Level4.tres" id="13_jncfv"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="14_55q2g"]
-[ext_resource type="PackedScene" path="res://Levels/a_hint.tscn" id="16_kcf18"]
+[ext_resource type="PackedScene" uid="uid://c4vl08q4hdgi8" path="res://Levels/a_hint.tscn" id="16_kcf18"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="17_k533x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2vrd6"]
@@ -64,7 +64,7 @@ target_name = ExtResource("13_jncfv")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(440, 184)
 scale = Vector2(1.425, 1.2)
-texture = ExtResource("1_8uqwu")
+texture = ExtResource("1_5o7pp")
 
 [node name="Cupid" parent="." instance=ExtResource("2_n4l62")]
 position = Vector2(51, 61)

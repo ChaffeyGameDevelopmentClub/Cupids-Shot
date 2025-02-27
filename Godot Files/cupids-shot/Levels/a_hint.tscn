@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://befc5jqapfl0j"]
+[gd_scene load_steps=9 format=3 uid="uid://c4vl08q4hdgi8"]
 
 [ext_resource type="Script" path="res://a_hint.gd" id="1_348ep"]
 [ext_resource type="Texture2D" uid="uid://bnqc2ns0h57t8" path="res://Sprites-And-Stuff/Sprites/cupid shot arrow.png" id="2_ceedq"]

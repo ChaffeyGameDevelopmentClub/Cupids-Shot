@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="target_data" load_steps=2 format=3 uid="uid://c0qltbxi8d8ae"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_3ku7b"]
+
+[resource]
+script = ExtResource("1_3ku7b")
+target_name = ""
+target_description = ""

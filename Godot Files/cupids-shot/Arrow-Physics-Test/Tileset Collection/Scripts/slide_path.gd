@@ -20,9 +20,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if type == 0: #loop
 		path.progress_ratio+=delta*direction*speed
+		if path.progress_ratio >= 1 || path.progress_ratio <= 0:
+			path.progress_ratio = 0
 	if type == 1: #Bounce
 		path.progress_ratio+=delta*direction*speed
-		direction *=-1
+		if path.progress_ratio >= 1 || path.progress_ratio <= 0:
+			direction *=-1
 	if type == 2: #Locked
 		pass
 	if type == 3: # Unlocked

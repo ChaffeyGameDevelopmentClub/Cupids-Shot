@@ -25,11 +25,11 @@ func _process(delta: float) -> void:
 	if arrowLaunched && !stuck:
 		arrow_trail.set_drawing_true()
 		if true_velocity.y>=0:
-			true_velocity +=  (arrow.gravity_direction * custom_gravity*1.5) * delta
+			true_velocity +=  (arrow.gravity_direction * custom_gravity) * delta
 		if true_velocity.y<=0:
 			true_velocity +=  (arrow.gravity_direction * custom_gravity) * delta
 		var input_dir = Input.get_axis("ui_right", "ui_left")
-		true_velocity += input_dir * true_velocity.normalized().orthogonal() * 40 * delta
+		true_velocity += input_dir * true_velocity.normalized().orthogonal() * 60 * delta
 		position +=  true_velocity * delta
 		rotation = true_velocity.angle() 
 		
