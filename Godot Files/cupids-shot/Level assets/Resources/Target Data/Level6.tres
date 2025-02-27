@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://dinakwfhni0wp"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_2mtsg"]
+[ext_resource type="Texture2D" uid="uid://6840oq8afbgr" path="res://Sprites-And-Stuff/Sprites/NPCs/ima.png" id="2_axoaq"]
+
+[resource]
+script = ExtResource("1_2mtsg")
+target_name = "Thank"
+target_image = ExtResource("2_axoaq")
+target_description = "for playing!"
