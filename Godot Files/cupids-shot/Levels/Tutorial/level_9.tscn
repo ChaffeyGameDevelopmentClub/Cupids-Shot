@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://buhqbxrj1c6d0"]
+[gd_scene load_steps=11 format=3 uid="uid://buhqbxrj1c6d0"]
 
 [ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="1_m0j0i"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="2_f5tdu"]
@@ -7,6 +7,35 @@
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="5_iix4p"]
 [ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="6_2vnbe"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="7_qufsq"]
+[ext_resource type="Texture2D" uid="uid://7h5wd007ncvp" path="res://Sprites-And-Stuff/Sprites/Tileset/city tileset simple.png" id="8_jeoqq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kj158"]
+texture = ExtResource("8_jeoqq")
+6:0/0 = 0
+6:1/0 = 0
+10:1/0 = 0
+7:2/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g2i53"]
+sources/0 = SubResource("TileSetAtlasSource_kj158")
 
 [node name="Level 9" type="Node2D"]
 
@@ -40,5 +69,8 @@ position = Vector2(98, 115)
 [node name="Special-tileSet" parent="." instance=ExtResource("6_2vnbe")]
 
 [node name="Collission-tiles" parent="." instance=ExtResource("7_qufsq")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_g2i53")
 
 [editable path="Cupid"]
