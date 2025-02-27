@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="target_data" load_steps=3 format=3 uid="uid://dgt88y7sxrv6x"]
 
 [ext_resource type="Script" path="res://Level assets/Resources/target_data.gd" id="1_g7o5t"]
-[ext_resource type="Texture2D" uid="uid://c6r41ikr42axs" path="res://Sprites-And-Stuff/Sprites/NPCs/Cupid Shot NPC 3.png" id="2_q3v4n"]
+[ext_resource type="Texture2D" uid="uid://duiif872bcjn" path="res://Sprites-And-Stuff/Sprites/NPCs/Female/FEMALE NPC 3.png" id="2_mfdro"]
 
 [resource]
 script = ExtResource("1_g7o5t")
-target_name = "Gohio"
-target_image = ExtResource("2_q3v4n")
-target_description = ""
+target_name = "Freya"
+target_image = ExtResource("2_mfdro")
+target_description = "On thin ice."
