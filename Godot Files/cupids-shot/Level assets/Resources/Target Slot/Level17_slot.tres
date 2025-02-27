@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="target_slot" load_steps=2 format=3 uid="uid://dwiimvapdpq8b"]
+
+[ext_resource type="Script" path="res://Level assets/Resources/target_slot.gd" id="1_ofgq1"]
+
+[resource]
+script = ExtResource("1_ofgq1")
