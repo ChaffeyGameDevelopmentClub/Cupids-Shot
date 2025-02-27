@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://crti3235ja1la"]
+
+[ext_resource type="PackedScene" uid="uid://bq5u87alx25ee" path="res://Level assets/Resources/Objective.tscn" id="1_jdjw7"]
+[ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="2_rplur"]
+[ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="4_lwwqe"]
+[ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="5_4l72k"]
+[ext_resource type="PackedScene" uid="uid://bgcksq2d4gyr0" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Special-TileSet.tscn" id="6_1ffra"]
+[ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="7_oavx3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxygk"]
+load_path = "res://.godot/imported/TILESET_BACKGROUND.png-ac4bd230622f33e5083d3dc3e8d31fb8.ctex"
+
+[node name="Level 8" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -20
+offset_left = -493.0
+offset_top = -506.0
+offset_right = 1241.0
+offset_bottom = 753.0
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Objective" parent="CanvasLayer" instance=ExtResource("1_jdjw7")]
+offset_left = 328.0
+offset_top = 354.0
+offset_right = -312.0
+offset_bottom = -6.0
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_rplur")]
+
+[node name="TilesetBackground" type="Sprite2D" parent="."]
+position = Vector2(316, 180)
+texture = SubResource("CompressedTexture2D_pxygk")
+
+[node name="Cupid" parent="." instance=ExtResource("4_lwwqe")]
+position = Vector2(98, 115)
+
+[node name="Level Start" parent="." instance=ExtResource("5_4l72k")]
+
+[node name="Special-tileSet" parent="." instance=ExtResource("6_1ffra")]
+
+[node name="Collission-tiles" parent="." instance=ExtResource("7_oavx3")]
+
+[editable path="Cupid"]

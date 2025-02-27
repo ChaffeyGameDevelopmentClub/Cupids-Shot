@@ -1,6 +1,5 @@
 [gd_scene load_steps=21 format=4 uid="uid://dphlsc1et7vt7"]
 
-[ext_resource type="Texture2D" uid="uid://ce8ta3bvk5mdr" path="res://Levels/Tutorial/TILESET_BACKGROUND.png" id="1_dgj8i"]
 [ext_resource type="PackedScene" uid="uid://br3bpyk2eu6wg" path="res://Arrow-Physics-Test/Scenes/better_arrow_launcher.tscn" id="2_42pff"]
 [ext_resource type="PackedScene" uid="uid://c55px6dkhu7ly" path="res://cupid.tscn" id="2_qtudi"]
 [ext_resource type="PackedScene" uid="uid://cidi1p8hxqgyp" path="res://Arrow-Physics-Test/Tileset Collection/Master Tileset/Collission-Tiles.tscn" id="4_m4aj8"]
@@ -17,6 +16,9 @@
 [ext_resource type="Resource" uid="uid://dgt88y7sxrv6x" path="res://Level assets/Resources/Target Data/Level3.tres" id="15_n6g4g"]
 [ext_resource type="PackedScene" uid="uid://cxisfdhuo23bx" path="res://UI Stuff/Ingame-Menus/Pause-Menu/pause_menu.tscn" id="16_m0dul"]
 [ext_resource type="PackedScene" uid="uid://c1tk3gqskrur1" path="res://level_start.tscn" id="19_4obrm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxygk"]
+load_path = "res://.godot/imported/TILESET_BACKGROUND.png-ac4bd230622f33e5083d3dc3e8d31fb8.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kxetp"]
 animations = [{
@@ -65,7 +67,7 @@ target_name = ExtResource("15_n6g4g")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(304, 200)
 scale = Vector2(1.4, 1.28889)
-texture = ExtResource("1_dgj8i")
+texture = SubResource("CompressedTexture2D_pxygk")
 
 [node name="better arrow launcher2" parent="." instance=ExtResource("2_42pff")]
 position = Vector2(-13, 253)
