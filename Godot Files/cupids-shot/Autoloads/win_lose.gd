@@ -11,7 +11,7 @@ func Lose():
 	AudioBus.play_sound("You Lose")
 	lose.visible = true
 	var posTween:Tween = get_tree().create_tween()
-	posTween.tween_property(lose, "position", Vector2(320, 192), 2)
+	posTween.tween_property(lose, "position", Vector2(320, 192), 3)
 	lose_screen.visible = true
 	posTween.tween_property(lose_screen, "position", Vector2(0,0), 1)
 
