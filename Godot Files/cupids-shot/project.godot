@@ -13,7 +13,9 @@ config_version=5
 config/name="Cupids Shot"
 run/main_scene="res://UI Stuff/opening_sequence.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/image="res://GDClogo.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
